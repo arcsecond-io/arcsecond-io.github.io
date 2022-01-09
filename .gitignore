@@ -1,0 +1,16 @@
+*.pyc
+
+dist/
+build/
+*.egg-info/
+
+.tox/
+.coverage
+.pytest_cache
+.idea
+
+venv
+/env
+.DS_Store
+node_modules
+
