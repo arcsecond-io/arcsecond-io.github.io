@@ -12,6 +12,12 @@ footer: MIT Licensed | Copyright © 2020-present F52 Tech.
 iObserve on the web and all the other Pro Tools of the app www.arcsecond.io.
 (Work in progress.)
 
+# [Observatory Portals](https://docs.arcsecond.io/portals)
+
+The B2B side of Arcsecond.io dedicated to small and medium-size observatories,
+combining data storage and management with (in the future) innovative 
+proposal-schedule workflows.
+
 # [CLI](https://docs.arcsecond.io/cli)
 
 The open-source CLI (Command-Line Interface) and Python module to access all
@@ -21,15 +27,14 @@ code!
 # [Oort](https://docs.arcsecond.io/oort)
 
 The easy-to-use open-source tool to upload any images or data to Arcsecond.io.
-Use by organisations in their Observatory or by individuals.
+Use by organisations in their Observatory Portals or by individuals.
 
 <br/>
 
 ---
 
-**Arcsecond** is a unique and comprehensive cloud platform made by 
-astronomers for astronomers providing all the necessary resources and tools for 
-preparing astronomical observations.
+**Arcsecond** is a unique and comprehensive cloud platform for astronomical
+observations, made by astronomers for astronomers.
 
 It is composed of professional tools that help preparing astronomical
 observations. The most advanced and well-known of these tools is iObserve
@@ -38,8 +43,8 @@ explorer of Exoplanet Transits, a simulator of satellite (Starlink!)
 tracks on the sky, various converters etc.
 
 For Observatories, Arcsecond offer 
-[professional portals](https://www.arcsecond.io/portals) dedicated to Data
-Storage and Data Management. Upload to Arcsecond is made easy thanks to our
+[professional portals](https://www.arcsecond.io/portals) dedicated to data
+storage and management. Data upload to Arcsecond is made easy thanks to our
 uploader Oort, mentionned above. Arcsecond uses secured Amazon S3 buckets as
 storage backend, and offer on top of that an easy-to-use interface for searching
 among data, but also organising and packaging multiple data files and datasets.
