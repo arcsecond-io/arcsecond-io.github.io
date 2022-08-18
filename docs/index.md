@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://statics.arcsecond.io/img/logo-circle.png
+heroImage: https://statics.arcsecond.io/img/logo-circle-sm.png
 heroAlt: Arcsecond Logo
 heroText: Arcsecond Documentation
 tagline: The root of all documentation for Arcsecond.io and its associated tools.
