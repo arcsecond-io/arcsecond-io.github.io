@@ -1,4 +1,9 @@
 # arcsecond-io.github.io
 
-The umbrella project for all documentation of Arcsecond.io, including
-the ones available only in www.arcsecond.io and api.arcsecond.io.
+The documentation repository of Arcsecond.io, covering iObserve, the other Pro Tools, 
+the Observatory Portals and the REST APIs.
+
+The CLI and the Oort Uploader have their documentation integrated into their respective 
+repository. 
+
+Based on [VitePress](https://vitepress.vuejs.org).

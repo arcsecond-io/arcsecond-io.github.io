@@ -3,9 +3,9 @@ export default {
     logo: '/logo-circle-sm.png',
     siteTitle: false,
     nav: [
-      { text: 'iObserve', link: '/iobserve/introduction' },
-      { text: 'Pro Tools', link: '/tools/introduction' },
-      { text: 'Observatory Portals', link: '/portals/introduction' }
+      { text: 'iObserve & Pro Tools', link: '/iobserve/introduction' },
+      { text: 'Observatory Portals', link: '/portals/introduction' },
+      { text: 'APIs & Ecosystem', link: '/ecosystem/introduction' },
     ],
     footer: {
       message: 'MIT Licensed',
