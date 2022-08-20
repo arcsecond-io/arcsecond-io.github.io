@@ -1,10 +1,10 @@
 export default {
+  title: 'Arcsecond Docs',
+  description: 'A Platform for Astronomers and Observatories',
+  siteTitle: false,
+  cleanUrls: 'with-subfolders',
   themeConfig: {
     logo: '/logo-circle-sm.png',
-    title: 'Arcsecond Docs',
-    description: 'A Platform for Astronomers and Observatories',
-    siteTitle: false,
-    cleanUrls: 'with-subfolders',
     nav: [
       { text: 'iObserve & Pro Tools', link: '/iobserve/introduction' },
       { text: 'Observatory Portals', link: '/portals/introduction' },
