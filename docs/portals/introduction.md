@@ -3,13 +3,11 @@
 The ambition of Arcsecond is to offer professional-quality software for astronomers and observatories to manage data,
 execute night operations and perform the best astronomical observations possible. It is built on top of years of
 experience of professional software development following a 10-years period of astronomical research, and especially 4
-years spent in Chile, working for ESO at the La Silla Observatory.
+years spent in Chile, working for the European Southern Observatory ([ESO](https://eso.org)) at the 
+[La Silla Observatory](https://www.arcsecond.io/observingsites/2ac73126-e183-4e56-b04a-03e4f20dced4).
 
 Arcsecond was initiated to bring to the web a well-known macOS app, called iObserve. It is now expanding to offer
 observatories powerful portals, and work not only in the cloud, but it will soon also work in self-hosted environments.
-
-This documentation is about Observatory Portals only. The other documentations of Arcsecond can be found in the
-[Root Docs](https://docs.arcsecond.io).
 
 # OMA
 
