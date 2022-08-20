@@ -1,45 +1,33 @@
 ---
-home: true
-heroImage: https://statics.arcsecond.io/img/logo-circle-sm.png
-heroAlt: Arcsecond Logo
-heroText: Arcsecond Documentation
-tagline: The root of all documentation for Arcsecond.io and its associated tools.
-footer: MIT Licensed | Copyright © 2020-present F52 Tech.
+layout: home
+
+hero:
+  name: Arcsecond.io
+  image:
+    src: https://statics.arcsecond.io/img/logo-circle-sm.png
+    alt: Arcsecond Logo 
+  text: A Platform for Astronomers and Observatories
+  tagline: Professional software for individual astronomers and astronomical observatories to manage data and execute night operations.
+  actions:
+    - theme: brand
+      text: Discover Portals for Observatories
+      link: /portals/introduction
+    - theme: brand
+      text: Explore iObserve
+      link: /iobserve/introduction
+    - theme: alt
+      text: Visit our GitHub page
+      link: https://github.com/arcsecond-io/portals
+
+features:
+- icon: 🔭
+  title: iObserve, the best pro tool for preparing observations.
+  details: Draw multiple trackable airmass curves and star tracks for any celestial object, exoplanet, solar system planet, or asteroids & comets, plus a ton of other features.
+- icon: 🌌
+  title: Run an entire observatory with Arcsecond.
+  details: Manage data storage, easily distribute packages to observers, and soon, have your own telescope schedule, time proposals etc.
+- icon: 🌗
+  title: Cloud or Self-Hosted
+  details: Choose between the cloud-based SaaS easily integrable with APIs, or (in a near future) run it in your own environment (and still enjoy APIs).
 ---
 
-# [Pro Tools](https://docs.arcsecond.io/tools)
-
-iObserve and all the other Pro Tools of the webapp www.arcsecond.io.
-
-# [Observatory Portals](https://docs.arcsecond.io/portals)
-
-Portals dedicated to small and medium-size observatories, to manage data,
-observers, schedule, telescopes etc.
-
-# [CLI](https://docs.arcsecond.io/cli)
-
-The open-source CLI (Command-Line Interface) and Python module to access all
-public and private Arcsecond.io resources right into your terminal or Python
-code.
-
-# [Oort](https://docs.arcsecond.io/oort)
-
-The easy-to-use open-source tool to upload any images or data to Arcsecond.io.
-Use by organisations in their Observatory Portals or by individuals.
-
-<br/>
-
----
-
-**Arcsecond** is a unique and comprehensive cloud platform for astronomical
-observations, made by an astrophysicist & former support astronomer in La Silla
-Observatory, in Chile, now turned to a VP Software Engineering in a deeptech
-startup [See LinkedIn Profile](https://www.linkedin.com/in/cedricfoellmi/).
-
-Arcsecond is composed of professional tools that help to prepare astronomical
-observations, the most well-known being iObserve, already used by thousands
-astronomers worldwide.
-
-Moreover, Arcsecond offers cloud portals for Observatories to manage their data.
-A complete solution to manage the observatory operations is being currently
-developed.
