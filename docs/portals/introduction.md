@@ -7,7 +7,11 @@ years spent in Chile, working for the European Southern Observatory ([ESO](https
 [La Silla Observatory](https://www.arcsecond.io/observingsites/2ac73126-e183-4e56-b04a-03e4f20dced4).
 
 Arcsecond was initiated to bring to the web a well-known macOS app, called iObserve. It is now expanding to offer
-observatories powerful portals, and work not only in the cloud, but it will soon also work in self-hosted environments.
+powerful portals to small and medium-size observatories. Moreover, Arcsecond is being transformed to work not only 
+in the cloud, but also in self-hosted environments.
+
+As of today (September 2022), Arcsecond is only available in the cloud, but you can register for the beta in
+[https://www.arcsecond.io/self-hosting](https://www.arcsecond.io/self-hosting).
 
 # OMA
 
