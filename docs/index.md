@@ -4,8 +4,8 @@ layout: home
 hero:
   name: Arcsecond.io
   image:
-    src: https://statics.arcsecond.io/img/logo-circle-sm.png
-    alt: Arcsecond Logo 
+    src: /images/welcome-image.png
+    alt: Arcsecond Welcome Image 
   text: A Platform for Astronomers and Observatories
   tagline: A complete professional software suite to prepare observations, manage data and execute night operations.
   actions:
