@@ -1,6 +1,7 @@
 <template>
-  <img class="ThemedImage dark" :src="`${folder}/${prefix}-dark${extension}`" :alt="alt" ref="imgRefDark">
-  <img class="ThemedImage light" :src="`${folder}/${prefix}-light${extension}`" :alt="alt" ref="imgRefLight">
+  <img class="ThemedImage dark" :src="`${prefix}-dark${extension}`" :alt="alt" :title="title || alt" ref="imgRefDark">
+  <img class="ThemedImage light" :src="`${prefix}-light${extension}`" :alt="alt" :title="title || alt"
+       ref="imgRefLight">
 </template>
 
 <script setup lang="ts">
@@ -11,8 +12,8 @@
   const imgRefLight = ref(null)
 
   withDefaults(
-    defineProps<{ prefix: string, extension?: string, alt?: string, folder?: string }>(),
-    { extension: '.png', alt: 'Image', folder: '/images' }
+    defineProps<{ prefix: string, extension?: string, alt?: string, title?: string }>(),
+    { extension: '.png', alt: 'Image', title: '' }
   )
 
   onMounted(() => {

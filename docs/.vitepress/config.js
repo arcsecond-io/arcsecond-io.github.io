@@ -8,6 +8,7 @@ export default {
     nav: [
       { text: 'iObserve & Pro Tools', link: '/tools/iobserve.md' },
       { text: 'Observatory Portals', link: '/portals/introduction' },
+      { text: 'Resources', link: '/resources/introduction' },
       { text: 'APIs & Ecosystem', link: '/ecosystem/introduction' }
     ],
     footer: {
@@ -32,7 +33,27 @@ export default {
           text: 'Pro Tools',
           collapsible: true,
           items: [
-            { text: 'Starlinks Tracks', link: '/tools/starlinks.md' }
+            { text: 'Starlinks Tracks', link: '/tools/starlinks.md' },
+            { text: 'Exoplanet Transits', link: '/tools/coming-soon.md' },
+            { text: 'Night Duration', link: '/tools/coming-soon.md' },
+            { text: 'Yearly Visibility', link: '/tools/coming-soon.md' },
+            { text: 'Standard Stars', link: '/tools/coming-soon.md' },
+            { text: 'Almanac', link: '/tools/coming-soon.md' },
+            { text: 'Coordinates Converter', link: '/tools/coming-soon.md' },
+            { text: 'Times Converter', link: '/tools/coming-soon.md' },
+            { text: 'Distances Converter', link: '/tools/coming-soon.md' }
+          ]
+        }
+      ],
+      '/resources/': [
+        {
+          text: 'Resources',
+          collapsible: true,
+          items: [
+            { text: 'Observing Sites', link: '/resources/starlinks.md' },
+            { text: 'Satellites', link: '/resources/coming-soon.md' },
+            { text: 'Standard Stars Catalogues', link: '/resources/coming-soon.md' },
+            { text: 'Public Target Lists', link: '/resources/coming-soon.md' }
           ]
         }
       ],

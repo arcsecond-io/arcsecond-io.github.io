@@ -3,7 +3,7 @@
 iObserve is our Master Pro Tool. Its purpose is to provide a consistent application for preparing astronomical
 observations. 
 
-![Screenshot of iObserve in 4k](./assets/iobserve-4k-light.png){data-zoomable}
+<ThemedImage prefix="iobserve-4k" alt="iObserve in 4k"/>
 
 It can be decomposed into 7 parts:
 

@@ -3,7 +3,7 @@
 The Times Bar display the current time in various units, as well as a location selector. Time and location are the
 essential ingredients for iObserve curves to be computed.
 
-<ThemedImage prefix="iobserve-timesbar" folder="../assets" alt="iObserve Times Bar"/>
+<ThemedImage prefix="./iobserve-timesbar" alt="iObserve Times Bar"/>
 
 From left to right, the first three times are independent of the location:
 
