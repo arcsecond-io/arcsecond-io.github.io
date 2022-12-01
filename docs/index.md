@@ -14,7 +14,7 @@ hero:
       link: /portals/introduction
     - theme: brand
       text: Explore iObserve
-      link: /iobserve/introduction
+      link: /tools/iobserve.md
     - theme: alt
       text: Visit our GitHub page
       link: https://github.com/arcsecond-io/portals

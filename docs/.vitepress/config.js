@@ -6,7 +6,7 @@ export default {
   themeConfig: {
     logo: '/logo-circle-sm.png',
     nav: [
-      { text: 'iObserve & Pro Tools', link: '/iobserve/introduction' },
+      { text: 'iObserve & Pro Tools', link: '/tools/iobserve.md' },
       { text: 'Observatory Portals', link: '/portals/introduction' },
       { text: 'APIs & Ecosystem', link: '/ecosystem/introduction' }
     ],
@@ -19,8 +19,23 @@ export default {
       { icon: 'twitter', link: 'https://twitter.com/arcsecond_io' }
     ],
     sidebar: {
-      '/iobserve/': [],
-      '/tools/': [],
+      '/tools/': [
+        {
+          text: 'iObserve',
+          collapsible: true,
+          items: [
+            { text: 'Introduction', link: '/tools/iobserve.md' },
+            { text: 'Times Bar & Location Selector', link: '/tools/iobserve/timesbar.md' }
+          ]
+        },
+        {
+          text: 'Pro Tools',
+          collapsible: true,
+          items: [
+            { text: 'Starlinks Tracks', link: '/tools/starlinks.md' }
+          ]
+        }
+      ],
       '/portals/': [
         {
           text: 'General',
