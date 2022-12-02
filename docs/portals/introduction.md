@@ -23,4 +23,4 @@ in the Atacama desert.
 OMA is the first Observatory Portal of Arcsecond, and is used throughout this documentation to illustrate it with
 images taken in real conditions.
 
-<ThemedImage prefix="/images/introduction-oma-public-welcome" alt="OMA Public Homepage"/>
+<ThemedImage prefix="introduction-oma-public-welcome" alt="OMA Public Homepage"/>
