@@ -5,8 +5,8 @@ essential ingredients for iObserve curves to be computed.
 
 <ThemedImage prefix="iobserve-timesbar" alt="iObserve Times Bar"/>
 
-:::tip The right most button
-It allows to hide the navigation bar of Arcsecond and expand to the maximum the browser surface used
+:::tip
+The right most button allows to hide the navigation bar of Arcsecond and expand to the maximum the browser surface used
 by iObserve.
 
 :::

@@ -4,7 +4,7 @@
   "description": "The root docs repository",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs --port 5174",
     "docs:build": "vitepress build docs",
     "predocs:serve": "npm run docs:build",
     "docs:serve": "vitepress serve docs"

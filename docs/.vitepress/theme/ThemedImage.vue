@@ -1,8 +1,19 @@
 <template>
-  <img class="ThemedImage dark" :src="`/images/${prefix}-dark${extension}`" :alt="alt" :title="title || alt"
-       ref="imgRefDark" :style="{ 'max-width': maxWidth }">
-  <img class="ThemedImage light" :src="`/images/${prefix}-light${extension}`" :alt="alt" :title="title || alt"
-       ref="imgRefLight" :style="{ 'max-width': maxWidth }">
+  <div :style="{ 'max-width': maxWidth, 'float': float, 'margin: 0.5rem 0 0 1rem': float !== 'unset' }"
+       style="width: 100%; border: 1px solid #eee; padding: 3px;">
+    <img class="ThemedImage dark"
+         :src="`/images/${prefix}-dark${extension}`"
+         :alt="alt"
+         :title="title || alt"
+         ref="imgRefDark"
+         style="width: 100%;">
+    <img class="ThemedImage light"
+         :src="`/images/${prefix}-light${extension}`"
+         :alt="alt"
+         :title="title || alt"
+         ref="imgRefLight"
+         style="width: 100%;">
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -13,8 +24,8 @@
   const imgRefLight = ref(null)
 
   withDefaults(
-    defineProps<{ prefix: string, extension?: string, alt?: string, title?: string, maxWidth?: string }>(),
-    { extension: '.png', alt: 'Image', title: '', maxWidth: '100%' }
+    defineProps<{ prefix: string, extension?: string, alt?: string, title?: string, maxWidth?: string, float?: string }>(),
+    { extension: '.png', alt: 'Image', title: '', maxWidth: '100%', float: 'unset' }
   )
 
   onMounted(() => {

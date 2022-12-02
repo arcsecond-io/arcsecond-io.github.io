@@ -27,7 +27,8 @@ export default {
           items: [
             { text: 'Introduction', link: '/tools/iobserve.md' },
             { text: 'Times Bar & Location Selector', link: '/tools/iobserve/timesbar.md' },
-            { text: 'Nodes Tree & Object Imoorts', link: '/tools/iobserve/nodestree.md' }
+            { text: 'Nodes Tree & Object Imports', link: '/tools/iobserve/nodestree.md' },
+            { text: 'Global Layout & Options', link: '/tools/iobserve/layoutoptions.md' }
           ]
         },
         {
