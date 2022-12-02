@@ -108,6 +108,19 @@ export default {
             { text: 'Oort Cloud Uploader', link: '/portals/oort-uploader.md' }
           ]
         }
+      ],
+      '/ecosystem/': [
+        {
+          text: 'Ecosystem',
+          collapsible: true,
+          items: [
+            { text: 'APIs', link: '/ecosystem/coming-soon.md' },
+            { text: 'aa-js', link: '/ecosystem/coming-soon.md' },
+            { text: 'status', link: '/ecosystem/coming-soon.md' },
+            { text: 'CLI', link: '/ecosystem/coming-soon.md' },
+            { text: 'Oort', link: '/ecosystem/coming-soon.md' },
+          ]
+        }
       ]
     }
   }
