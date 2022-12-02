@@ -14,7 +14,7 @@
 
   withDefaults(
     defineProps<{ prefix: string, extension?: string, alt?: string, title?: string, maxWidth?: string }>(),
-    { extension: '.png', alt: 'Image', title: '', maxWidth: 'unset' }
+    { extension: '.png', alt: 'Image', title: '', maxWidth: '100%' }
   )
 
   onMounted(() => {
