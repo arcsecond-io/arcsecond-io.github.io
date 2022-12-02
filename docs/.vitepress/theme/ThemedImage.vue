@@ -1,7 +1,8 @@
 <template>
-  <img class="ThemedImage dark" :src="`${prefix}-dark${extension}`" :alt="alt" :title="title || alt" ref="imgRefDark">
-  <img class="ThemedImage light" :src="`${prefix}-light${extension}`" :alt="alt" :title="title || alt"
-       ref="imgRefLight">
+  <img class="ThemedImage dark" :src="`/images/${prefix}-dark${extension}`" :alt="alt" :title="title || alt"
+       ref="imgRefDark" :style="{ 'max-width': maxWidth }">
+  <img class="ThemedImage light" :src="`/images/${prefix}-light${extension}`" :alt="alt" :title="title || alt"
+       ref="imgRefLight" :style="{ 'max-width': maxWidth }">
 </template>
 
 <script setup lang="ts">
@@ -12,8 +13,8 @@
   const imgRefLight = ref(null)
 
   withDefaults(
-    defineProps<{ prefix: string, extension?: string, alt?: string, title?: string }>(),
-    { extension: '.png', alt: 'Image', title: '' }
+    defineProps<{ prefix: string, extension?: string, alt?: string, title?: string, maxWidth?: string }>(),
+    { extension: '.png', alt: 'Image', title: '', maxWidth: 'unset' }
   )
 
   onMounted(() => {

@@ -26,7 +26,8 @@ export default {
           collapsible: true,
           items: [
             { text: 'Introduction', link: '/tools/iobserve.md' },
-            { text: 'Times Bar & Location Selector', link: '/tools/iobserve/timesbar.md' }
+            { text: 'Times Bar & Location Selector', link: '/tools/iobserve/timesbar.md' },
+            { text: 'Nodes Tree & Object Imoorts', link: '/tools/iobserve/nodestree.md' }
           ]
         },
         {
