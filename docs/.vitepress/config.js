@@ -114,9 +114,8 @@ export default {
           text: 'Ecosystem',
           collapsible: true,
           items: [
-            { text: 'APIs', link: '/ecosystem/coming-soon.md' },
-            { text: 'aa-js', link: '/ecosystem/coming-soon.md' },
-            { text: 'status', link: '/ecosystem/coming-soon.md' },
+            { text: 'APIs', link: '/ecosystem/apis.md' },
+            { text: 'aa-js', link: '/ecosystem/aa-js.md' },
             { text: 'CLI', link: '/ecosystem/coming-soon.md' },
             { text: 'Oort', link: '/ecosystem/coming-soon.md' },
           ]
