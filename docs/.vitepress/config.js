@@ -7,9 +7,9 @@ export default {
     logo: '/logo-circle-sm.png',
     nav: [
       { text: 'iObserve & Pro Tools', link: '/tools/iobserve.md' },
-      { text: 'Observatory Portals', link: '/portals/introduction' },
-      { text: 'Resources', link: '/resources/introduction' },
-      { text: 'APIs & Ecosystem', link: '/ecosystem/introduction' }
+      { text: 'Observatory Portals', link: '/portals/' },
+      { text: 'Resources', link: '/resources/' },
+      { text: 'APIs & Ecosystem', link: '/ecosystem/' }
     ],
     footer: {
       message: 'MIT Licensed',
@@ -64,7 +64,7 @@ export default {
           text: 'General',
           collapsible: true,
           items: [
-            { text: 'Introduction', link: '/portals/introduction.md' },
+            { text: 'Introduction', link: '/portals/index.md' },
             { text: 'Portal Registration', link: '/portals/registration.md' },
             { text: 'Permissions & Roles', link: '/portals/permissions.md' },
             { text: 'Cloud vs Self-Hosting', link: '/portals/self-hosting.md' }
