@@ -1,9 +1,13 @@
-# Registration
+# Observatory Portal Registration
 
-The registration of a portal is not yet automatic, because a DNS entry must be made for the subdomain. 
-Please [write us an email](mailto:team@arcsecond.io) and we will very happy to diligently open a portal for you.
+The registration of a new Observatory Portal will soon be available to anyone, with Arcsecond V4 planned for early 2023.
 
-A free period between 1 and 3 months can be made for you familiarize yourself, explore and test before adopting
-Arcsecond.
+Here is the procedure to create a portal:
 
-In the future, it will be possible to create the portal, with its subdomain, right from the web.
+1. Login to Arcsecond.
+2. Open your *Setting* Page, in the "Memberships" tab.
+3. Click "Create Observatory Portal" button
+4. Choose a subdomain and click "Create"!...
+
+Your portal will be automatically created, along with your superadmin membership, and you will be redirected immediately
+to it. 

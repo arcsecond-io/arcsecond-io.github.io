@@ -66,6 +66,7 @@ export default {
           items: [
             { text: 'Introduction', link: '/portals/index.md' },
             { text: 'Portal Registration', link: '/portals/registration.md' },
+            { text: 'Paying Account', link: '/portals/paying-account.md' },
             { text: 'Permissions & Roles', link: '/portals/permissions.md' },
             { text: 'Cloud vs Self-Hosting', link: '/portals/self-hosting.md' }
           ]
