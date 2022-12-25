@@ -5,14 +5,14 @@
 Every observatory has a **subdomain** that serves as identifier. Then, the API
 endpoints simply follows:
 
-| Resources | Endpoint                                                             |
-| ---- |----------------------------------------------------------------------|
+| Resources       | Endpoint                                                             |
+|-----------------|----------------------------------------------------------------------|
 | Observing Sites | `https://api.arcsecond.io/<subdomain>/observingsites/[<uuid:uuid>/]` |
-| Telescopes | `https://api.arcsecond.io/<subdomain>/telescopes/[<uuid:uuid>/]`         |
-| Night Logs | `https://api.arcsecond.io/<subdomain>/nightlogs/[<uuid:uuid>/]`          |
-| Data Packages | `https://api.arcsecond.io/<subdomain>/datapackages/[<uuid:uuid>/]`       |
-| Datasets | `https://api.arcsecond.io/<subdomain>/datasets/[<uuid:uuid>/]`           |
-| Data Files | `https://api.arcsecond.io/<subdomain>/datafiles/[<int:pk>/]`             |
+| Telescopes      | `https://api.arcsecond.io/<subdomain>/telescopes/[<uuid:uuid>/]`     |
+| Night Logs      | `https://api.arcsecond.io/<subdomain>/nightlogs/[<uuid:uuid>/]`      |
+| Data Packages   | `https://api.arcsecond.io/<subdomain>/datapackages/[<uuid:uuid>/]`   |
+| Datasets        | `https://api.arcsecond.io/<subdomain>/datasets/[<uuid:uuid>/]`       |
+| Data Files      | `https://api.arcsecond.io/<subdomain>/datafiles/[<int:pk>/]`         |
 
 Apart from the Data files (see below for accepted formats), all details
 endpoints are using (v4) UUIDs as identifiers.
@@ -26,12 +26,12 @@ verbs to convey action meaning).
 
 In action, it means, for instance (note the presence of the trailing slash):
 
-| HTTP Verb | Payload ?           | Endpoint                     | Result(s)              |
-| --- |---------------------|------------------------------|---------------------------------------------------------------------------------------------------|
-| `GET` |                     | `/<subdomain>/observingsites/` | Get the list of all observing sites for that Observatory, including UUIDs of associated Telescopes |
-| `GET` |                     | `/<subdomain>/telescopes/<uuid>/` | Get the details of that given telescope.                               |
-| `POST` | :heavy_check_mark:  | `/<subdomain>/datasets/`     | Create a new dataset (`PUT` and `PATCH` not allowed on List endpoints) |
-| `PATCH` | :heavy_check_mark:|  `/<subdomain>/datapackages/<uuid>/` | Partially update that given datapackage with new information |
+| HTTP Verb | Payload ?          | Endpoint                            | Result(s)                                                                                          |
+|-----------|--------------------|-------------------------------------|----------------------------------------------------------------------------------------------------|
+| `GET`     |                    | `/<subdomain>/observingsites/`      | Get the list of all observing sites for that Observatory, including UUIDs of associated Telescopes |
+| `GET`     |                    | `/<subdomain>/telescopes/<uuid>/`   | Get the details of that given telescope.                                                           |
+| `POST`    | :heavy_check_mark: | `/<subdomain>/datasets/`            | Create a new dataset (`PUT` and `PATCH` not allowed on List endpoints)                             |
+| `PATCH`   | :heavy_check_mark: | `/<subdomain>/datapackages/<uuid>/` | Partially update that given datapackage with new information                                       |
 
 etc.
 
