@@ -59,6 +59,7 @@ export default {
           text: 'Data',
           collapsible: true,
           items: [
+            { text: 'Storage Credentials Security', link: '/observations/credentials-security.md' },
             { text: 'Arcsecond Cloud Storage', link: '/observations/cloud-storage.md' },
             { text: 'External Storage AWS', link: '/observations/external-storage-aws.md' },
             { text: 'External Storage Dropbox', link: '/observations/external-storage-dropbox.md' },
