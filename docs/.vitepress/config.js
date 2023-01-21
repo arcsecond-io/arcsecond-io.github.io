@@ -7,6 +7,7 @@ export default {
     logo: '/logo-circle-sm.png',
     nav: [
       { text: 'iObserve & Pro Tools', link: '/tools/iobserve.md' },
+      { text: 'Data & Observations', link: '/observations/' },
       { text: 'Observatory Portals', link: '/portals/' },
       { text: 'Resources', link: '/resources/' },
       { text: 'APIs & Ecosystem', link: '/ecosystem/' }
@@ -47,15 +48,27 @@ export default {
           ]
         }
       ],
-      '/resources/': [
+      '/observations/': [
         {
-          text: 'Resources',
+          text: 'Introduction',
+          items: [
+            { text: 'Introduction', link: '/observations/index.md' }
+          ]
+        },
+        {
+          text: 'Data',
           collapsible: true,
           items: [
-            { text: 'Observing Sites', link: '/resources/starlinks.md' },
-            { text: 'Satellites', link: '/resources/coming-soon.md' },
-            { text: 'Standard Stars Catalogues', link: '/resources/coming-soon.md' },
-            { text: 'Public Target Lists', link: '/resources/coming-soon.md' }
+            { text: 'Arcsecond Cloud Storage', link: '/observations/cloud-storage.md' },
+            { text: 'External Storage AWS', link: '/observations/external-storage-aws.md' },
+            { text: 'External Storage Dropbox', link: '/observations/external-storage-dropbox.md' },
+            { text: 'External Storage Local Disk', link: '/observations/external-storage-localdisk.md' }
+          ]
+        },
+        {
+          text: 'Observations',
+          items: [
+            { text: 'Night Reconstruction', link: '/observations/night-reconstruction.md' }
           ]
         }
       ],
@@ -110,6 +123,18 @@ export default {
           ]
         }
       ],
+      '/resources/': [
+        {
+          text: 'Resources',
+          collapsible: true,
+          items: [
+            { text: 'Observing Sites', link: '/resources/starlinks.md' },
+            { text: 'Satellites', link: '/resources/coming-soon.md' },
+            { text: 'Standard Stars Catalogues', link: '/resources/coming-soon.md' },
+            { text: 'Public Target Lists', link: '/resources/coming-soon.md' }
+          ]
+        }
+      ],
       '/ecosystem/': [
         {
           text: 'Ecosystem',
@@ -118,7 +143,7 @@ export default {
             { text: 'APIs', link: '/ecosystem/apis.md' },
             { text: 'aa-js', link: '/ecosystem/aa-js.md' },
             { text: 'CLI', link: '/ecosystem/coming-soon.md' },
-            { text: 'Oort', link: '/ecosystem/coming-soon.md' },
+            { text: 'Oort', link: '/ecosystem/coming-soon.md' }
           ]
         }
       ]
