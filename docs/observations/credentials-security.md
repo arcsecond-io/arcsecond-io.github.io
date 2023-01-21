@@ -1,6 +1,10 @@
 Storage Credentials Security
 ===
 
+:::info
+Documentation for the coming Arcsecond V4
+:::
+
 In a nutshell:
 
 - Credentials are sent encrypted to the Arcsecond backend.

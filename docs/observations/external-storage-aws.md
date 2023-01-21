@@ -1,6 +1,10 @@
 External Storage AWS
 ===
 
+:::info
+Documentation for the coming Arcsecond V4
+:::
+
 To attach an Amazon AWS S3 bucket to your Arcsecond account, we recommend to create a specific IAM user with a dedicated
 read-only policy. This tutorial show the complete procedure to do so. At the end, will have to provide the
 well-known `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` as well as the bucket name to Arcsecond to parse your bucket.
