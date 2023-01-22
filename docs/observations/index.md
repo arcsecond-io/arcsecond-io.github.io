@@ -33,4 +33,8 @@ is uploaded to it. This parsing allows to:
 * Create 2D-image and 1D-spectrum previews,
 * **Create your personal list of all your observed targets, associated with its data** (this will combine all cloud and
   external storages you have attached),
-* Reconstruct your observing nights (when possible). 
+* Reconstruct your observing nights (when possible).
+
+:::info
+We are working on an option to restrict the parsing to specific (sub)folder(s).
+:::
