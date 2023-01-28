@@ -1,7 +1,7 @@
 External Storage AWS
 ===
 
-:::info
+:::warning
 Documentation for the coming Arcsecond V4
 :::
 

@@ -1,7 +1,7 @@
 Storage Credentials Security
 ===
 
-:::info
+:::warning
 Documentation for the coming Arcsecond V4
 :::
 
