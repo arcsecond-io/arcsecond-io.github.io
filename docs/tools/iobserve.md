@@ -7,9 +7,9 @@ observations.
 
 It can be decomposed into 7 parts:
 
-* [Times Bar & Location Selector](./iobserve/timesbar.md)
-* [Nodes Tree & Objects Imports](./iobserve/nodestree.md)
-* [Global Layout & Options](./iobserve/layoutoptions.md)
+* [Times Bar & Location Selector](./iobserve/timesbar)
+* [Nodes Tree & Objects Imports](./iobserve/nodestree)
+* [Global Layout & Options](./iobserve/layoutoptions)
 * Airmass / Altitude Curves
 * Star Tracks Curves
 * Finding Charts
