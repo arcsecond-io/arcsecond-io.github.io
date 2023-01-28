@@ -6,18 +6,21 @@ Documentation for the coming Arcsecond V4
 :::
 
 To attach an Amazon AWS S3 bucket to your Arcsecond account, we recommend to create a specific IAM user with a dedicated
-read-only policy. This tutorial show the complete procedure to do so. At the end, will have to provide the
+read-only policy. This tutorial shows the complete procedure to do so. At the end, you will have to provide the
 well-known `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` as well as the bucket name and the AWS region for Arcsecond to
 parse your data.
 
-We will guide through the creation of a read-only policy, then that of a new IAM user, and finally attach the policy to
-the user.
+We will guide you through the creation of a read-only policy, then that of a new IAM user, attaching the policy to it.
 
 Create a read-only S3 policy for your bucket
 --
 
 1. To create a new IAM policy, login to your AWS console, and select the IAM service. You will end up in the IAM home
-   page (Arcsecond-specific information has been removed throughout the tutorial images).
+   page.
+
+:::info
+Arcsecond-specific information has been removed throughout the tutorial images.
+:::
 
 ![Screenshot](/images/storage-aws-iam-user-ro-01.png)
 
@@ -25,7 +28,7 @@ Create a read-only S3 policy for your bucket
 
 ![Screenshot](/images/storage-aws-iam-user-ro-02.png)
 
-3. Click the "Add Policy" button on the upper-right to start the short workflow of creating a new policies.
+3. Click the "Create Policy" button on the upper-right to start the short workflow of creating a new policies.
 
 ![Screenshot](/images/storage-aws-iam-user-ro-03.png)
 
@@ -33,9 +36,9 @@ Create a read-only S3 policy for your bucket
 
 ![Screenshot](/images/storage-aws-iam-user-ro-04.png)
 
-5. Copy the following code and replace as-is the actual content with it. **Replace the string `name-of-your-bucket` with
-   that or your own S3 bucket**. Note that you **must** have the two lines in the Resources section for the access to
-   work.
+5. Copy the following code and paste it as-is the actual content with it, **except for the string `name-of-your-bucket`
+   to be replaced with your own S3 bucket name**. Note that you **must** have the two lines in the Resources section for
+   the access to work.
 
 ```json
 {
@@ -63,7 +66,7 @@ Create a read-only S3 policy for your bucket
 
 ![Screenshot](/images/storage-aws-iam-user-ro-06.png)
 
-7. Optionally, give one or multiple tags to your policy (this has no effect nor impact on Arcsecond attachement). Then
+7. Optionally, give one or multiple tags to your policy (this has no effect nor impact on Arcsecond attachment). Then
    click the "Next: Review" button on the lower-right.
 
 ![Screenshot](/images/storage-aws-iam-user-ro-07.png)
@@ -78,14 +81,17 @@ Create a new IAM user
 --
 
 1. If not already done, login to your AWS console, and select the IAM service. You will end up in the IAM home page
-   (Arcsecond-specific information has been removed throughout the tutorial images).
+
+:::info
+Arcsecond-specific information has been removed throughout the tutorial images.
+:::
 
 ![Screenshot](/images/storage-aws-iam-user-ro-01.png)
 
 :::warning
 AWS recommends to use an IAM *role* instead of a user to give access to third-party services like Arcsecond. However,
-the Arcsecond storage backend is only working with `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. Hence, the need to
-stick to the dedicated user procedure.
+the Arcsecond storage backend works only with `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. Hence, the need to
+stick to the current procedure.
 :::
 
 2. Open the `Users` page by clicking the link on the left-hand sidebar.
@@ -93,7 +99,7 @@ stick to the dedicated user procedure.
 ![Screenshot](/images/storage-aws-iam-user-ro-09.png)
 
 3. Click the "Add users" button on the upper-right to start the short workflow of creating a new users. And give a name
-   to your new user. We recommend *not* to enable the console access. It is not needed by Arcsecond.
+   to your new user. We recommend to *not* enable the console access. It is not needed by Arcsecond.
 
 ![Screenshot](/images/storage-aws-iam-user-ro-10.png)
 
@@ -140,5 +146,5 @@ it from AWS. You will have to create new one from scratch.
 
 ![Screenshot](/images/storage-aws-iam-user-ro-19.png)
 
-Click "Done", and ypu're done! Now you can navigate to the Storages section of your Arcsecond settings, and attach your
+Click "Done", and you're done! Now you can navigate to the Storages section of your Arcsecond settings, and attach your
 AWS storage.
