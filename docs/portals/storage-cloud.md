@@ -1,3 +1,9 @@
+<script setup>
+import {ref} from 'vue';
+const collabMembers = ref(5);
+const gigabytesVolume = ref(1000);
+</script>
+
 # Cloud Storage
 
 The way Arcsecond store data in the cloud.
@@ -10,7 +16,16 @@ For instance, the OMA portal is accessible at `https://oma.arcsecond.io`.
 ## Access
 
 The human interfaces to manage data in the cloud are available at `https://www.arcsecond.io` for individual astronomers,
-and `https://<subdomain>.arcsecond.io`. Technically, the data is available through REST API endpoints.
+and `https://<subdomain>.arcsecond.io` for Observatory Portals. Technically, the data is available through REST API
+endpoints.
+
+## Can I remove all my data from arcsecond.io?
+
+**Of course.**
+
+Deleting data on arcsecond.io will delete files on the Amazon S3 folder, then remove any associated
+metadata we have on our database. Apart from some logfiles whose lifetime is limited, there is no
+trace anymore of your data on our system.
 
 ## How data volume is measured ?
 
@@ -24,6 +39,66 @@ We multiply that number of Gibibytes-month by the price per GB per month.
 ::: info
 1 GB = 1 Gibibytes = 2<sup>30</sup> bytes = 1,073,741,824 bytes.
 :::
+
+## Are the first 50 GB(-month) free?
+
+**Yes.**
+
+But once you reach that point,
+you pay the full volume. We think this give you enough time and room to validate the service, and
+represent a small enough step.
+
+## Is Arcsecond really cheaper than Dropbox?
+
+It depends. Honestly, the comparison is difficult, since we use different pricing models. Dropbox uses a
+constant prices per month, and split features into different plans. We choose to offer a purely linear
+pricing for storage, and the same features for everyone.
+
+Arcsecond solution is dedicated to astronomical data, can be associated with real observations
+and night logs, and you pay for what you store. Dropbox business is software-enhanced
+*document* storage.
+
+In other words, our storage has fewer features, but the ones available are made for astronomers.
+
+## What are the key price differences with Dropbox?
+
+**There is no upfront entry payment in Arcsecond.** You can start using and testing
+the storage right away.
+
+**For sharing data, Arcsecond is cheaper**, because it does not depend on the number of people. See simulation below.
+
+For storing larger amounts of data alone or with 1 or 2 colleagues only, Arcsecond is more expensive, obviously (there
+is no magic, Dropbox like Gmail long ago, relies on the fact that few people will actually fill their entire storage
+space). See below for a simulation.
+
+## Dropbox vs Arcsecond prices comparison
+
+:::warning
+Prices are for the coming Arcsecond V4 (unreleased yet).
+:::
+
+For instance: take a group of
+<input type="number" :min="1" :max="1000" :step="1" v-model="collabMembers"
+style="font-size: large; border: 1px solid lightgray; padding: 2px; border-radius: 5px;"
+/>
+people:
+
+* The [Dropbox Standard team plan](https://www.dropbox.com/plans) costs US$ {{ collabMembers * 15 }} / month (or US$ {{
+  collabMembers * 12.5 }} / year).
+* Arcsecond's Data Central for an Observatory Portal is US$ 50 / month + storage, **whatever
+  the number of people.**
+
+## Is output bandwidth taken into account?
+
+No, even if AWS charges us for that. We think bandwidth will be covered by margins on subscriptions.
+
+## Where is the data stored?
+
+The data is stored in Amazon S3 in the US (where the servers are, as well as more than 50% of our users).
+The data of a user X is stored in a dedicated folder. This folder contains only data user X has uploaded,
+since data of Arcsecond.io itself is not stored in the same bucket.
+
+Likewise, for observatory portals.
 
 ## How data download cost is computed?
 
