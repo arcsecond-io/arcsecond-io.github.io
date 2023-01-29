@@ -52,7 +52,7 @@ export default {
         {
           text: 'Introduction',
           items: [
-            { text: 'Introduction', link: '/observations/index.md' }
+            { text: 'Data & Observations Overview', link: '/observations/index.md' }
           ]
         },
         {
