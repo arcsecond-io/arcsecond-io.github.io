@@ -1,5 +1,9 @@
 # Paying Account
 
+:::warning
+Documentation for the coming Arcsecond V4
+:::
+
 In order to active Portal Modules, a paying account must be chosen. If the creator of the portal is not the paying
 account, it must invite the person in charge to open a free Arcsecond account.
 

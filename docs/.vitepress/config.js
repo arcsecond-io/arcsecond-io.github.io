@@ -59,17 +59,19 @@ export default {
           text: 'Data',
           collapsible: true,
           items: [
-            { text: 'Storage Credentials Security', link: '/observations/credentials-security.md' },
             { text: 'Arcsecond Cloud Storage', link: '/observations/cloud-storage.md' },
+            { text: 'External Storage Credentials', link: '/observations/credentials-security.md' },
             { text: 'External Storage AWS', link: '/observations/external-storage-aws.md' },
             { text: 'External Storage Dropbox', link: '/observations/external-storage-dropbox.md' },
+            { text: 'External Storage FTP', link: '/observations/external-storage-ftp.md' },
             { text: 'External Storage Local Disk', link: '/observations/external-storage-localdisk.md' }
           ]
         },
         {
           text: 'Observations',
           items: [
-            { text: 'Night Reconstruction', link: '/observations/night-reconstruction.md' }
+            { text: 'Night Reconstruction', link: '/observations/night-reconstruction.md' },
+            { text: 'Observing Runs', link: '/observations/observing-runs.md' }
           ]
         }
       ],
