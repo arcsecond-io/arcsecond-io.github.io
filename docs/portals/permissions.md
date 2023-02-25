@@ -16,7 +16,7 @@ Below is a table listing the various permissions associated with each of theses 
 
 There are 5 levels, and their capabilities are listed below:
 
-| -                                                          | Anonymous          | Observer           | Member             | Admin              | Superadmin         |
+| -                                                          | Anonymous          | Visitor            | Member             | Admin              | Superadmin         |
 |------------------------------------------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
 | Download public data packages and datasets                 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Login into organisation portal                             |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
