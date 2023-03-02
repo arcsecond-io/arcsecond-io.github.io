@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Discover Portals for Observatories
-      link: /portals/introduction
+      link: /portals/
     - theme: brand
       text: Explore iObserve
       link: /tools/iobserve.md
