@@ -1,6 +1,15 @@
 :root {
   --vp-c-brand: #2398c8;
   --vp-c-brand-light: #7cd3f6;
+
+  --vp-c-green: #2398c8;
+  --vp-c-green-light: #46bfef;
+  --vp-c-green-lighter: #7cd3f6;
+  --vp-c-green-dark: #168dbe;
+  --vp-c-green-darker: #096c94;
+  --vp-c-green-dimm-1: rgba(16, 134, 185, 0.05);
+  --vp-c-green-dimm-2: rgba(16, 134, 185, 0.2);
+  --vp-c-green-dimm-3: rgba(16, 134, 185, 0.5);
 }
 
 .medium-zoom-overlay {
