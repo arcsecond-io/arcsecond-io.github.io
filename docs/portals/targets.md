@@ -1,3 +1,0 @@
-# Observed Targets
-
-Coming soon.

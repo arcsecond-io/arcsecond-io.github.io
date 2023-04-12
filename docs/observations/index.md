@@ -1,10 +1,6 @@
 Data & Observations Overview
 ===
 
-:::warning
-Documentation for the coming Arcsecond V4
-:::
-
 Arcsecond aims at providing a consistent platform for astronomical observers, being single or grouped into an
 organisation (such as an astronomy club, or an observatory - see [Observatory Portals](/portals/) made for that).
 

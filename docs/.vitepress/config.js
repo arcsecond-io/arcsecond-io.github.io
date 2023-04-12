@@ -5,6 +5,7 @@ export default {
   cleanUrls: 'with-subfolders',
   themeConfig: {
     logo: '/logo-circle-sm.png',
+    localSearch: true,
     nav: [
       { text: 'iObserve & Pro Tools', link: '/tools/iobserve.md' },
       { text: 'Data & Observations', link: '/observations/' },
@@ -56,9 +57,10 @@ export default {
           ]
         },
         {
-          text: 'Data',
+          text: 'Data & Observations',
           collapsible: true,
           items: [
+            { text: 'Overview', link: '/observations/index.md' },
             { text: 'Arcsecond Cloud Storage', link: '/observations/cloud-storage.md' },
             { text: 'External Storage Credentials', link: '/observations/credentials-security.md' },
             { text: 'External Storage AWS', link: '/observations/external-storage-aws.md' },
@@ -70,7 +72,7 @@ export default {
         {
           text: 'Observations',
           items: [
-            { text: 'Night Reconstruction', link: '/observations/night-reconstruction.md' },
+            { text: 'Observing Nights', link: '/observations/observing-nights.md' },
             { text: 'Observing Runs', link: '/observations/observing-runs.md' }
           ]
         }
@@ -95,8 +97,8 @@ export default {
             { text: 'Data files', link: '/portals/coming-soon.md' },
             { text: 'Datasets', link: '/portals/coming-soon.md' },
             { text: 'Packages', link: '/portals/coming-soon.md' },
-            { text: 'Observed Targets', link: '/portals/coming-soon.md' },
-            { text: 'Night Observations', link: '/portals/coming-soon.md' }
+            { text: 'Observed Targets', link: '/portals/observed-targets.md' },
+            { text: 'Night Observations', link: '/portals/observations.md' }
           ]
         },
         {
@@ -122,7 +124,7 @@ export default {
           collapsible: true,
           items: [
             { text: 'REST Endpoints', link: '/portals/endpoints.md' },
-            { text: 'Oort Cloud Uploader', link: '/portals/oort-uploader.md' }
+            { text: 'Oort Cloud Uploader', link: '/ecosystem/oort.md' }
           ]
         }
       ],
@@ -145,8 +147,7 @@ export default {
           items: [
             { text: 'APIs', link: '/ecosystem/apis.md' },
             { text: 'aa-js', link: '/ecosystem/aa-js.md' },
-            { text: 'CLI', link: '/ecosystem/coming-soon.md' },
-            { text: 'Oort', link: '/ecosystem/coming-soon.md' }
+            { text: 'CLI & Oort', link: '/ecosystem/cli-oort.md' }
           ]
         }
       ]

@@ -142,10 +142,6 @@ space). See below for a simulation.
 
 ## Dropbox vs Arcsecond prices comparison
 
-:::warning
-Prices are for the coming Arcsecond V4 (unreleased yet).
-:::
-
 For instance: take a group of
 <input type="number" :min="1" :max="1000" :step="1" v-model="collabMembers"
 style="font-size: large; border: 1px solid lightgray; padding: 2px; border-radius: 5px;"

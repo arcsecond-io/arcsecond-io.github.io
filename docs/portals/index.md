@@ -10,8 +10,8 @@ Arcsecond was initiated to bring to the web a well-known macOS app, called iObse
 powerful portals to small and medium-size observatories. Moreover, Arcsecond is being transformed to work not only 
 in the cloud, but also in self-hosted environments.
 
-As of today (September 2022), Arcsecond is only available in the cloud, but you can register for the beta in
-[https://www.arcsecond.io/self-hosting](https://www.arcsecond.io/self-hosting).
+As of today (April 2023), Arcsecond is only available in the cloud, but you can register for the beta in
+[https://www.arcsecond.io/self-hosting](https://www.arcsecond.io/self-hosting) (expected around end 2023).
 
 # OMA
 

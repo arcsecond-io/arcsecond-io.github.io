@@ -1,12 +1,12 @@
 # APIs & Ecosystem
 
-Arcsecond.io is a small software *system*. Behind the webapp available on any navigator, there are various other
+Arcsecond.io is a software *system*. Behind the webapp available on any navigator, there are various other
 associated services and projects.
 
 * [APIs](./apis.md) - our backend RESTful APIs.
 * [aa-js](./aa-js.md) - our open-source library of astronomical algorithms in Typescript.
 * [CLI](./coming-soon.md) - our open-source Command-Line Interface (a.k.a. the `arcsecond` terminal command).
-* [Oort](./coming-soon.md) - our open-source data uploader.
+* [Oort](./oort.md) - our open-source data uploader.
 
 ## Support services & repositories
 
@@ -46,5 +46,5 @@ For the tech-savvy users, here is the main elements of ou technology stack:
 * Our servers (web server, background workers, static frontend etc) are deployed with Render.com
 * The documentation pages are hosted by the "Pages" services of GitHub.
 * We heavily use the professional edition of PyCharm on macOS and test our interface using Safari, Firefox and the Brave
-  browser. 
+  browser.
 * The desktop app is built with Electron.js.
