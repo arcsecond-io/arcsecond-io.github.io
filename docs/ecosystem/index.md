@@ -5,8 +5,8 @@ associated services and projects.
 
 * [APIs](./apis.md) - our backend RESTful APIs.
 * [aa-js](./aa-js.md) - our open-source library of astronomical algorithms in Typescript.
-* [CLI](./coming-soon.md) - our open-source Command-Line Interface (a.k.a. the `arcsecond` terminal command).
-* [Oort](./oort.md) - our open-source data uploader.
+* [CLI](./cli-oort.md) - our open-source Command-Line Interface (a.k.a. the `arcsecond` terminal command).
+* [Oort](./cli-oort.md) - our open-source data uploader.
 
 ## Support services & repositories
 
