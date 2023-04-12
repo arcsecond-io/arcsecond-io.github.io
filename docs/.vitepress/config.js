@@ -51,16 +51,13 @@ export default {
       ],
       '/observations/': [
         {
-          text: 'Introduction',
-          items: [
-            { text: 'Data & Observations Overview', link: '/observations/index.md' }
-          ]
+          text: 'Overview',
+          link: '/observations/index.md'
         },
         {
-          text: 'Data & Observations',
+          text: 'Data',
           collapsible: true,
           items: [
-            { text: 'Overview', link: '/observations/index.md' },
             { text: 'Arcsecond Cloud Storage', link: '/observations/cloud-storage.md' },
             { text: 'External Storage Credentials', link: '/observations/credentials-security.md' },
             { text: 'External Storage AWS', link: '/observations/external-storage-aws.md' },
