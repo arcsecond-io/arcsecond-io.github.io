@@ -24,6 +24,7 @@ There are 5 levels, and their capabilities are listed below:
 | Download organisation's private data packages and datasets |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Create datasets and upload data files                      |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Create and delete data packages                            |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Share data packages with visitors                          |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Read organisation's information                            |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Delete datasets or data files                              |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
 | Invite new organisation members & visitors                 |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
