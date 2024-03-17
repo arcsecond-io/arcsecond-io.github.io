@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/arcsecond-io/arcsecond-io.github.io#readme",
   "devDependencies": {
-    "vitepress": "^1.0.0-alpha.65"
+    "vitepress": "^1.0.0-rc.45"
   },
   "dependencies": {
-    "medium-zoom": "^1.0.8"
+    "medium-zoom": "^1.1.0"
   }
 }
