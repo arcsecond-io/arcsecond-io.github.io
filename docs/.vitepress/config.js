@@ -1,14 +1,14 @@
 export default {
   title: 'Arcsecond Docs',
-  description: 'A Platform for Astronomers and Observatories',
+  description: 'The Astronomical Observations Platform',
   siteTitle: false,
   cleanUrls: 'with-subfolders',
   themeConfig: {
     logo: '/logo-circle-sm.png',
     localSearch: true,
     nav: [
-      { text: 'iObserve & Pro Tools', link: '/tools/iobserve.md' },
-      { text: 'Data & Observations', link: '/observations/' },
+      { text: 'Night Explorer, Plans & Logs', link: '/nights/' },
+      { text: 'Targets & Data', link: '/observations/' },
       { text: 'Observatory Portals', link: '/portals/' },
       { text: 'Resources', link: '/resources/' },
       { text: 'APIs & Ecosystem', link: '/ecosystem/' }
@@ -22,34 +22,31 @@ export default {
       { icon: 'twitter', link: 'https://twitter.com/arcsecond_io' }
     ],
     sidebar: {
-      '/tools/': [
+      '/nights/': [
         {
-          text: 'iObserve',
+          text: 'Night Explorer (fka iObserve)',
           collapsible: true,
           items: [
-            { text: 'Introduction', link: '/tools/iobserve.md' },
-            { text: 'Times Bar & Location Selector', link: '/tools/iobserve/timesbar.md' },
-            { text: 'Nodes Tree & Object Imports', link: '/tools/iobserve/nodestree.md' },
-            { text: 'Global Layout & Options', link: '/tools/iobserve/layoutoptions.md' }
+            { text: 'Introduction', link: '/nights/explorer/' },
+            { text: 'Times Bar & Location Selector', link: '/nights/explorer/timesbar.md' },
+            { text: 'Nodes Tree & Object Imports', link: '/nights/explorer/nodestree.md' },
+            { text: 'Global Layout & Options', link: '/nights/explorer/layoutoptions.md' }
           ]
         },
         {
-          text: 'Pro Tools',
+          text: 'Night Plans',
           collapsible: true,
           items: [
-            { text: 'Starlinks Tracks', link: '/tools/starlinks.md' },
-            { text: 'Exoplanet Transits', link: '/tools/coming-soon.md' },
-            { text: 'Night Duration', link: '/tools/coming-soon.md' },
-            { text: 'Yearly Visibility', link: '/tools/coming-soon.md' },
-            { text: 'Standard Stars', link: '/tools/coming-soon.md' },
-            { text: 'Almanac', link: '/tools/coming-soon.md' },
-            { text: 'Coordinates Converter', link: '/tools/coming-soon.md' },
-            { text: 'Times Converter', link: '/tools/coming-soon.md' },
-            { text: 'Distances Converter', link: '/tools/coming-soon.md' }
+          ]
+        },
+        {
+          text: 'Night Logs',
+          collapsible: true,
+          items: [
           ]
         }
       ],
-      '/observations/': [
+      '/targets/': [
         {
           text: 'Overview',
           link: '/observations/index.md'

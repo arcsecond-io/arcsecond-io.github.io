@@ -1,6 +1,6 @@
-# iObserve
+# Night Explorer (f.k.a. iObserve)
 
-iObserve is our Master Pro Tool. Its purpose is to provide a consistent application for preparing astronomical
+Night Explorer (known before as iObserve) is the best tool for exploring nights.
 observations. 
 
 <ThemedImage prefix="iobserve-4k" alt="iObserve V3 in 4k - V4 screenshot is coming soon"/>
