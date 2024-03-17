@@ -24,7 +24,7 @@ hero:
 
 features:
 - icon: 🔭
-  title: iObserve, the best pro tool for preparing observations.
+  title: iObserve, now called Night Explorer, the best pro tool for preparing observations.
   details: Draw multiple trackable airmass curves and star tracks for any celestial object, exoplanet, solar system planet, or asteroids & comets, plus a ton of other features.
 - icon: 🌌
   title: Run an entire observatory with Arcsecond.
