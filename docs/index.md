@@ -6,8 +6,8 @@ hero:
   image:
     src: /images/welcome-image.png
     alt: Arcsecond Welcome Image 
-  text: A Platform for Astronomers and Observatories
-  tagline: A complete professional software suite to prepare observations, manage data and execute night operations.
+  text: The Astronomical Observations Platform 
+  tagline: For Astronomers and Observatories, a complete professional software suite to prepare observations, manage data and execute night operations.
   actions:
     - theme: brand
       text: Discover Portals for Observatories
