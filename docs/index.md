@@ -10,22 +10,25 @@ hero:
   tagline: For Astronomers and Observatories, a complete professional software suite to prepare observations, manage data and execute night operations.
   actions:
     - theme: brand
-      text: Discover Portals for Observatories
-      link: /portals/
-    - theme: brand
-      text: Explore iObserve
+      text: I am an Astronomer
       link: /tools/iobserve.md
+    - theme: brand
+      text: I want an Observatory Portal
+      link: /portals/
     - theme: alt
       text: Visit Arcsecond.io
       link: https://www.arcsecond.io
     - theme: alt
       text: Visit our GitHub page
-      link: https://github.com/arcsecond-io/portals
+      link: https://github.com/arcsecond-io
 
 features:
 - icon: 🔭
-  title: iObserve, now called Night Explorer, the best pro tool for preparing observations.
-  details: Draw multiple trackable airmass curves and star tracks for any celestial object, exoplanet, solar system planet, or asteroids & comets, plus a ton of other features.
+  title: Night Explorer (formerly known as iObserve)
+  details: The best pro tool for preparing observations.
+- icon: 🪐
+  title: Night Plans & Logs
+  details: A whole new observations planner 
 - icon: 🌌
   title: Run an entire observatory with Arcsecond.
   details: Manage data storage, easily distribute packages to observers, and soon, have your own customizable telescope schedule, time proposals, observers management etc.
@@ -38,8 +41,5 @@ features:
 - icon: 🌃
   title: Unlimited secured cloud storage
   details: Our Amazon S3 buckets are safe and reliable to store an unlimited amount of scientific data with a purely linear pricing. 
-- icon: 🪐
-  title: Pro tools and sources
-  details: Open-source scientific algorithms covered with tests fed with official sources (Simbad/CDS, JPL, IRPAC, NED etc) allowing to build converters, calculators, transit browsers etc.
 ---
 
