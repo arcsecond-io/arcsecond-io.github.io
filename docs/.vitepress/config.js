@@ -4,14 +4,13 @@ export default {
   siteTitle: false,
   cleanUrls: 'with-subfolders',
   themeConfig: {
-    logo: '/logo-circle-sm.png',
+    logo: '/logo.svg',
     localSearch: true,
     nav: [
-      { text: 'Night Explorer, Plans & Logs', link: '/nights/' },
-      { text: 'Targets & Data', link: '/observations/' },
-      { text: 'Observatory Portals', link: '/portals/' },
-      { text: 'Resources', link: '/resources/' },
-      { text: 'APIs & Ecosystem', link: '/ecosystem/' }
+      { text: 'Nights', link: '/nights/' },
+      { text: 'Targets', link: '/targets/' },
+      { text: 'Data', link: '/data/' },
+      { text: 'Observatory Portals', link: '/portals/' }
     ],
     footer: {
       message: 'MIT Licensed',
@@ -22,31 +21,24 @@ export default {
       { icon: 'twitter', link: 'https://twitter.com/arcsecond_io' }
     ],
     sidebar: {
-      '/nights/': [
+      '/explorer/': [
         {
           text: 'Night Explorer (fka iObserve)',
           collapsible: true,
           items: [
-            { text: 'Introduction', link: '/nights/explorer/' },
-            { text: 'Times Bar & Location Selector', link: '/nights/explorer/timesbar.md' },
-            { text: 'Nodes Tree & Object Imports', link: '/nights/explorer/nodestree.md' },
-            { text: 'Global Layout & Options', link: '/nights/explorer/layoutoptions.md' }
+            { text: 'Introduction', link: '/explorer/' },
+            { text: 'Times Bar & Location Selector', link: '/explorer/timesbar.md' },
+            { text: 'Nodes Tree & Object Imports', link: '/explorer/nodestree.md' },
+            { text: 'Global Layout & Options', link: '/explorer/layoutoptions.md' }
           ]
         },
         {
-          text: 'Night Plans',
+          text: 'Observations',
           collapsible: true,
-          items: [
-          ]
-        },
-        {
-          text: 'Night Logs',
-          collapsible: true,
-          items: [
-          ]
+          items: []
         }
       ],
-      '/targets/': [
+      '/observations/': [
         {
           text: 'Overview',
           link: '/observations/index.md'
@@ -55,7 +47,7 @@ export default {
           text: 'Data',
           collapsible: true,
           items: [
-            { text: 'Arcsecond Cloud Storage', link: '/observations/cloud-storage.md' },
+            { text: 'Arcsecond Cloud Storage', link: '/cloud-storage.md' },
             { text: 'External Storage Credentials', link: '/observations/credentials-security.md' },
             { text: 'External Storage AWS', link: '/observations/external-storage-aws.md' },
             { text: 'External Storage Dropbox', link: '/observations/external-storage-dropbox.md' },
