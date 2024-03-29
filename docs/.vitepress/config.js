@@ -17,8 +17,9 @@ export default {
       copyright: 'Copyright © 2018-present Arcsecond.io (F52 Tech).'
     },
     socialLinks: [
+      // { icon: 'facebook', link: 'https://www.facebook.com/arcsecond.io' },
       { icon: 'github', link: 'https://github.com/arcsecond-io' },
-      { icon: 'twitter', link: 'https://twitter.com/arcsecond_io' }
+      { icon: 'x', link: 'https://x.com/arcsecond_io' }
     ],
     sidebar: {
       '/explorer/': [
