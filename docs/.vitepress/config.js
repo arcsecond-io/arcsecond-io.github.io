@@ -144,7 +144,7 @@ export default {
           items: [
             { text: 'APIs', link: '/ecosystem/apis.md' },
             { text: 'aa-js', link: '/ecosystem/aa-js.md' },
-            { text: 'CLI & Oort', link: '/ecosystem/cli-oort.md' }
+            { text: 'CLI', link: '/ecosystem/cli.md' }
           ]
         }
       ]
