@@ -7,10 +7,12 @@ export default {
     logo: '/logo.svg',
     localSearch: true,
     nav: [
-      { text: 'Nights', link: '/nights/' },
-      { text: 'Targets', link: '/targets/' },
-      { text: 'Data', link: '/data/' },
-      { text: 'Observatory Portals', link: '/portals/' }
+      { text: 'Explore', link: '/tools/iobserve.md' },
+      { text: 'Plan', link: '/observations/' },
+      { text: 'Observe', link: '/portals/' },
+      { text: 'Store', link: '/resources/' },
+      { text: 'Distribute', link: '/ecosystem/' },
+      { text: '(Globals)', link: '/ecosystem/' }
     ],
     footer: {
       message: 'MIT Licensed',
