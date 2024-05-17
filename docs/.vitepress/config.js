@@ -7,11 +7,8 @@ export default {
     logo: '/logo.svg',
     localSearch: true,
     nav: [
-      { text: 'Explore', link: '/tools/iobserve.md' },
-      { text: 'Plan', link: '/observations/' },
-      { text: 'Observe', link: '/portals/' },
-      { text: 'Store', link: '/resources/' },
-      { text: 'Distribute', link: '/ecosystem/' },
+      { text: 'Observatory Portals', link: '/portals/' },
+      { text: 'Astronomers', link: '/astronomers/' },
       { text: '(Globals)', link: '/ecosystem/' }
     ],
     footer: {

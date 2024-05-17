@@ -7,15 +7,14 @@ hero:
     src: /images/welcome-image.png
     alt: Arcsecond Welcome Image
   text: The Astronomical Observations Platform
-  tagline: For astronomers and observatories, a complete and modular professional platform to prepare observations, manage data and execute night operations.
+  tagline: For astronomers and observatories. Arcsecond is a complete and modular professional platform to prepare observations, manage data and execute night operations.
   actions:
     - theme: brand
-      text: Explore Astronomer Domain
+      text: Explore Astronomers Domain
+      link: /portals/
     - theme: brand
       text: Discover Observatory Portals
       link: /portals/
-    - theme: brand
-      text: Explore Astronomers Domain
     - theme: alt
       text: Visit www.arcsecond.io
       link: https://www.arcsecond.io
