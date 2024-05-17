@@ -18,7 +18,10 @@ export default {
     socialLinks: [
       // { icon: 'facebook', link: 'https://www.facebook.com/arcsecond.io' },
       { icon: 'github', link: 'https://github.com/arcsecond-io' },
-      { icon: 'x', link: 'https://x.com/arcsecond_io' }
+      { icon: 'x', link: 'https://x.com/arcsecond_io' },
+      { icon: 'instagram', link: 'https://instagram.com/arcsecond_io' },
+      { icon: 'youtube', link: 'https://www.youtube.com/@arcsecond_io' },
+      { icon: 'slack', link: 'https://join.slack.com/t/arcsecond-io/shared_invite/zt-yvsehzjl-jExYLVWzwuslMJum7r2GiA' }
     ],
     sidebar: {
       '/explorer/': [
