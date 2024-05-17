@@ -1,26 +1,46 @@
 # Introduction
 
-The ambition of Arcsecond is to offer professional-quality software for astronomers and observatories to manage data,
-execute night operations and perform the best astronomical observations possible. It is built on top of years of
-experience of professional software development following a 10-years period of astronomical research, and especially 4
-years spent in Chile, working for the European Southern Observatory ([ESO](https://eso.org)) at the 
-[La Silla Observatory](https://www.arcsecond.io/observingsites/2ac73126-e183-4e56-b04a-03e4f20dced4).
+> "All astronomical observatories in the world have in common the needs to prepare and plan
+> observations, organise and execute night operations, then store, package and distribute data."
 
-Arcsecond was initiated to bring to the web a well-known macOS app, called iObserve. It is now expanding to offer
-powerful portals to small and medium-size observatories. Moreover, Arcsecond is being transformed to work not only 
-in the cloud, but also in self-hosted environments.
+Cédric Foellmi, Ph.D.<br/>
+<span style="font-size: small;">
+(former
+<a href="https://www.eso.org/sci/publications/messenger/archive/no.121-sep05/messenger-no121-69-69.pdf" target="_blank">
+ESO Fellow in La Silla
+</a>, and Arcsecond Founder)
+</span>
 
-As of today (April 2023), Arcsecond is only available in the cloud, but you can register for the beta in
-[https://www.arcsecond.io/self-hosting](https://www.arcsecond.io/self-hosting) (expected around end 2023).
+Arcsecond's **Observatory Portals** allow every observatory, science
+group, university, planetarium, astro club or any organisation, to store and build the history of their
+Observatory. It is a dedicated space with an unlimited number of members, easy membership permissions and
+capabilities, where one can handle all the activities associated with astronomical observations, in a modular
+way.
 
-# OMA
+ICONS
 
-OMA stands for "[Observatorio Mancomunado de Astrofísica](https://oma.astrofisicamas.cl)". It is a consortium
-of Chilean Universities, coordinated by the Millennium Institute of Astrophysics (MAS) that operates a telescope located
-in [El Sauce Observatory](https://www.arcsecond.io/observingsites/1003d9eb-5f4b-4b16-81f4-1529e52e0959),
-in the Atacama desert.
+We are very proud to have been already entrusted by 3 organisations on multiple continents: OMA in Chile, ARIEL-Survey
+(between France and Tasmania) and the Montréal Planétarium (Espace pour la Vie, Canada).
 
-OMA is the first Observatory Portal of Arcsecond, and is used throughout this documentation to illustrate it with
-images taken in real conditions.
+## Portals specific features
 
-<ThemedImage prefix="introduction-oma-public-welcome" alt="OMA Public Homepage"/>
+In addition to the Astronomer's Domain (Night Explorer with Night Plans and Night Logs, Datasets and Data Storage, as
+well as Data Packages), Observatory Portals offer the following:
+
+- **An unlimited number of members, at no additional charge**, with an easy-to-manage 5-levels permission scheme to
+  easily control who is doing what, and has access to what.
+- An Observatory Schedule, to manage what is happening in your Observatory over time. The schedule can be customized
+  between a standard calendar mode, a telescopes timeline or an observers timeline. It includes sophisticated recurring
+  events.
+- 100GB of free Data Storage to start with Finding Charts & Data Previews (instead of 50GB for astronomers).
+- A customizable public page.
+- A dedicated subdomain, under the Arcsecond umbrella.
+
+## Important notes
+
+If you need a dedicated cloud infrastructure for your portal, <a href="mailto:team@arcsecond.io" target="_blank">contact
+us</a>.
+
+Likewise, data are stored in the U.S. by default. But if you need or prefer a default storage in another region, we will
+be happy to set it up for you.
+

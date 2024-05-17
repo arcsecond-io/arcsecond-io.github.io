@@ -10,5 +10,5 @@ Here is the procedure to create a portal:
 Your portal will be automatically created, along with your `superadmin` membership. You will be redirected
 immediately to it. From your portal, you will be able to invite other colleagues, entirely for free.
 
-The creation of portals is entirely free, and can be tested around (with a limit of 50GB of data). Feel
+The creation of portals is entirely free, and can be tested (no credit card needed). Feel
 free to [contact us](mailto:team@arcsecond.io) for more details or a demo
