@@ -10,8 +10,8 @@ hero:
   tagline: For astronomers and observatories. Arcsecond is a complete and modular professional platform to prepare observations, manage data and execute night operations.
   actions:
     - theme: brand
-      text: Explore Astronomers Domain
-      link: /portals/
+      text: Explore Astronomers Workspace
+      link: /astronomers/
     - theme: brand
       text: Discover Observatory Portals
       link: /portals/
