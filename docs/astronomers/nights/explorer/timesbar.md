@@ -1,5 +1,9 @@
 # Times Bar & Location Selector
 
+:::warning
+Many screenshots are still those of V4, until we take new ones from production site.
+:::
+
 The Times Bar display the current time in various units, as well as a location selector. Time and location are the
 essential ingredients for iObserve curves to be computed.
 

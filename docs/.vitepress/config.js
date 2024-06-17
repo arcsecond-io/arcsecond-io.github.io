@@ -24,15 +24,16 @@ export default {
       { icon: 'slack', link: 'https://join.slack.com/t/arcsecond-io/shared_invite/zt-yvsehzjl-jExYLVWzwuslMJum7r2GiA' }
     ],
     sidebar: {
-      '/explorer/': [
+      '/astronomers/nights/explorer/': [
         {
-          text: 'Night Explorer (fka iObserve)',
+          text: 'Night Explorer',
           collapsible: true,
           items: [
-            { text: 'Introduction', link: '/explorer/' },
-            { text: 'Times Bar & Location Selector', link: '/explorer/timesbar.md' },
-            { text: 'Nodes Tree & Object Imports', link: '/explorer/nodestree.md' },
-            { text: 'Global Layout & Options', link: '/explorer/layoutoptions.md' }
+            { text: 'Intro', link: '/astronomers/nights/explorer/' },
+            { text: 'Times Bar & Location Selector', link: '/astronomers/nights/explorer/timesbar.md' },
+            { text: 'Nodes Tree & Object Imports', link: '/astronomers/nights/explorer/nodestree.md' },
+            { text: 'Global Layout & Options', link: '/astronomers/nights/explorer/layoutoptions.md' },
+            { text: 'App Mode', link: '/astronomers/nights/explorer/appmode.md' }
           ]
         },
         {

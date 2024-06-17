@@ -1,5 +1,9 @@
 # Nodes Tree & Object Imports
 
+:::warning
+Many screenshots are still those of V4, until we take new ones from production site.
+:::
+
 <ThemedImage prefix="iobserve-nodes-tree" alt="The tree of nodes of iObserve" maxWidth="15rem" float="right"/>
 
 The Nodes Tree is a key component of iObserve, as it holds the organisation of targets into folders.
@@ -17,8 +21,8 @@ Each non-folder node has a target associated to it. It can be of type:
 Apart from the planets of our Solar System (whose properties are directly computed by the web app), all other types of
 objects are imported by requesting https://api.arcsecond.io which in turn request professional
 sources: [SIMBAD](http://simbad.cds.unistra.fr/simbad/) of the [CDS](https://cds.u-strasbg.fr) (Strasbourg, France),
-[Exoplanet.eu](http://exoplanet.eu) (Observatoire de Paris, France) and [SSD/CNEOS](https://ssd-api.jpl.nasa.gov) from
-the [JPL](https://www.jpl.nasa.gov) (USA).
+[NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/index.html) (IPAC, Caltech, USA)
+and [SSD](https://ssd-api.jpl.nasa.gov) from the [JPL](https://www.jpl.nasa.gov) (USA).
 
 <div style="clear: right;"></div>
 

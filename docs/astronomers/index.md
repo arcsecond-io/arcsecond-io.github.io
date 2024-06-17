@@ -7,7 +7,7 @@ planning, and observing:
 
 <img style="float: left; align: top; margin-right: 1rem;" width="60" src="/icons/icon-telescope.svg"/> 
 
-[Night Explorer](nights/explorer), formerly known as **iObserve**, the best pro tools to explore observing nights. Already
+[Night Explorer](nights/explorer/), formerly known as **iObserve**, the best pro tools to explore observing nights. Already
 used by thousands of astronomers worldwide (and even some classrooms!)
 
 ## Night Plans & Rule Sets
