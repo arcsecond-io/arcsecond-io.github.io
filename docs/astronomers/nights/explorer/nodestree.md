@@ -22,7 +22,7 @@ Apart from the planets of our Solar System (whose properties are directly comput
 objects are imported by requesting https://api.arcsecond.io which in turn request professional
 sources: [SIMBAD](http://simbad.cds.unistra.fr/simbad/) of the [CDS](https://cds.u-strasbg.fr) (Strasbourg, France),
 [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/index.html) (IPAC, Caltech, USA)
-and [SSD](https://ssd-api.jpl.nasa.gov) from the [JPL](https://www.jpl.nasa.gov) (USA).
+and the [SSD/CNEOS service](https://ssd-api.jpl.nasa.gov) from the [JPL](https://www.jpl.nasa.gov) (USA).
 
 <div style="clear: right;"></div>
 
