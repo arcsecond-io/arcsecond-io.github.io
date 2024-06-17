@@ -51,21 +51,19 @@ export default {
           ]
         }
       ],
-      '/observations/': [
-        {
-          text: 'Overview',
-          link: '/observations/index.md'
-        },
+      '/astronomers/data/': [
         {
           text: 'Data',
           collapsible: true,
           items: [
-            { text: 'Arcsecond Cloud Storage', link: '/cloud-storage.md' },
-            { text: 'External Storage Credentials', link: '/observations/credentials-security.md' },
-            { text: 'External Storage AWS', link: '/observations/external-storage-aws.md' },
-            { text: 'External Storage Dropbox', link: '/observations/external-storage-dropbox.md' },
-            { text: 'External Storage FTP', link: '/observations/external-storage-ftp.md' },
-            { text: 'External Storage Local Disk', link: '/observations/external-storage-localdisk.md' }
+            { text: 'Arcsecond Cloud Storage', link: '/astronomers/data/cloud-storage.md' },
+            { text: 'External Storage AWS', link: '/astronomers/data/external-storage-aws.md' },
+            { text: 'External Storage Azure', link: '/astronomers/data/external-storage-aws.md' },
+            { text: 'External Storage Dropbox', link: '/astronomers/data/external-storage-dropbox.md' },
+            { text: 'External Storage FTP', link: '/astronomers/data/external-storage-ftp.md' },
+            { text: 'External Storage SFTP', link: '/astronomers/data/external-storage-aws.md' },
+            { text: 'External Storage Local Disk', link: '/astronomers/data/external-storage-localdisk.md' },
+            { text: 'External Storage Archives', link: '/astronomers/data/external-storage-aws.md' },
           ]
         },
         {
@@ -86,18 +84,6 @@ export default {
             { text: 'Paying Account', link: '/portals/paying-account.md' },
             { text: 'Permissions & Roles', link: '/portals/permissions.md' },
             { text: 'Cloud vs Self-Hosting', link: '/portals/self-hosting.md' }
-          ]
-        },
-        {
-          text: 'Data',
-          collapsible: true,
-          items: [
-            { text: 'Cloud Storage', link: '/portals/storage-cloud.md' },
-            { text: 'Data files', link: '/portals/coming-soon.md' },
-            { text: 'Datasets', link: '/portals/coming-soon.md' },
-            { text: 'Packages', link: '/portals/coming-soon.md' },
-            { text: 'Observed Targets', link: '/portals/observed-targets.md' },
-            { text: 'Night Observations', link: '/portals/observations.md' }
           ]
         },
         {
