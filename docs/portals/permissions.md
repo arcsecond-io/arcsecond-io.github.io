@@ -10,11 +10,7 @@ into, we keep a list of only 5 purely-hierarchical roles:
 * `Observer` (Visitor)
 * `Anonymous`
 
-Below is a table listing the various permissions associated with each of theses roles.
-
-## What are the access levels used in Arcsecond.io?
-
-There are 5 levels, and their capabilities are listed below:
+Below is a table listing the various permissions associated with each of these roles.
 
 | -                                                          | Anonymous          | Visitor            | Member             | Admin              | Superadmin         |
 |------------------------------------------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
@@ -29,6 +25,8 @@ There are 5 levels, and their capabilities are listed below:
 | Delete datasets or data files                              |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
 | Invite new organisation members & visitors                 |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
 | Change members access levels                               |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
-| Update organisation's information                          |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
+| Create/associate Observing Sites                           |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
+| Create/associate Telescopes                                |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: || Update organisation's information                          |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
+| Activate/deactivate Telescopes in the subscription modules |                    |                    |                    |                    | :heavy_check_mark: || Update organisation's information                          |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
 | Access and handle billing information                      |                    |                    |                    |                    | :heavy_check_mark: |
 | Close organisation                                         |                    |                    |                    |                    | :heavy_check_mark: |

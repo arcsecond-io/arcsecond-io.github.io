@@ -14,8 +14,8 @@ ESO Fellow in La Silla
 Arcsecond's **Observatory Portals** allow every observatory, science
 group, university, planetarium, astro club to handle all the activities associated with astronomical
 observations, in a modular way. It is a dedicated space with an unlimited number of members, easy membership
-permissions and capabilities, where one can store and build a modern data archive based on APIs, and further
-more the whole life and history of an Observatory
+permissions and capabilities, where one can store and build a modern data archive based on APIs, and furthermore the
+whole life and history of an Observatory.
 
 [ICONS]
 
