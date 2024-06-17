@@ -12,10 +12,10 @@ ESO Fellow in La Silla
 </span>
 
 Arcsecond's **Observatory Portals** allow every observatory, science
-group, university, planetarium, astro club or any organisation, to store and build the history of their
-Observatory. It is a dedicated space with an unlimited number of members, easy membership permissions and
-capabilities, where one can handle all the activities associated with astronomical observations, in a modular
-way.
+group, university, planetarium, astro club to handle all the activities associated with astronomical
+observations, in a modular way. It is a dedicated space with an unlimited number of members, easy membership
+permissions and capabilities, where one can store and build a modern data archive based on APIs, and further
+more the whole life and history of an Observatory
 
 ICONS
 
@@ -24,22 +24,24 @@ We are very proud to have been already entrusted by 3 organisations on multiple 
 
 ## Portals specific features
 
-In addition to the Astronomer's Domain (Night Explorer with Night Plans and Night Logs, Datasets and Data Storage, as
-well as Data Packages), Observatory Portals offer the following:
+First, **Arcsecond's Observatory Portals offer to all its members the same coverage of the astronomical observations'
+lifecycle: Explore, Plan, Observe, Store, Distribute**.
+
+In addition, Arcsecond's Observatory Portals offer the following:
 
 - **An unlimited number of members, at no additional charge**, with an easy-to-manage 5-levels permission scheme to
   easily control who is doing what, and has access to what.
+- The possibility to easily share data with the public, with a customizable public page,
 - An Observatory Schedule, to manage what is happening in your Observatory over time. The schedule can be customized
-  between a standard calendar mode, a telescopes timeline or an observers timeline. It includes sophisticated recurring
+  between a standard calendar mode, a telescopes timeline or an observers timeline, including recurring
   events.
 - 100GB of free Data Storage to start with Finding Charts & Data Previews (instead of 50GB for astronomers).
-- A customizable public page.
 - A dedicated subdomain, under the Arcsecond umbrella.
 
 ## Important notes
 
-If you need a dedicated cloud infrastructure for your portal, <a href="mailto:team@arcsecond.io" target="_blank">contact
-us</a>.
+If you want Arcsecond to setup a dedicated cloud infrastructure specifically for your
+portal, <a href="mailto:team@arcsecond.io" target="_blank">contact us</a>.
 
 Likewise, data are stored in the U.S. by default. But if you need or prefer a default storage in another region, we will
 be happy to set it up for you.

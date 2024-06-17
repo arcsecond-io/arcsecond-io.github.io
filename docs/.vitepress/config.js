@@ -24,7 +24,7 @@ export default {
       { icon: 'slack', link: 'https://join.slack.com/t/arcsecond-io/shared_invite/zt-yvsehzjl-jExYLVWzwuslMJum7r2GiA' }
     ],
     sidebar: {
-      '/astronomers/nights/explorer/': [
+      '/astronomers/nights/': [
         {
           text: 'Night Explorer',
           collapsible: true,
@@ -37,9 +37,18 @@ export default {
           ]
         },
         {
-          text: 'Observations',
+          text: 'Night Plans & Rule Sets',
           collapsible: true,
-          items: []
+          items: [
+            { text: 'Intro', link: '/astronomers/nights/plans/' },
+          ]
+        },
+        {
+          text: 'Night Logs',
+          collapsible: true,
+          items: [
+            { text: 'Intro', link: '/astronomers/nights/logs/' },
+          ]
         }
       ],
       '/observations/': [
