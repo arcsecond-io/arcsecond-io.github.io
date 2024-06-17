@@ -17,18 +17,20 @@ observations, in a modular way. It is a dedicated space with an unlimited number
 permissions and capabilities, where one can store and build a modern data archive based on APIs, and further
 more the whole life and history of an Observatory
 
-ICONS
+[ICONS]
 
 We are very proud to have been already entrusted by 3 organisations on multiple continents: OMA in Chile, ARIEL-Survey
 (between France and Tasmania) and the Montréal Planétarium (Espace pour la Vie, Canada).
 
 ## Portals specific features
 
-First, **Arcsecond's Observatory Portals offer to all its members the same coverage of the astronomical observations'
-lifecycle: Explore, Plan, Observe, Store, Distribute**.
+First, Arcsecond's Observatory Portals offer **to all its members** the same coverage of the astronomical observations'
+lifecycle: *Explore, Plan, Observe, Store, Distribute*.
 
 In addition, Arcsecond's Observatory Portals offer the following:
 
+- A unique place to record the history of all observations, observers, targets and observing nights, and build the data
+  archive of your Observatory, even if you have existing data located elsewhere.
 - **An unlimited number of members, at no additional charge**, with an easy-to-manage 5-levels permission scheme to
   easily control who is doing what, and has access to what.
 - The possibility to easily share data with the public, with a customizable public page,
@@ -40,7 +42,7 @@ In addition, Arcsecond's Observatory Portals offer the following:
 
 ## Important notes
 
-If you want Arcsecond to setup a dedicated cloud infrastructure specifically for your
+If you want Arcsecond to set up a dedicated cloud infrastructure specifically for your
 portal, <a href="mailto:team@arcsecond.io" target="_blank">contact us</a>.
 
 Likewise, data are stored in the U.S. by default. But if you need or prefer a default storage in another region, we will
