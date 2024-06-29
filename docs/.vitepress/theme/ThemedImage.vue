@@ -44,10 +44,10 @@
   }
 
   .medium-zoom-overlay {
-    z-index: 20;
+    z-index: 30;
   }
 
   .medium-zoom-image {
-    z-index: 21;
+    z-index: 31;
   }
 </style>

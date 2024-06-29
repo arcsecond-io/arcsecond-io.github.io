@@ -1,8 +1,8 @@
 :root {
-  --vp-c-brand-1: #3fb2e0;
-  --vp-c-brand-2: #178ebe;
-  --vp-c-brand-3: #086185;
-  --vp-c-brand-soft: #7cd3f6;
+  --vp-c-brand-1: #609af8;
+  --vp-c-brand-2: #326fd1;
+  --vp-c-brand-3: #204887;
+  --vp-c-brand-soft: rgba(96, 154, 248, 0.62);
 }
 
 .medium-zoom-overlay {

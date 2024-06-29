@@ -1,6 +1,7 @@
 {
   "name": "arcsecond-io.github.io",
   "version": "1.0.0",
+  "type": "module",
   "description": "The root docs repository",
   "main": "index.js",
   "scripts": {
@@ -20,12 +21,12 @@
   },
   "homepage": "https://github.com/arcsecond-io/arcsecond-io.github.io#readme",
   "devDependencies": {
-    "vitepress": "^1.0.0-rc.45"
+    "vitepress": "^1.1.4"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.21"
   },
   "dependencies": {
     "medium-zoom": "^1.1.0"
-  },
-  "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.9.5"
   }
 }

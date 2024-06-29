@@ -1,4 +1,0 @@
-Observing Nights
-==
-
-Coming soon
