@@ -1,7 +1,7 @@
 # Nights Domain
 
 The Nights Domain comprises all the features Arcsecond offers for exploring
-planning, and observing:
+planning, and observing.
 
 ## Night Explorer
 
@@ -21,6 +21,7 @@ record linear sequences of targets, with their expected explosure time, in a giv
 
 [Rule Sets](/astronomers/nights/plans/rulesets.md) are custom rules to be attached to Observing Sites, Telescopes,
 regular Targets or Transiting Exoplanets. Then can be used then to automatically sequence your Night Plans.
+`in preparation!`
 
 ## Night Logs
 
@@ -33,33 +34,37 @@ performed. Data Files can be easily associated with every observation.
 
 # Targets Domain
 
-## Follow Up Targets
+## Follow-Up Targets
 
 <img style="float: left; align: top; margin-right: 1rem;" width="60" src="/icons/icon-star.svg"/> 
 
-[Night Logs](logs) are the executed plans! They record the actual sequence of observations performed. Data Files
-can be easily associated with every observation.
+[Follow-Up Targets](/astronomers/targets/followup/) are the targets that have been observed. Arcsecond maintains the
+list from the created
+Night Logs and those reconstructed from uploaded data.
 
 ## Target Lists
 
 <img style="float: left; align: top; margin-right: 1rem;" width="60" src="/icons/icon-targetlist.svg"/> 
 
-[Night Logs](logs) are the executed plans! They record the actual sequence of observations performed. Data Files
-can be easily associated with every observation.
+[Target Lists](/astronomers/targets/targetlists/) are lists of targets grouped by common interest. They can be directly
+created from /
+imported to the Night Explorer, and used to create Night Plans, Night Logs etc.
 
 ## Exoplanet Transits
 
 <img style="float: left; align: top; margin-right: 1rem;" width="60" src="/icons/icon-exoplanet.svg"/> 
 
-[Night Logs](logs) are the executed plans! They record the actual sequence of observations performed. Data Files
-can be easily associated with every observation.
+[Exoplanet Transits](/astronomers/targets/exoplanet-transits/) are the subset of exoplanets known for transiting in
+front of their host star.
+Arcsecond builds a powerful table and visualisation of transits for any date, and observing site of your choice.
 
 ## Known Bright Objects
 
 <img style="float: left; align: top; margin-right: 1rem;" width="60" src="/icons/icon-galaxy.png"/> 
 
-[Night Logs](logs) are the executed plans! They record the actual sequence of observations performed. Data Files
-can be easily associated with every observation.
+[Known Bright Objects](/astronomers/targets/tonight/) are the objects you can easily observe **tonight**. This feature
+is
+still `in preparation`.
 
 <br/><br/><br/>
 
@@ -69,27 +74,27 @@ can be easily associated with every observation.
 
 <img style="float: left; align: top; margin-right: 1rem;" width="60" src="/icons/icon-dataset.svg"/> 
 
-[Datasets](data/datasets) are the executed plans! They record the actual sequence of observations performed. Data Files
-can be easily associated with every observation.
+[Datasets](/astronomers/data/datasets) are the virtual folders containing data. They allow to group (and easily
+download) data files
+which have a common source or interest.
 
-[Cloud Storage](data/cloud-storage) are the executed plans! They record the actual sequence of observations performed.
-Data Files
-can be easily associated with every observation.
+[Cloud Storage](/astronomers/data/cloud-storage) is the unlimited, secured-by-default, deletion-protected,
+industry-grade storage Arcsecond offers, based on Amazon's AWS S3.
 
-[External Storages](data/external-storages.md) are the executed plans! They record the actual sequence of observations
-performed. Data Files
-can be easily associated with every observation.
+[External Storages](/astronomers/data/external-storages) are storages that an astronomer, or an Observatory Portal
+owns, or has access to. By providing secured read-only credentials, Arcsecond will use it to consolidate the Follow-Up
+Targets list (and past Night Logs too).
 
 ## Data Packages
 
 <img style="float: left; align: top; margin-right: 1rem;" width="60" src="/icons/icon-datapackage.svg"/> 
 
-[Night Logs](logs) are the executed plans! They record the actual sequence of observations performed. Data Files
-can be easily associated with every observation.
+[Data Packages](/astronomers/data/datapackages/) are custom packages of Datasets to be shared, either within an
+Observatory Portal (e.g. for visiting observers), or with other astronomers, or to the public.
 
-## File Browser
+## Data & File Browser
 
 <img style="float: left; align: top; margin-right: 1rem;" width="60" src="/icons/icon-datafile.svg"/> 
 
-[Night Logs](logs) are the executed plans! They record the actual sequence of observations performed. Data Files
-can be easily associated with every observation.
+[File Browser](/astronomers/data/filebrowser/) is a browser of all Data files associated with an account or an
+Observatory Portal (being Arcsecond's Cloud storage or External Storages).
