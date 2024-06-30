@@ -10,9 +10,9 @@ Many screenshots are still those of V4, until we take new ones from production s
 
 It can be decomposed into 8 parts:
 
-* [Times Bar & Location Selector](./iobserve/timesbar)
-* [Nodes Tree & Objects Imports](./iobserve/nodestree)
-* [Global Layout & Options](./iobserve/layoutoptions)
+* [Times Bar & Location Selector](./timesbar)
+* [Nodes Tree & Objects Imports](./nodestree)
+* [Global Layout & Options](./layoutoptions)
 * Airmass / Altitude Curves (with Tracking)
 * Star Tracks Curves (with Tracking)
 * Sky Maps! 

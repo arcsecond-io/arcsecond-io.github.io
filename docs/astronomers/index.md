@@ -54,7 +54,7 @@ imported to the Night Explorer, and used to create Night Plans, Night Logs etc.
 
 <img style="float: left; align: top; margin-right: 1rem;" width="60" src="/icons/icon-exoplanet.svg"/> 
 
-[Exoplanet Transits](/astronomers/targets/exoplanet-transits/) are the subset of exoplanets known for transiting in
+[Exoplanet Transits](/astronomers/targets/transits/) are the subset of exoplanets known for transiting in
 front of their host star.
 Arcsecond builds a powerful table and visualisation of transits for any date, and observing site of your choice.
 

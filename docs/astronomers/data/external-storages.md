@@ -9,7 +9,7 @@ Find tutorials on how to provide credentials for your external storages in:
 
 * [Amazon AWS S3 buckets](./external-storage-aws.md)
 * [Dropbox](./external-storage-dropbox.md)
-* [Azure](./external-storage-dropbox.md) (`in preparation`)
+* [Azure](./external-storage-azure.md) (`in preparation`)
 * FTP
 * SFTP
 * Local disk (coming with self-hosted Arcsecond, `in preparation`)
@@ -21,7 +21,7 @@ about your nights and observed targets.
 ![Overview of Observations & Data](/images/observations-data-overview.png){data-zoomable}
 
 Arcsecond will scan and parse content of external storages, identically to what it does on its
-own [Cloud Storage](/observations/cloud-storage) when data is uploaded to it. This parsing allows to:
+own [Cloud Storage](./cloud-storage.md) when data is uploaded to it. This parsing allows to:
 
 * Extract FITS- and XISF-files headers, for easy searching in a web interface,
 * Create 2D-image and 1D-spectrum previews (stored in Arcsecond Cloud storage, within the 10GB limit, unless you unlock
