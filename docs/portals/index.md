@@ -37,7 +37,7 @@ In addition, Arcsecond's Observatory Portals offer the following:
 - An Observatory Schedule, to manage what is happening in your Observatory over time. The schedule can be customized
   between a standard calendar mode, a telescopes timeline or an observers timeline, including recurring
   events.
-- 100GB of free Data Storage to start with Finding Charts & Data Previews (instead of 50GB for astronomers).
+- 100GB of free Data Storage to start with Finding Charts & Data Previews (instead of 10GB for astronomers).
 - A dedicated subdomain, under the Arcsecond umbrella.
 
 ## Important notes

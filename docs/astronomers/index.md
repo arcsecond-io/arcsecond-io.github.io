@@ -89,12 +89,12 @@ Targets list (and past Night Logs too).
 
 <img style="float: left; align: top; margin-right: 1rem;" width="60" src="/icons/icon-datapackage.svg"/> 
 
-[Data Packages](/astronomers/data/datapackages/) are custom packages of Datasets to be shared, either within an
+[Data Packages](/astronomers/data/datapackages) are custom packages of Datasets to be shared, either within an
 Observatory Portal (e.g. for visiting observers), or with other astronomers, or to the public.
 
 ## Data & File Browser
 
 <img style="float: left; align: top; margin-right: 1rem;" width="60" src="/icons/icon-datafile.svg"/> 
 
-[File Browser](/astronomers/data/filebrowser/) is a browser of all Data files associated with an account or an
+[File Browser](/astronomers/data/filebrowser) is a browser of all Data files associated with an account or an
 Observatory Portal (being Arcsecond's Cloud storage or External Storages).

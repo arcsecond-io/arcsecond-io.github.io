@@ -24,7 +24,7 @@ Arcsecond will scan and parse content of external storages, identically to what 
 own [Cloud Storage](/observations/cloud-storage) when data is uploaded to it. This parsing allows to:
 
 * Extract FITS- and XISF-files headers, for easy searching in a web interface,
-* Create 2D-image and 1D-spectrum previews (stored in Arcsecond Cloud storage, within the 50GB limit, unless you unlock
+* Create 2D-image and 1D-spectrum previews (stored in Arcsecond Cloud storage, within the 10GB limit, unless you unlock
   more),
 * **Create your personal list of all your follow-up targets, associated with its data** (this will combine all cloud and
   external storages you have attached),

@@ -53,24 +53,26 @@ export default {
       ],
       '/astronomers/data/': [
         {
-          text: 'Data',
+          text: 'Storages',
           collapsible: true,
           items: [
             { text: 'Arcsecond Cloud Storage', link: '/astronomers/data/cloud-storage.md' },
+            { text: 'External Storages', link: '/astronomers/data/external-storages.md' },
             { text: 'External Storage AWS', link: '/astronomers/data/external-storage-aws.md' },
-            { text: 'External Storage Azure', link: '/astronomers/data/external-storage-aws.md' },
+            { text: 'External Storage Azure', link: '/astronomers/data/external-storage-azure.md' },
             { text: 'External Storage Dropbox', link: '/astronomers/data/external-storage-dropbox.md' },
             { text: 'External Storage FTP', link: '/astronomers/data/external-storage-ftp.md' },
-            { text: 'External Storage SFTP', link: '/astronomers/data/external-storage-aws.md' },
+            { text: 'External Storage SFTP', link: '/astronomers/data/external-storage-sftp.md' },
             { text: 'External Storage Local Disk', link: '/astronomers/data/external-storage-localdisk.md' },
-            { text: 'External Storage Archives', link: '/astronomers/data/external-storage-aws.md' },
+            { text: 'External Storage Archives', link: '/astronomers/data/external-storage-archives.md' },
           ]
         },
         {
-          text: 'Observations',
+          text: 'Datasets, Files & Packages',
           items: [
-            { text: 'Observing Nights', link: '/observations/observing-nights.md' },
-            { text: 'Observing Runs', link: '/observations/observing-runs.md' }
+            { text: 'Datasets', link: '/astronomers/data/datasets.md' },
+            { text: 'Data Packages', link: '/astronomers/data/datapackages.md' },
+            { text: 'File Browser', link: '/astronomers/data/filebrowser.md' }
           ]
         }
       ],

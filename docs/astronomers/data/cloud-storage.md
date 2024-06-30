@@ -31,7 +31,7 @@ We multiply that number of Gibibytes-month by the price per GB per month.
 **Yes.**
 
 But once you reach that point, you pay the full volume. We think this give you enough time and room to validate the
-service. Note that 50GB in AWS costs about 1 (one) $US per month.
+service. Note that 10GB in AWS costs about 1 (one) $US per month.
 
 ## Where is the data stored?
 
