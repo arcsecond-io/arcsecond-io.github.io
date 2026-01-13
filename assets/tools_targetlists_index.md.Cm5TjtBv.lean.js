@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as s}from"./chunks/framework.E0AgsPhI.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"tools/targetlists/index.md","filePath":"tools/targetlists/index.md"}'),a={name:"tools/targetlists/index.md"};function o(r,n,i,c,d,l){return s(),e("div")}const m=t(a,[["render",o]]);export{_ as __pageData,m as default};
