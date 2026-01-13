@@ -7,9 +7,10 @@ export default {
     logo: '/logo.svg',
     localSearch: true,
     nav: [
-      { text: 'Astronomers', link: '/astronomers/' },
+      { text: 'Arcsecond.local', link: '/local/' },
+      { text: 'Overview of Our Tools', link: '/tools/' },
       { text: 'Observatory Portals', link: '/portals/' },
-      { text: '(Globals)', link: '/globals/' }
+      { text: 'API & Libraries', link: '/ecosystem/' },
     ],
     footer: {
       message: 'MIT Licensed',
@@ -24,55 +25,44 @@ export default {
       { icon: 'slack', link: 'https://join.slack.com/t/arcsecond-io/shared_invite/zt-yvsehzjl-jExYLVWzwuslMJum7r2GiA' }
     ],
     sidebar: {
-      '/astronomers/nights/': [
+      '/local/': [
         {
-          text: 'Night Explorer',
+          text: 'Arcsecond.local',
           collapsible: true,
           items: [
-            { text: 'Intro', link: '/astronomers/nights/explorer/' },
-            { text: 'Times Bar & Location Selector', link: '/astronomers/nights/explorer/timesbar.md' },
-            { text: 'Nodes Tree & Object Imports', link: '/astronomers/nights/explorer/nodestree.md' },
-            { text: 'Global Layout & Options', link: '/astronomers/nights/explorer/layoutoptions.md' },
-            { text: 'App Mode', link: '/astronomers/nights/explorer/appmode.md' }
+            { text: 'Introduction', link: '/local/index.md' },
+            { text: 'Installation', link: '/local/installation.md' },
           ]
         },
-        {
-          text: 'Night Plans & Rule Sets',
-          collapsible: true,
-          items: [
-            { text: 'Intro', link: '/astronomers/nights/plans/' },
-          ]
-        },
-        {
-          text: 'Night Logs',
-          collapsible: true,
-          items: [
-            { text: 'Intro', link: '/astronomers/nights/logs/' },
-          ]
-        }
       ],
-      '/astronomers/data/': [
+      '/tools/': [
         {
-          text: 'Storages',
+          text: 'Night Studio',
           collapsible: true,
           items: [
-            { text: 'Arcsecond Cloud Storage', link: '/astronomers/data/cloud-storage.md' },
-            { text: 'External Storages', link: '/astronomers/data/external-storages.md' },
-            { text: 'External Storage AWS', link: '/astronomers/data/external-storage-aws.md' },
-            { text: 'External Storage Azure', link: '/astronomers/data/external-storage-azure.md' },
-            { text: 'External Storage Dropbox', link: '/astronomers/data/external-storage-dropbox.md' },
-            { text: 'External Storage FTP', link: '/astronomers/data/external-storage-ftp.md' },
-            { text: 'External Storage SFTP', link: '/astronomers/data/external-storage-sftp.md' },
-            { text: 'External Storage Local Disk', link: '/astronomers/data/external-storage-localdisk.md' },
-            { text: 'External Storage Archives', link: '/astronomers/data/external-storage-archives.md' },
+            { text: 'Introduction', link: '/tools/index.md' },
+            { text: 'Night Explorer', link: '/tools/night-explorer.md' },
           ]
         },
         {
-          text: 'Datasets, Files & Packages',
+          text: 'Control Room',
+          items: []
+        },
+        {
+          text: 'Data Grand Central',
           items: [
-            { text: 'Datasets', link: '/astronomers/data/datasets.md' },
-            { text: 'Data Packages', link: '/astronomers/data/datapackages.md' },
-            { text: 'File Browser', link: '/astronomers/data/filebrowser.md' }
+            { text: 'Cloud Storage', link: '/tools/data/cloud-storage.md' },
+            { text: 'External Storages', link: '/tools/data/external-storages.md' },
+            { text: 'External Storage AWS', link: '/tools/data/external-storage-aws.md' },
+            { text: 'External Storage Azure', link: '/tools/data/external-storage-azure.md' },
+            { text: 'External Storage Dropbox', link: '/tools/data/external-storage-dropbox.md' },
+            { text: 'External Storage FTP', link: '/tools/data/external-storage-ftp.md' },
+            { text: 'External Storage SFTP', link: '/tools/data/external-storage-sftp.md' },
+            { text: 'External Storage Local Disk', link: '/tools/data/external-storage-localdisk.md' },
+            { text: 'External Storage Archives', link: '/tools/data/external-storage-archives.md' },
+            { text: 'Datasets', link: '/tools/data/datasets.md' },
+            { text: 'Data Packages', link: '/tools/data/datapackages.md' },
+            { text: 'File Browser', link: '/tools/data/filebrowser.md' }
           ]
         }
       ],
@@ -115,21 +105,9 @@ export default {
           ]
         }
       ],
-      '/resources/': [
-        {
-          text: 'Resources',
-          collapsible: true,
-          items: [
-            { text: 'Observing Sites', link: '/resources/starlinks.md' },
-            { text: 'Satellites', link: '/resources/coming-soon.md' },
-            { text: 'Standard Stars Catalogues', link: '/resources/coming-soon.md' },
-            { text: 'Public Target Lists', link: '/resources/coming-soon.md' }
-          ]
-        }
-      ],
       '/ecosystem/': [
         {
-          text: 'Ecosystem',
+          text: 'APIs & Libraries',
           collapsible: true,
           items: [
             { text: 'APIs', link: '/ecosystem/apis.md' },

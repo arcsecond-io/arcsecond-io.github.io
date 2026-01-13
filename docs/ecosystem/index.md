@@ -1,4 +1,4 @@
-# APIs & Ecosystem
+# APIs & Libraries
 
 Arcsecond.io is a software *system*. Behind the webapp available on any navigator, there are various other
 associated services and projects.
@@ -24,26 +24,11 @@ catalogues found in the various pages of the websites of
 
 There's also a public issues repository (but it isn't much used, people prefer to reach us directly).
 
-## Reachability
+## Contact
 
 And finally, we are reachable for any question, suggestions or bug reports in multiple ways:
 
 * Our email is [team@arcsecond.io](mailto:team@arcsecond.io)
-* We have a [Slack](https://join.slack.com/t/arcsecond-io/shared_invite/zt-yvsehzjl-jExYLVWzwuslMJum7r2GiA) (open and
-  free)
-* And a Twitter account [@arcsecond_io](https://twitter.com/arcsecond_io)
+* We have a [Slack](https://join.slack.com/t/arcsecond-io/shared_invite/zt-yvsehzjl-jExYLVWzwuslMJum7r2GiA) (open and free)
 
-## Technology Stack
-
-For the tech-savvy users, here is the main elements of ou technology stack:
-
-* The backend is written with Django 4 and the Django Rest Framework, with pytest as a test library.
-* The frontend webapp is developed with Vue.js 3, and written in typescript, with vitest as a test library, and vite.js
-  for the bundler.
-* The data is stored on Amazon Web Service (AWS) S3, using secured buckets. We have two AWS Lambda functions for zipping
-  datasets before downloads.
-* Our servers (web server, background workers, static frontend etc) are deployed with Render.com
-* The documentation pages are hosted by the "Pages" services of GitHub.
-* We heavily use the professional edition of PyCharm on macOS and test our interface using Safari, Firefox and the Brave
-  browser.
-* The desktop app is built with Electron.js.
+Sorry, we don't use our Twitter/X account anymore, considering the awful state of this platform.

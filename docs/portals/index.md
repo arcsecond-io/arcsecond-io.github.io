@@ -1,3 +1,7 @@
+:::warning
+This documentation is not up-to-date. We are working on it. [Contact us](mailto:team@arcsecond.io) to know more.
+:::
+
 # Introduction
 
 > "All astronomical observatories in the world have in common the needs to prepare and plan
