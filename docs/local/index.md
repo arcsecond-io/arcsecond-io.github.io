@@ -10,6 +10,7 @@ Contact us [team@arcsecond.io](mailto:team@arcsecond.io) to learn more about Arc
 Here is a quick guide to get you started with Arcsecond.local:
 
 1. [Installation](installation.md): Simple steps to install and run Arcsecond locally.
+2. [Updates](updates.md): Learn how to update your Arcsecond.local installation to the latest version.
 2. **Configuration**: Configure Arcsecond.local according to your observatory's needs, including setting up user
    accounts, defining observing sites, and configuring data storage.
 3. **First Observations**: Execute your observations using Arcsecond.local's automated control room, ensuring smooth and
