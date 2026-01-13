@@ -3,6 +3,9 @@ export default {
   description: 'The Astronomical Observations Platform',
   siteTitle: false,
   cleanUrls: 'with-subfolders',
+  ignoreDeadLinks: [
+    /^https?:\/\/localhost/,
+  ],
   themeConfig: {
     logo: '/logo.svg',
     localSearch: true,

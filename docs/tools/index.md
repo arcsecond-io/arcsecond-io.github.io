@@ -64,28 +64,28 @@ Calibration Manager...
 
 ### <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><img src="/icons/icon-dataset.svg" width="40"/> Data Management</span>
 
-[Datasets](/astronomers/data/datasets) are the virtual folders containing data. They allow to group (and easily
+[Datasets](/tools/data/datasets) are the virtual folders containing data. They allow to group (and easily
 download) data files
 which have a common source or interest.
 
-[Cloud Storage](/astronomers/data/cloud-storage) is the unlimited, secured-by-default, deletion-protected,
+[Cloud Storage](/tools/data/cloud-storage) is the unlimited, secured-by-default, deletion-protected,
 industry-grade storage Arcsecond offers, based on Amazon's AWS S3.
 
-[External Storages](/astronomers/data/external-storages) are storages that an astronomer, or an Observatory Portal
+[External Storages](/tools/data/external-storages) are storages that an astronomer, or an Observatory Portal
 owns, or has access to. By providing secured read-only credentials, Arcsecond will use it to consolidate the Follow-Up
 Targets list (and past Night Logs too).
 
 ### <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><img src="/icons/icon-datapackage.svg" width="40"/> Data Packages</span>
 
-[Data Packages](/astronomers/data/datapackages) are custom packages of Datasets to be shared, either within an
+[Data Packages](/tools/data/datapackages) are custom packages of Datasets to be shared, either within an
 Observatory Portal (e.g. for visiting observers), or with other astronomers, or to the public.
 
 ### <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><img src="/icons/icon-datafile.svg" width="40"/> Data & File Browser</span>
 
-[File Browser](/astronomers/data/filebrowser) is a browser of all Data files associated with an account or an
+[File Browser](/tools/data/filebrowser) is a browser of all Data files associated with an account or an
 Observatory Portal (being Arcsecond's Cloud storage or External Storages).
 
 ### <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><img src="/icons/icon-star.svg" width="40"/> Follow-Up Targets</span>
 
-[Targets Follow-Up](/astronomers/targets/followup/) is the tool to automatically follow all the targets that have been
+[Targets Follow-Up](/tools/followup/) is the tool to automatically follow all the targets that have been
 observed. Arcsecond maintains the list from the created Night Logs and those reconstructed from uploaded data.

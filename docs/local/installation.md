@@ -39,7 +39,7 @@ the [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 ## First steps
 
-- Arcsecond.local is now accessible at the following address: http://localhost:5555
+- Arcsecond.local is now accessible at the following address: [http://localhost:5555](http://localhost:5555)
 - You can login as `admin` / `admin`. We recommend that you change this password as soon as possible, by opening your
   "Account" panel, from the bottom-left menu.
 - Before exploring the Arcsecond interface, you may want to create your first observing site, by clicking on the
