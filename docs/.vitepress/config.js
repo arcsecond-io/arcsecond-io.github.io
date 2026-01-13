@@ -35,6 +35,7 @@ export default {
           items: [
             { text: 'Introduction', link: '/local/index.md' },
             { text: 'Installation', link: '/local/installation.md' },
+            { text: 'Updates', link: '/local/updates.md' },
           ]
         },
       ],
