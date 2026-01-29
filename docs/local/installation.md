@@ -13,7 +13,9 @@ Before proceeding with the installation, ensure that you have the following prer
   CPU, 2GB+ of RAM (depending on number of potential users). Moreover, for normal operations, outside any
   consideration of long-term data storage, Arcsecond requires at least 50GB of disk storage to operate. It is used for
   database backups, astrometry cache, temporary images data etc.
-- [Docker](https://docker.io) and [Docker Compose](https://docs.docker.com/compose/) installed on your PC.
+- [Docker](https://docker.io) is installed on your PC.
+- [pip](https://pip.pypa.io/en/stable/installation/) is installed on your PC (you can open a Terminal and type `pip3` to
+  check first).
 - Access to the Arcsecond Docker private registry, via the personal authentication
   token (PAT). [Contact us](mailto:team@arcsecond.io) to obtain yours.
 
@@ -25,13 +27,13 @@ any shell. On Windows, you should use the bash terminal coming with the installa
 the [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 :::
 
-- Create a directory where everything related to Arcsecond will be stored, and go inside it.
-- Install the Arcsecond CLI: `pip3 install arcsecond`. You can verify that the installation was successful by running
-  `arcsecond --version`.
-- Decide in which folder the data that Arcsecond is generating will be stored.
-- Run the basic setup: `arcsecond setup` and provide the above folder path.
-- You can check that you have a `.env` file containing some secret keys, and a file `docker-compose.yml` with the
-  Arcsecond system configuration.
+- Open the Terminal.
+- Install the Arcsecond CLI: `pip3 install arcsecond`.
+- Verify the installation was successful by running `arcsecond --version`.
+- Create a directory where everything related to Arcsecond will be stored, and go inside it, with the terminal.
+- Run the basic setup: `arcsecond setup`.
+- You can check that you have a new `.env` file in the current directory, containing some secret keys.
+- You should also have a file named `docker-compose.yml` with the Arcsecond system configuration.
 - Have your PAT with you, and login once in the Arcsecond Docker registry (replace `<PAT>` with your PAT):
   `echo <PAT> | docker login ghcr.io -u arcsecond-io --password-stdin`
 - You can now start Arcsecond.local with the command: `docker compose up -d`. **The first time, Docker will download all
