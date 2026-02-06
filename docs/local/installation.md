@@ -23,8 +23,11 @@ Before proceeding with the installation, ensure that you have the following prer
 
 :::info
 The installation of Arcsecond requires you to write some simple commands in the Terminal. On *nix machines, you can use
-any shell. On Windows, you should use the bash terminal coming with the installation of
-the [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+any shell. On Windows, with the installation of the [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) you
+have the possibility to install a small Linux distribution ("Distro"). Typically, with the Ubuntu Distro, you will have
+a bash shell. You may also stay with PowerShell if you wish of course.
+:::
+
 :::
 
 - Open the Terminal.
@@ -38,6 +41,11 @@ the [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
   `echo <PAT> | docker login ghcr.io -u arcsecond-io --password-stdin`
 - You can now start Arcsecond.local with the command: `docker compose up -d`. **The first time, Docker will download all
   the required images. It may take some time.**
+
+::: warn
+By convention, the chevrons indicate placeholders in the documentation. Hence, you must also remove them when inserting
+your PAT. For instance: `echo ghp_XXX... | docker login...` and not `echo <ghp_XXX...> | docker login...`
+:::
 
 ## First steps
 
