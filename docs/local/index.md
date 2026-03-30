@@ -18,3 +18,4 @@ Here is a quick guide to get you started with Arcsecond.local:
 4. **Data Management**: Learn how to store and manage your observational data using Arcsecond.local's robust data
    management capabilities. [IN PREP]
 
+[Troubleshooting](troubleshooting.md).
