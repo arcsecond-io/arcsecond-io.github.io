@@ -1,0 +1,1 @@
+import{_ as t,c as e,o}from"./chunks/framework.E0AgsPhI.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"tools/tonight/index.md","filePath":"tools/tonight/index.md"}'),n={name:"tools/tonight/index.md"};function a(s,r,i,c,d,p){return o(),e("div")}const m=t(n,[["render",a]]);export{l as __pageData,m as default};
