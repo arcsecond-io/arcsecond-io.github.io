@@ -1,3 +1,0 @@
-# Night Observations
-
-Coming soon.

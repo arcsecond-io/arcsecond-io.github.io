@@ -1,10 +1,164 @@
 :root {
-  --vp-c-brand-1: #609af8;
-  --vp-c-brand-2: #326fd1;
-  --vp-c-brand-3: #204887;
-  --vp-c-brand-soft: rgba(96, 154, 248, 0.62);
+  /* Arcsecond pink accent — mirrors www.arcsecond.io */
+  --as-pink: #ec4899;         /* pink-500 */
+  --as-pink-light: #f472b6;   /* pink-400 */
+  --as-pink-lighter: #f9a8d4; /* pink-300 */
+  --as-pink-dark: #db2777;    /* pink-600 */
+  --as-pink-darker: #be185d;  /* pink-700 */
+  --as-pink-vivid: #ff2e9f;   /* hero ".local" accent */
+  --as-sky: #7dd3fc;          /* sky-300 */
+  --as-night: #030712;        /* gray-950 */
+
+  /* Primary brand = pink (buttons, nav/sidebar active states) */
+  --vp-c-brand-1: var(--as-pink-dark);
+  --vp-c-brand-2: var(--as-pink);
+  --vp-c-brand-3: var(--as-pink-darker);
+  --vp-c-brand-soft: rgba(236, 72, 153, 0.14);
+
+  /* Secondary = sky blue (in-page content links) */
+  --as-doc-link: #0284c7;       /* sky-600, readable on white */
+  --as-doc-link-hover: #0369a1; /* sky-700 */
 }
 
+.dark {
+  --vp-c-brand-1: var(--as-pink-light);
+  --vp-c-brand-2: var(--as-pink);
+  --vp-c-brand-3: var(--as-pink-lighter);
+  --vp-c-brand-soft: rgba(244, 114, 182, 0.16);
+
+  --as-doc-link: #7dd3fc;       /* sky-300 */
+  --as-doc-link-hover: #38bdf8; /* sky-400 */
+}
+
+/* In-page links use the secondary (sky) colour, not pink */
+.vp-doc a {
+  color: var(--as-doc-link);
+}
+
+.vp-doc a:hover {
+  color: var(--as-doc-link-hover);
+}
+
+/* ---- Home hero: dark starfield background, like www.arcsecond.io ---- */
+.VPHome .VPHero {
+  position: relative;
+  background-color: var(--as-night);
+  overflow: hidden;
+}
+
+.VPHome .VPHero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/images/welcome-banner-background.jpeg') center / cover no-repeat;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.VPHome .VPHero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero text reads on the dark background in both light & dark themes */
+.VPHome .VPHero .name.clip {
+  background: none;
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+}
+
+.VPHome .VPHero .hero-dot-local {
+  -webkit-text-fill-color: var(--as-pink-vivid);
+  color: var(--as-pink-vivid);
+  text-shadow: 0 0 22px rgba(255, 46, 159, 0.45);
+}
+
+.VPHome .VPHero .text {
+  color: #fff;
+  font-size: clamp(26px, 4vw, 44px);
+  line-height: 1.2;
+}
+
+.VPHome .VPHero .tagline {
+  color: rgba(255, 255, 255, 0.80);
+}
+
+/* Secondary (alt) hero button: ghost style readable on the dark hero */
+.VPHome .VPHero .actions .VPButton.alt {
+  background: rgba(255, 255, 255, 0.10);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.VPHome .VPHero .actions .VPButton.alt:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: var(--as-sky);
+  color: #fff;
+}
+
+/* External-link icon on the "Describe your Observatory" button */
+.VPHome .VPHero .actions a[href*="arcsecond-observatory-contact"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.VPHome .VPHero .actions a[href*="arcsecond-observatory-contact"]::after {
+  content: '';
+  width: 0.95em;
+  height: 0.95em;
+  flex: none;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* Nav links read as true white while the bar is transparent over the dark hero */
+.VPNavBar.home.top .VPNavBarMenuLink {
+  color: #fff;
+}
+
+.VPNavBar.home.top .VPNavBarMenuLink:hover {
+  color: var(--as-sky);
+}
+
+.VPNavBar.home.top .VPSocialLink {
+  color: #fff;
+}
+
+/* ---- CTA buttons (e.g. pricing page) ---- */
+.as-cta {
+  display: inline-block;
+  margin: 0.4rem 0.6rem 0.4rem 0;
+  padding: 0.65rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.as-cta.primary {
+  background: var(--as-pink-dark);
+  color: #fff !important;
+  border: 1px solid var(--as-pink);
+}
+
+.as-cta.primary:hover {
+  background: var(--as-pink);
+  border-color: var(--as-pink-light);
+}
+
+.as-cta.secondary {
+  background: transparent;
+  color: var(--as-doc-link) !important;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.as-cta.secondary:hover {
+  border-color: var(--as-sky);
+}
+
+/* ---- medium-zoom ---- */
 .medium-zoom-overlay {
   z-index: 20;
 }

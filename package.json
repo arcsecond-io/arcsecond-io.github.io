@@ -21,10 +21,12 @@
   },
   "homepage": "https://github.com/arcsecond-io/arcsecond-io.github.io#readme",
   "devDependencies": {
-    "vitepress": "^1.6.4"
+    "@vitejs/plugin-vue": "^6.0.7",
+    "vite": "^7.3.1",
+    "vitepress": "^2.0.0-alpha.17"
   },
   "peerDependencies": {
-    "vue": "^3.5.26"
+    "vue": "^3.5.38"
   },
   "dependencies": {
     "medium-zoom": "^1.1.0"

@@ -2,47 +2,36 @@
 layout: home
 
 hero:
-  name: Arcsecond
-  image:
-    src: /images/welcome-image.png
-    alt: Arcsecond Welcome Image
-  text: Automating Astronomical Observatories
-  tagline: The first off-the-shelf, multi-user & multi-telescope, industry-grade platform dedicated to astronomical observatories. In the cloud & self-hosted.
+  name: 'Arcsecond<span class="hero-dot-local">.local</span>'
+  text: Documentation
+  tagline: The off-the-shelf, multi-user & multi-telescope, industry-grade platform dedicated to astronomical observatories — running entirely on your own infrastructure.
   actions:
     - theme: brand
-      text: Install Arcsecond.local
+      text: Discover Arcsecond.local
       link: /local/
-    - theme: brand
-      text: Overview of Our Tools
-      link: /tools/
-    - theme: brand
-      text: Discover Observatory Portals
-      link: /portals/
     - theme: alt
-      text: Visit Arcsecond.io
-      link: https://www.arcsecond.io
-    - theme: alt
-      text: Visit our blog!
-      link: https://blog.arcsecond.io
-    - theme: alt
-      text: Visit our GitHub page
-      link: https://github.com/arcsecond-io
+      text: Describe your Observatory
+      link: https://arcsecond-observatory-contact.notion.site/320bd21eb64780f1bc2fc977d3e13690?pvs=105
 
 features:
-  - icon:
-      src: /icons/icon-nightplan.svg
-      width: 60
-    title: Observe
-    details: Automate your nights and data acquisition with our new "Control Room"!
   - icon:
       src: /icons/icon-telescope.svg
       width: 60
     title: Decide
-    details: Use our powerful visualisation tools to decide what to observe, when and from where, for any type of target, moving or not.
+    details: Night Studio's powerful visualisation tools help you decide what to observe, when and from where — for any type of target, moving or not.
+  - icon:
+      src: /icons/icon-nightplan.svg
+      width: 60
+    title: Observe
+    details: Automate your nights and data acquisition with the Control Room, talking directly to the equipment on your own machines.
   - icon:
       src: /icons/icon-dataset.svg
       width: 60
     title: Manage
-    details: Store and manage your data, all of it, being obtained with Arcsecond or not, with powerful tools and secured storages.
+    details: Store, package and share all of your data with Data Grand Central — on your own storage, with no cloud tier and no quota.
+  - icon:
+      src: /icons/icon-logo-round.svg
+      width: 60
+    title: Collaborate
+    details: Every install is multi-user by design. Observatory Headquarters runs your whole team, with unlimited members and clear roles.
 ---
-
