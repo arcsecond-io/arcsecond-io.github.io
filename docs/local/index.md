@@ -38,6 +38,6 @@ Operating Arcsecond.local is done through the `arcsecond` command-line tool (see
 [CLI documentation](/cli/)). The following guides cover the most common
 self-hosting tasks:
 
-- [Live-Image Proxy](webcam.md): stream USB webcams and all-sky cameras into Arcsecond.local.
+- [Live-Image Proxy](webcam.md): stream USB webcams, all-sky cameras and network cameras into Arcsecond.local.
 - [Backups](backups.md): where the Postgres dumps live, and how to list, inspect, and restore them.
 - [Rotate Postgres Password](rotate-postgres-password.md): rotate the database password on an existing install.

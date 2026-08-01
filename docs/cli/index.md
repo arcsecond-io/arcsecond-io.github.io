@@ -29,7 +29,7 @@ install. The core flow is documented in the
 
 - [Installation](/local/installation) — `arcsecond setup`, then `docker compose up -d`.
 - [Updates](/local/updates) — keep your install current.
-- [Live-Image Proxy](/local/webcam) — stream USB webcams and all-sky cameras into Arcsecond.local.
+- [Live-Image Proxy](/local/webcam) — stream USB webcams, all-sky cameras and network cameras into Arcsecond.local.
 - [Backups](/local/backups) — list, inspect, and restore the Postgres dumps.
 - [Rotate Postgres Password](/local/rotate-postgres-password) — rotate the database password on an existing install.
 
