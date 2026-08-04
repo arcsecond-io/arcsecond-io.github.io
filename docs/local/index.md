@@ -42,3 +42,4 @@ self-hosting tasks:
 - [Live-Image Proxy](webcam.md): stream USB webcams, all-sky cameras and network cameras into Arcsecond.local.
 - [Backups](backups.md): where the Postgres dumps live, and how to list, inspect, and restore them.
 - [Rotate Postgres Password](rotate-postgres-password.md): rotate the database password on an existing install.
+- [Transient Alerts](transient-alerts.md): how to setup transient alert service
