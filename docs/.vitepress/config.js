@@ -42,6 +42,7 @@ export default {
           text: 'Self-Hosting',
           collapsible: true,
           items: [
+            { text: 'Alpaca Server on the LAN', link: '/local/alpaca-lan.md' },
             { text: 'Live-Image Proxy', link: '/local/webcam.md' },
             { text: 'Backups', link: '/local/backups.md' },
             { text: 'Rotate Postgres Password', link: '/local/rotate-postgres-password.md' },
