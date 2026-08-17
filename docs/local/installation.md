@@ -136,6 +136,8 @@ Then open a fresh PowerShell window. More Windows-specific cases are covered in
 ## First steps
 
 - Arcsecond.local is now accessible at the following address: [http://localhost:5555](http://localhost:5555)
+- That address only works on this machine. To let the rest of the observatory in from their own computers, see
+  [Access from Other Computers](/local/lan-access).
 - You can login as `admin` / `admin`. We recommend that you change this password as soon as possible, by opening your
   "Account" panel, from the bottom-left menu.
 - Before exploring the Arcsecond interface, you may want to create your first observing site, by clicking on the
