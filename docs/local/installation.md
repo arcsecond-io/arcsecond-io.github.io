@@ -49,6 +49,15 @@ Two frequent worries, both unfounded:
 - **You do not need a Docker account** to run Arcsecond.local. Docker Desktop shows a sign-in screen on first
   launch — you can simply skip it. The only login involved is the one to the *Arcsecond* registry with your PAT,
   described below, which is unrelated to Docker Hub.
+
+One exception, on **Linux with Docker Engine** (no Docker Desktop): the daemon only answers root and members of the
+`docker` group. If `docker compose up -d` ends with `permission denied while trying to connect to the docker API at
+unix:///var/run/docker.sock`, add your user to that group once, then log out and back in (or open a new shell with
+`newgrp docker`):
+
+```bash
+sudo usermod -aG docker $USER
+```
 :::
 
 ## Installation
