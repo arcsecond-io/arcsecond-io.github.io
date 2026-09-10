@@ -225,7 +225,9 @@ arcsecond allsky add '/var/data/allsky/*.jpg'
 
 The camera is registered whether or not the file is there yet. All-sky software
 often writes its first image only at dusk, and refusing until then would just
-mean coming back to retype the command.
+mean coming back to retype the command — the same is true of an address that
+does not answer, which is registered with a note saying so rather than
+refused.
 
 ### Adding one by address
 
@@ -250,8 +252,41 @@ Check it before registering, from the machine that will run the proxy:
 curl -sSI http://allsky.local/current/tmp/image.jpg
 ```
 
-You want `200` and `Content-Type: image/jpeg`.
+You want `200` and `Content-Type: image/jpeg`. `curl` uses your machine's own
+resolver, so a `.local` name that fails here may still work — see below.
 :::
+
+### On `.local` names
+
+All-sky software on a Raspberry Pi is usually reached at a name like
+`skykot.local`, and that name works differently from every other. It is in no
+DNS server: the Pi answers for itself, over multicast, and the machine asking
+has to know how to listen. Most do. Some — Windows machines in particular, on
+some network profiles — send the question to the configured DNS server
+instead, which knows nothing about `.local` and answers with a failure:
+
+```
+Cannot connect to host skykot.local:80 [DNS server returned general failure]
+```
+
+The proxy handles this itself since 3.19.0: when your machine's resolver has
+no answer for a `.local` name, it asks the network directly, exactly as the
+browser you copied the address from does. Nothing to configure, and the name —
+not an address — is what stays registered, so the camera survives its next
+DHCP lease.
+
+Two things it cannot do. An `rtsp://` camera is opened by FFmpeg, which
+resolves names its own way, so a video stream at a `.local` name still depends
+on your machine. And if what blocks multicast is a firewall rather than a
+missing resolver, the proxy's query is blocked with everyone else's — `add`
+says so, and the Pi's IP address is then the reliable form:
+
+```bash
+arcsecond allsky add http://192.168.1.42/current/tmp/image.jpg
+```
+
+Give the Pi a DHCP reservation in your router if you register it by address,
+so tomorrow's lease does not point the proxy at somebody's laptop.
 
 It remains an all-sky camera in every way that matters: it is listed by
 `arcsecond allsky`, reported to Arcsecond.local as `allsky`, and polled at the
