@@ -260,26 +260,29 @@ resolver, so a `.local` name that fails here may still work — see below.
 
 All-sky software on a Raspberry Pi is usually reached at a name like
 `skykot.local`, and that name works differently from every other. It is in no
-DNS server: the Pi answers for itself, over multicast, and the machine asking
-has to know how to listen. Most do. Some — Windows machines in particular, on
-some network profiles — send the question to the configured DNS server
-instead, which knows nothing about `.local` and answers with a failure:
+DNS server: the Pi answers for itself over **mDNS** — multicast DNS, the
+protocol behind Bonjour and Avahi — and the machine asking has to know how to
+listen. Most do. Some — Windows machines in particular, on some network
+profiles — send the question to the configured DNS server instead, which knows
+nothing about `.local` and answers with a failure:
 
 ```
 Cannot connect to host skykot.local:80 [DNS server returned general failure]
 ```
 
 The proxy handles this itself since 3.19.0: when your machine's resolver has
-no answer for a `.local` name, it asks the network directly, exactly as the
+no answer for a `.local` name, it sends its own mDNS query, exactly as the
 browser you copied the address from does. Nothing to configure, and the name —
 not an address — is what stays registered, so the camera survives its next
 DHCP lease.
 
 Two things it cannot do. An `rtsp://` camera is opened by FFmpeg, which
 resolves names its own way, so a video stream at a `.local` name still depends
-on your machine. And if what blocks multicast is a firewall rather than a
-missing resolver, the proxy's query is blocked with everyone else's — `add`
-says so, and the Pi's IP address is then the reliable form:
+on your machine. And if what blocks mDNS is a firewall rather than a missing
+resolver, the proxy's query is blocked along with everyone else's — mDNS is
+UDP to `224.0.0.251:5353`, which is also the rule to look for if you would
+rather allow it than work around it. `add` says when nothing answers, and the
+Pi's IP address is then the reliable form:
 
 ```bash
 arcsecond allsky add http://192.168.1.42/current/tmp/image.jpg
