@@ -15,6 +15,37 @@
   issue.
   
 
+## "ports are not available: exposing port TCP 127.0.0.1:5432"
+
+The full line, on `docker compose up -d`, is `Error response from daemon: ports are not available: exposing port TCP
+127.0.0.1:5432 -> 127.0.0.1:0: listen tcp4 127.0.0.1:5432: bind: Only one usage of each socket address
+(protocol/network address/port) is normally permitted` on Windows, or ends with `bind: address already in use` on macOS
+and Linux. The `arcsecond-db` container does not start, and neither does anything that depends on it.
+
+Another program on the machine already listens on port 5432 — usually a PostgreSQL server installed directly on the
+machine, sometimes a container from another project. The `docker-compose.yml` written by CLI versions up to 3.19 asked
+Docker to publish the database on that same port of the machine (and Redis on 6379), so the two could not coexist.
+Nothing in Arcsecond ever used that port: every container reaches the database over Docker's internal network, and every
+CLI command that needs it ([backups](/local/backups), [password rotation](/local/rotate-postgres-password)) goes through
+`docker exec` into the container.
+
+Since CLI 3.20.0, the template (version 6.4) publishes neither port. Update the CLI, let `arcsecond setup` bring
+`docker-compose.yml` up to date, and start again:
+
+```bash
+pip3 install --upgrade arcsecond
+arcsecond setup
+docker compose up -d
+```
+
+`arcsecond setup` rewrites `docker-compose.yml` in place when it has not been edited by hand. If it has, the file is
+left alone and the packaged version lands beside it as `docker-compose.latest.yml`: remove the `ports:` block of the
+`db` and `broker` services from your file (or merge the two files by hand), then run `docker compose up -d`.
+
+There is no need to stop or remove the other PostgreSQL. If you would rather know what holds the port anyway:
+`netstat -ano | findstr :5432` in PowerShell prints the process id in the last column, and `tasklist /FI "PID eq <pid>"`
+names it. On macOS and Linux, `lsof -i :5432` does both.
+
 ## Linux: "permission denied while trying to connect to the docker API"
 
 The full line is `permission denied while trying to connect to the docker API at unix:///var/run/docker.sock`, and it

@@ -187,6 +187,11 @@ arcsecond login --api local --username <you> --type access --key <access-key>
 
 Leave the port closed if nobody needs it — the web interface does not.
 
+The database and Redis publish no port at all, not even on the machine itself (since CLI 3.20.0; earlier templates
+bound them to `localhost`). They are reachable from the other containers only. Anything that needs the database, such
+as [backups](/local/backups) or [rotating its password](/local/rotate-postgres-password), goes through `docker exec`
+and needs no open port.
+
 ## If Arcsecond.local runs on macOS or Linux
 
 The same five steps apply, with different tools:
