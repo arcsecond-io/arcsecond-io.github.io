@@ -146,7 +146,7 @@ Then open a fresh PowerShell window. More Windows-specific cases are covered in
 
 - Arcsecond.local is now accessible at the following address: [http://localhost:5555](http://localhost:5555)
 - That address only works on this machine. To let the rest of the observatory in from their own computers, see
-  [Access from Other Computers](/local/lan-access).
+  [Access from other computers](#access-from-other-computers) below.
 - You can login as `admin` / `admin`. We recommend that you change this password as soon as possible, by opening your
   "Account" panel, from the bottom-left menu.
 - Before exploring the Arcsecond interface, you may want to create your first observing site, by clicking on the
@@ -161,3 +161,59 @@ exoplanets, etc). You may need to wait a bit before creating your first observin
   and "Data Grand Central".
 - You may want to customise your sidebar and the associated tools by opening your "Settings" panel from the bottom-left
   menu. 
+
+## Access from other computers
+
+A fresh installation is only reachable from the machine it runs on. `http://localhost:5555` works there and nowhere
+else — on any other computer, `localhost` means *that* computer. Windows also blocks incoming connections to the port
+by default, so nothing is wrong when the page does not load from a laptop on the same network: three steps open it.
+
+Throughout this section, `192.168.1.42` stands for the IP address of the machine running Arcsecond.local. Find yours
+in **Settings → Network & Internet**, by clicking **Wi-Fi** or **Ethernet**, then the network name, and reading the
+**IPv4 address**.
+
+**1. Set the network profile to Private.** On that same page, under **Network profile type**, select **Private
+network**. Windows blocks incoming connections much more aggressively on networks marked *Public*, and a firewall rule
+scoped to *Private* has no effect until this is done.
+
+**2. Open TCP port 5555 in the Windows firewall.** In an Administrator PowerShell:
+
+```powershell
+New-NetFirewallRule -DisplayName "Arcsecond.local (TCP 5555)" -Direction Inbound -Protocol TCP -LocalPort 5555 -Profile Private -Action Allow
+```
+
+The same rule can be created through **Windows Defender Firewall with Advanced Security → Inbound Rules → New Rule…**;
+the [Access from Other Computers](/local/lan-access) page lists that dialog click by click.
+
+**3. Tell Arcsecond its own address.** Add this line to the `.env` file sitting next to your `docker-compose.yml`, then
+run `docker compose up -d` in that folder:
+
+```
+HOSTED_FRONTEND_HOST=192.168.1.42:5555
+```
+
+Browsing already works after step 2. This step is about the links Arcsecond *writes* — invitations and password-reset
+emails. The server has no way of knowing which address people reach it at, so left unset, every one of those links
+says `localhost` and lands whoever clicks it on their own computer.
+
+From any other computer on the network, Arcsecond.local is then at:
+
+```
+http://192.168.1.42:5555
+```
+
+Only that one port has to be reachable: the API is served from the same address, under `/api/`.
+
+::: tip
+Pin that IP address before sharing it, or a reboot may hand the machine a different one and break everyone's bookmark.
+A DHCP reservation on the router is the simplest way.
+:::
+
+::: info
+On **macOS**, Docker's published ports are not blocked by default and step 2 can be skipped. On **Linux** with `ufw`
+enabled, it becomes `sudo ufw allow from 192.168.1.0/24 to any port 5555 proto tcp`.
+:::
+
+Fixing the address for good, reaching the installation by a name such as `arcsecond.local` rather than by IP, and
+opening port `8800` for the command-line interface are all covered in
+[Access from Other Computers](/local/lan-access).
