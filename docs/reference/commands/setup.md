@@ -4,7 +4,7 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.1.0"
+cli: "4.2.0"
 ---
 
 # `arcsecond setup`
@@ -15,7 +15,8 @@ arcsecond setup [OPTIONS]
 
 Write (or update) the two files an installation is made of, in the
 current folder: .env, with this installation's secrets, and
-docker-compose.yml. Then:  arcsecond start
+docker-compose.yml — and ask for the access token Arcsecond gave your
+observatory, if this machine has none yet. Then:  arcsecond start
 
 Run it again after upgrading the CLI to bring docker-compose.yml up to
 date; nothing of yours is overwritten.

@@ -4,7 +4,7 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.1.0"
+cli: "4.2.0"
 ---
 
 # `arcsecond allsky`

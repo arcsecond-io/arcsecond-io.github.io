@@ -4,13 +4,13 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.1.0"
+cli: "4.2.0"
 ---
 
 
 # Command reference
 
-Every command of the `arcsecond` tool, version 4.1.0, generated from the tool itself.
+Every command of the `arcsecond` tool, version 4.2.0, generated from the tool itself.
 
 | Command | For | What it does |
 | --- | --- | --- |
@@ -30,6 +30,7 @@ Every command of the `arcsecond` tool, version 4.1.0, generated from the tool it
 | [`arcsecond status`](./status.md) | operator | Say what is running, and whether it is up to date. |
 | [`arcsecond stop`](./stop.md) | operator | Stop Arcsecond.local. |
 | [`arcsecond telescopes`](./telescopes.md) | astronomer | Display the list of (portal) telescopes. |
+| [`arcsecond token`](./token.md) | operator | The access token Arcsecond gave your observatory. It lets this machine download Arcsecond.local. |
 | [`arcsecond update`](./update.md) | operator | Update Arcsecond.local to the latest images. |
 | [`arcsecond upload`](./upload.md) | astronomer | Upload the data files contained in a folder. |
 | [`arcsecond version`](./version.md) | operator | Show the 'arcsecond' CLI version and exit. |

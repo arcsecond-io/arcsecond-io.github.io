@@ -24,8 +24,7 @@ Before proceeding with the installation, ensure that you have the following prer
 - [Docker](https://docker.io) is installed on your PC.
 - [pip](https://pip.pypa.io/en/stable/installation/) is available on your PC (you can open a Terminal and type
   `pip3 --version` to check first).
-- Access to the Arcsecond Docker private registry, via the personal authentication
-  token (PAT). [Contact us](mailto:team@arcsecond.io) to obtain yours.
+- The **access token** Arcsecond gives each observatory. [Contact us](mailto:team@arcsecond.io) to obtain yours.
 
 ::: tip You probably already have `pip`
 `pip` is bundled with Python itself, and has been for many years. If you installed a recent Python (3.13, 3.14, or
@@ -92,8 +91,9 @@ in PowerShell: WSL has no direct access to the host's USB devices. See the
 - Run the basic setup: `arcsecond setup`. It writes two files in that folder: `.env`, holding this installation's
   secret keys, and `docker-compose.yml`, the system configuration. It also remembers the folder, so every command
   below works from any directory afterwards.
-- Log Docker in to the Arcsecond image registry, once per machine: `arcsecond registry login`. It asks for the
-  token Arcsecond gave your observatory and shows nothing while you type or paste it.
+- `arcsecond setup` also asks for the **access token Arcsecond gave your observatory**, once per machine — it is
+  what lets the machine download Arcsecond.local. Nothing is shown while you type or paste it. Left empty, enter it
+  later with `arcsecond token set`; `arcsecond token` says whether the machine has one.
 - Start Arcsecond.local: `arcsecond start`. **The first time, it downloads all the required images, which takes a
   while.** It then waits for the backend to be ready and prints the address to open.
 

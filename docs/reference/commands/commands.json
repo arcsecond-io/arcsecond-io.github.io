@@ -1,6 +1,6 @@
 {
   "program": "arcsecond",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "commands": [
     {
       "name": "allsky",
@@ -113,6 +113,13 @@
       "audience": "astronomer",
       "summary": "Display the list of (portal) telescopes.",
       "group": false
+    },
+    {
+      "name": "token",
+      "page": "token.md",
+      "audience": "operator",
+      "summary": "The access token Arcsecond gave your observatory. It lets this machine download Arcsecond.local.",
+      "group": true
     },
     {
       "name": "update",
