@@ -72,6 +72,9 @@ const commandItems = commands.commands.map(c => ({ text: `arcsecond ${c.name}`, 
 // comments and the app's help links still name some of the old addresses.
 // ---------------------------------------------------------------------------
 const redirects = JSON.parse(readFileSync(join(here, 'redirects.json'), 'utf8'))
+// The command pages moved as a folder; one redirect per command, from the
+// manifest, so a command added later is covered without editing anything.
+for (const c of commands.commands) redirects[`/cli/commands/${c.name}`] = `/reference/commands/${c.name}`
 
 function redirectPage (target) {
   const safe = target.replace(/"/g, '&quot;')
