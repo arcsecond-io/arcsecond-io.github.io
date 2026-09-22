@@ -7,8 +7,8 @@ hero:
   tagline: The off-the-shelf, multi-user & multi-telescope, industry-grade platform dedicated to astronomical observatories — running entirely on your own infrastructure.
   actions:
     - theme: brand
-      text: Discover Arcsecond.local
-      link: /local/
+      text: Install Arcsecond.local
+      link: /start/
     - theme: alt
       text: Describe your Observatory
       link: https://arcsecond-observatory-contact.notion.site/320bd21eb64780f1bc2fc977d3e13690?pvs=105
