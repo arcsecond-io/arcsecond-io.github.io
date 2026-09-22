@@ -4,13 +4,13 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.0.0"
+cli: "4.1.0"
 ---
 
 
 # Command reference
 
-Every command of the `arcsecond` tool, version 4.0.0, generated from the tool itself.
+Every command of the `arcsecond` tool, version 4.1.0, generated from the tool itself.
 
 | Command | For | What it does |
 | --- | --- | --- |
@@ -18,6 +18,7 @@ Every command of the `arcsecond` tool, version 4.0.0, generated from the tool it
 | [`arcsecond alpaca`](./alpaca.md) | operator | Diagnostics for local ASCOM Alpaca devices. |
 | [`arcsecond api`](./api.md) | operator | The API server the CLI talks to. |
 | [`arcsecond backups`](./backups.md) | operator | Browse and restore Arcsecond.local DB backups. |
+| [`arcsecond check`](./check.md) | operator | Check that the installation works, and is reachable from other computers. |
 | [`arcsecond datasets`](./datasets.md) | astronomer | Display the list of (portal) datasets. |
 | [`arcsecond db`](./db.md) | operator | Manage the Arcsecond.local database. |
 | [`arcsecond login`](./login.md) | operator | Login to your Arcsecond account. |

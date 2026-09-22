@@ -4,7 +4,7 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.0.0"
+cli: "4.1.0"
 ---
 
 # `arcsecond backups`
@@ -37,6 +37,7 @@ Show detailed info about a backup.
 
 | Option | Description |
 | --- | --- |
+| `--dir FOLDER` | The Arcsecond.local folder (the one holding docker-compose.yml). Default: the current folder, else the one `arcsecond setup` last ran in. |
 | `-v, --verbose` | Increases verbosity. |
 
 ## `arcsecond backups list`
@@ -51,6 +52,7 @@ List available DB backups with compatibility status.
 
 | Option | Description |
 | --- | --- |
+| `--dir FOLDER` | The Arcsecond.local folder (the one holding docker-compose.yml). Default: the current folder, else the one `arcsecond setup` last ran in. |
 | `-v, --verbose` | Increases verbosity. |
 
 ## `arcsecond backups restore`
@@ -72,4 +74,5 @@ Restore a DB backup. Stops the backend, wipes the DB, pipes the dump back in, th
 | `--force` | Bypass the incompatible-backup block. |
 | `--dry-run` | Print every command that would run; do nothing. |
 | `--no-safety-backup` | Skip the pre-restore safety snapshot. |
+| `--dir FOLDER` | The Arcsecond.local folder (the one holding docker-compose.yml). Default: the current folder, else the one `arcsecond setup` last ran in. |
 | `-v, --verbose` | Increases verbosity. |

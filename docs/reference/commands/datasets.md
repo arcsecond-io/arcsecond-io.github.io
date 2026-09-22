@@ -4,7 +4,7 @@ visibility: public
 audience: astronomer
 tier: reference
 source: generated
-cli: "4.0.0"
+cli: "4.1.0"
 ---
 
 # `arcsecond datasets`
