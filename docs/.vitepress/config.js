@@ -10,7 +10,14 @@ const here = dirname(fileURLToPath(import.meta.url))
 const commands = JSON.parse(readFileSync(join(here, '../cli/commands/commands.json'), 'utf8'))
 const commandItems = commands.commands.map(c => ({ text: `arcsecond ${c.name}`, link: `/cli/commands/${c.name}.md` }))
 
+// Where the site is served from. The public site lives at the root of
+// docs.arcsecond.io; the copy bundled into the Arcsecond.local web image is
+// served by its nginx under /docs/, and needs every asset and link prefixed.
+// The image's Dockerfile builds with DOCS_BASE=/docs/ (`npm run docs:build:embedded`).
+const base = process.env.DOCS_BASE || '/'
+
 export default {
+  base,
   title: 'Arcsecond.local',
   description: 'Arcsecond.local — the self-hosted observatory platform',
   siteTitle: false,
