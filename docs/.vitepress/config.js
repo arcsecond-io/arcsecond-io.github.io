@@ -45,6 +45,7 @@ export default {
             { text: 'Access from Other Computers', link: '/local/lan-access.md' },
             { text: 'Alpaca Server on the LAN', link: '/local/alpaca-lan.md' },
             { text: 'Live-Image Proxy', link: '/local/webcam.md' },
+            { text: 'Transient Alerts', link: '/local/transient-alerts.md' },
             { text: 'Backups', link: '/local/backups.md' },
             { text: 'Rotate Postgres Password', link: '/local/rotate-postgres-password.md' },
           ]
