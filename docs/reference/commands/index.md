@@ -4,13 +4,13 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.2.0"
+cli: "4.2.1"
 ---
 
 
 # Command reference
 
-Every command of the `arcsecond` tool, version 4.2.0, generated from the tool itself.
+Every command of the `arcsecond` tool, version 4.2.1, generated from the tool itself.
 
 | Command | For | What it does |
 | --- | --- | --- |
