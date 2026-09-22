@@ -1,0 +1,86 @@
+name: Regenerate References
+
+# The command reference and the services/environment reference under
+# docs/reference/ are written by the arcsecond tool itself (`arcsecond docs
+# commands`, `arcsecond docs compose`), from the released tool — so a page can
+# never describe a command the release does not have. This keeps them in step
+# with PyPI without anyone remembering to: install the latest release, run both
+# generators, and when anything changed, build the site (dead links and the
+# visibility assertion gate it), commit, and deploy.
+#
+# A push made with GITHUB_TOKEN does not trigger other workflows, so the deploy
+# is done here rather than left to docsdeploy.yml.
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'   # every six hours; a release is picked up within that
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the latest released arcsecond tool
+        run: |
+          python -m pip install --quiet --upgrade pip
+          python -m pip install --quiet --upgrade arcsecond
+          echo "VERSION=$(arcsecond --version)" >> "$GITHUB_ENV"
+
+      - name: Regenerate
+        run: |
+          arcsecond docs commands --out docs/reference/commands
+          arcsecond docs compose --out docs/reference/compose
+
+      - name: Anything changed?
+        id: diff
+        run: |
+          if git diff --quiet -- docs/reference; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "References already match arcsecond $VERSION."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat -- docs/reference
+          fi
+
+      - name: Setup node
+        if: steps.diff.outputs.changed == 'true'
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install
+        if: steps.diff.outputs.changed == 'true'
+        run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.READ_PACKAGE_TOKEN }}
+          CI: true
+
+      - name: Build (dead links and the visibility assertion gate the commit)
+        if: steps.diff.outputs.changed == 'true'
+        run: npm run docs:build
+
+      - name: Commit
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "gh actions bot"
+          git config user.email "team@arcsecond.io"
+          git add docs/reference
+          git commit -m "Command and compose references for arcsecond $VERSION" \
+                     -m "Regenerated from the release on PyPI by regenerate-references.yml."
+          git push origin HEAD:master
+
+      - name: Deploy
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./deploy.sh
