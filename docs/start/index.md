@@ -92,16 +92,11 @@ in PowerShell: WSL has no direct access to the host's USB devices. See the
 - Run the basic setup: `arcsecond setup`. It writes two files in that folder: `.env`, holding this installation's
   secret keys, and `docker-compose.yml`, the system configuration. It also remembers the folder, so every command
   below works from any directory afterwards.
-- Have your PAT with you, and login once in the Arcsecond Docker registry (replace `<PAT>` with your PAT):
-  `echo <PAT> | docker login ghcr.io -u arcsecond-io --password-stdin`. This is the only `docker` command you will
-  type: everything else goes through `arcsecond`.
+- Log Docker in to the Arcsecond image registry, once per machine: `arcsecond registry login`. It asks for the
+  token Arcsecond gave your observatory and shows nothing while you type or paste it.
 - Start Arcsecond.local: `arcsecond start`. **The first time, it downloads all the required images, which takes a
   while.** It then waits for the backend to be ready and prints the address to open.
 
-::: warn
-By convention, the chevrons indicate placeholders in the documentation. Hence, you must also remove them when inserting
-your PAT. For instance: `echo ghp_XXX... | docker login...` and not `echo <ghp_XXX...> | docker login...`
-:::
 
 From now on, the installation is operated with a handful of commands, from any folder:
 
@@ -114,6 +109,8 @@ From now on, the installation is operated with a handful of commands, from any f
 | `arcsecond update` | move to the latest release — see [Updates](/guides/operating/updates) |
 
 Every command and option is listed in the [command reference](/reference/commands/).
+What the two files contain is described, from the files themselves, in [Services](/reference/compose/services)
+and [Environment](/reference/compose/environment).
 
 ### Windows: adding Python's `Scripts` folder to `PATH`
 

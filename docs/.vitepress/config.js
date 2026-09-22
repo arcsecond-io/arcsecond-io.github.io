@@ -221,6 +221,14 @@ export default {
           ]
         },
         {
+          text: 'Installation files',
+          collapsible: true,
+          items: [
+            { text: 'Services (docker-compose.yml)', link: '/reference/compose/services.md' },
+            { text: 'Environment (.env)', link: '/reference/compose/environment.md' },
+          ]
+        },
+        {
           text: 'Interfaces',
           collapsible: true,
           items: [

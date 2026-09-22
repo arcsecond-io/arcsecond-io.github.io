@@ -30,13 +30,14 @@ Everything these pages used to ask for as a `docker compose …` line has an `ar
 | `docker compose logs --tail 50 backend`, `docker logs -f arcsecond-alerts` | `arcsecond logs backend --tail 50`, `arcsecond logs alerts -f` |
 | `arcsecond setup` + `docker compose pull` + `docker compose up -d` | `arcsecond update` |
 | `docker compose up -d alerts` | `arcsecond restart alerts` |
+| `echo <PAT> \| docker login ghcr.io …` | `arcsecond registry login` |
 
 These commands find the installation in the current folder, or in the folder `arcsecond setup` last ran in — so they
 work from a PowerShell opened anywhere — or where `--dir` points. `arcsecond start` also explains the failures the
 [Troubleshooting](/guides/operating/troubleshooting) page used to: a port already taken, a user not in the `docker` group, Docker
 Desktop not running.
 
-The one `docker` command left is the login to the image registry at installation time.
+Since 4.2, the login to the image registry is `arcsecond registry login` too: there is no `docker` command left to type.
 
 ## The server is a pointer, not an option
 
