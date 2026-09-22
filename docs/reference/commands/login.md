@@ -16,15 +16,15 @@ arcsecond login [OPTIONS]
 Login to your Arcsecond account, on the API server the CLI points at.
 
 You must provide either your Access Key, or your Upload Key.
-    By doing so, you choose the level of access you want to store
-    on this computer. The Access Key give a full API access to your
-    data. The Upload Key gives just enough permissions to upload data.
+By doing so, you choose the level of access you want to store
+on this computer. The Access Key give a full API access to your
+data. The Upload Key gives just enough permissions to upload data.
 
 Both keys can be retrieved from your personal Settings page on
-    https://www.arcsecond.io (or on your own Arcsecond.local).
+https://www.arcsecond.io (or on your own Arcsecond.local).
 
 Beware that the Key you provide will be stored locally on the file:
-    ~/.config/arcsecond/config.ini
+~/.config/arcsecond/config.ini
 
 **Options**
 

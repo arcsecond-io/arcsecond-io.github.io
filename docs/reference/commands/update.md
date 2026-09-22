@@ -14,10 +14,10 @@ arcsecond update [OPTIONS]
 ```
 
 Bring the installation up to date: refresh docker-compose.yml from this
-    CLI, download the latest images, and restart what changed.
+CLI, download the latest images, and restart what changed.
 
 Update the CLI itself first, so that the compose file it writes is the
-    newest one:  pip install --upgrade arcsecond
+newest one:  pip install --upgrade arcsecond
 
 **Options**
 
