@@ -1,0 +1,54 @@
+---
+title: "arcsecond upload"
+visibility: public
+audience: astronomer
+tier: reference
+source: generated
+cli: "4.0.0"
+---
+
+# `arcsecond upload`
+
+```
+arcsecond upload [OPTIONS] FOLDER
+```
+
+Upload the data files contained in a folder.
+
+You will be prompted for confirmation before the whole walking process actually
+start.
+
+Warning: this method allows to upload a folder with a **consistent** raw data flag as well
+as common custom tags, both applied to every single file. If you want to upload a mixed-content
+folder, you must write your own script.
+
+Every DataFile must belong to a Dataset. If you provide a Dataset UUID, Arcsecond will
+append files to the dataset. If you provide a Dataset *name*, Arcsecond will try to find
+an existing Dataset with that name. If none could be found, Arcsecond will create one,
+and put files in it.
+
+You can use `arcsecond datasets [OPTIONS]` to get a list of your existing datasets
+(with their UUID).
+
+Every Dataset must be attached to a Telescope. This is necessary to retrieve geographical
+coordinates, hence compute local dates, and simply organise datasets. You can use the command
+`arcsecond telescopes [-p subdomain]` to obtain the list of telescopes attached to your
+account or portal.
+
+Upon validation, Arcsecond will then start walking through the folder tree and uploads regular
+files (hidden and empty files will always be skipped).
+
+**Arguments**
+
+- `FOLDER` — required
+
+**Options**
+
+| Option | Description |
+| --- | --- |
+| `-d, --dataset TEXT` | The UUID or name of the dataset to put data in. If new, it will be created.  [required] |
+| `-t, --telescope UUID` | The telescope UUID, to be attached to the dataset.  [required] |
+| `--raw BOOLEAN` | A flag indicating the data is raw or not. Default True. |
+| `--tags TEXT` | An optional list of custom tags to be attached to every filed. |
+| `-p, --portal TEXT` | The portal subdomain, if uploading for an Observatory Portal. |
+| `-v, --verbose` | Increases verbosity. |

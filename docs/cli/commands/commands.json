@@ -1,0 +1,139 @@
+{
+  "program": "arcsecond",
+  "version": "4.0.0",
+  "commands": [
+    {
+      "name": "allsky",
+      "page": "allsky.md",
+      "audience": "operator",
+      "summary": "List your all-sky cameras.",
+      "group": true
+    },
+    {
+      "name": "alpaca",
+      "page": "alpaca.md",
+      "audience": "operator",
+      "summary": "Diagnostics for local ASCOM Alpaca devices.",
+      "group": true
+    },
+    {
+      "name": "api",
+      "page": "api.md",
+      "audience": "operator",
+      "summary": "The API server the CLI talks to.",
+      "group": true
+    },
+    {
+      "name": "backups",
+      "page": "backups.md",
+      "audience": "operator",
+      "summary": "Browse and restore Arcsecond.local DB backups.",
+      "group": true
+    },
+    {
+      "name": "datasets",
+      "page": "datasets.md",
+      "audience": "astronomer",
+      "summary": "Display the list of (portal) datasets.",
+      "group": false
+    },
+    {
+      "name": "db",
+      "page": "db.md",
+      "audience": "operator",
+      "summary": "Manage the Arcsecond.local database.",
+      "group": true
+    },
+    {
+      "name": "login",
+      "page": "login.md",
+      "audience": "operator",
+      "summary": "Login to your Arcsecond account.",
+      "group": false
+    },
+    {
+      "name": "logs",
+      "page": "logs.md",
+      "audience": "operator",
+      "summary": "Show the logs of Arcsecond.local, or of one service.",
+      "group": false
+    },
+    {
+      "name": "proxy",
+      "page": "proxy.md",
+      "audience": "operator",
+      "summary": "Start and inspect the proxy that serves your cameras.",
+      "group": true
+    },
+    {
+      "name": "restart",
+      "page": "restart.md",
+      "audience": "operator",
+      "summary": "Recreate containers so they pick up a changed .env.",
+      "group": false
+    },
+    {
+      "name": "setup",
+      "page": "setup.md",
+      "audience": "operator",
+      "summary": "Prepare the installation of Arcsecond.local.",
+      "group": false
+    },
+    {
+      "name": "start",
+      "page": "start.md",
+      "audience": "operator",
+      "summary": "Start Arcsecond.local.",
+      "group": false
+    },
+    {
+      "name": "status",
+      "page": "status.md",
+      "audience": "operator",
+      "summary": "Say what is running, and whether it is up to date.",
+      "group": false
+    },
+    {
+      "name": "stop",
+      "page": "stop.md",
+      "audience": "operator",
+      "summary": "Stop Arcsecond.local.",
+      "group": false
+    },
+    {
+      "name": "telescopes",
+      "page": "telescopes.md",
+      "audience": "astronomer",
+      "summary": "Display the list of (portal) telescopes.",
+      "group": false
+    },
+    {
+      "name": "update",
+      "page": "update.md",
+      "audience": "operator",
+      "summary": "Update Arcsecond.local to the latest images.",
+      "group": false
+    },
+    {
+      "name": "upload",
+      "page": "upload.md",
+      "audience": "astronomer",
+      "summary": "Upload the data files contained in a folder.",
+      "group": false
+    },
+    {
+      "name": "version",
+      "page": "version.md",
+      "audience": "operator",
+      "summary": "Show the 'arcsecond' CLI version and exit.",
+      "group": false
+    },
+    {
+      "name": "webcam",
+      "page": "webcam.md",
+      "audience": "operator",
+      "summary": "List your webcams \u2014 plugged into this machine, or reached over the network.",
+      "group": true
+    }
+  ]
+}
