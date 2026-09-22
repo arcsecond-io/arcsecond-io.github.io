@@ -51,8 +51,8 @@ Two frequent worries, both unfounded:
   described below, which is unrelated to Docker Hub.
 
 One exception, on **Linux with Docker Engine** (no Docker Desktop): the daemon only answers root and members of the
-`docker` group. If `docker compose up -d` ends with `permission denied while trying to connect to the docker API at
-unix:///var/run/docker.sock`, add your user to that group once, then log out and back in (or open a new shell with
+`docker` group. If `arcsecond start` says that this user is not allowed to talk to Docker (`permission denied while
+trying to connect to the docker API`), add your user to that group once, then log out and back in (or open a new shell with
 `newgrp docker`):
 
 ```bash
@@ -81,18 +81,31 @@ in PowerShell: WSL has no direct access to the host's USB devices. See the
 - Install the Arcsecond CLI: `pip3 install arcsecond`.
 - Verify the installation was successful by running `arcsecond --version`.
 - Create a directory where everything related to Arcsecond will be stored, and go inside it, with the terminal.
-- Run the basic setup: `arcsecond setup`.
-- You can check that you have a new `.env` file in the current directory, containing some secret keys.
-- You should also have a file named `docker-compose.yml` with the Arcsecond system configuration.
+- Run the basic setup: `arcsecond setup`. It writes two files in that folder: `.env`, holding this installation's
+  secret keys, and `docker-compose.yml`, the system configuration. It also remembers the folder, so every command
+  below works from any directory afterwards.
 - Have your PAT with you, and login once in the Arcsecond Docker registry (replace `<PAT>` with your PAT):
-  `echo <PAT> | docker login ghcr.io -u arcsecond-io --password-stdin`
-- You can now start Arcsecond.local with the command: `docker compose up -d`. **The first time, Docker will download all
-  the required images. It may take some time.**
+  `echo <PAT> | docker login ghcr.io -u arcsecond-io --password-stdin`. This is the only `docker` command you will
+  type: everything else goes through `arcsecond`.
+- Start Arcsecond.local: `arcsecond start`. **The first time, it downloads all the required images, which takes a
+  while.** It then waits for the backend to be ready and prints the address to open.
 
 ::: warn
 By convention, the chevrons indicate placeholders in the documentation. Hence, you must also remove them when inserting
 your PAT. For instance: `echo ghp_XXX... | docker login...` and not `echo <ghp_XXX...> | docker login...`
 :::
+
+From now on, the installation is operated with a handful of commands, from any folder:
+
+| | |
+| --- | --- |
+| `arcsecond status` | what is running, and whether the installation is up to date |
+| `arcsecond stop` / `arcsecond start` | stop it, bring it back |
+| `arcsecond logs backend -f` | watch a service's log (`arcsecond status` lists their names) |
+| `arcsecond restart` | recreate the containers after editing `.env` |
+| `arcsecond update` | move to the latest release — see [Updates](/local/updates) |
+
+Every command and option is listed in the [command reference](/cli/commands/).
 
 ### Windows: adding Python's `Scripts` folder to `PATH`
 
@@ -185,12 +198,16 @@ New-NetFirewallRule -DisplayName "Arcsecond.local (TCP 5555)" -Direction Inbound
 The same rule can be created through **Windows Defender Firewall with Advanced Security → Inbound Rules → New Rule…**;
 the [Access from Other Computers](/local/lan-access) page lists that dialog click by click.
 
-**3. Tell Arcsecond its own address.** Add this line to the `.env` file sitting next to your `docker-compose.yml`, then
-run `docker compose up -d` in that folder:
+**3. Tell Arcsecond its own address.** In the Arcsecond folder, run setup again with the address, then recreate the
+containers so they pick it up:
 
+```bash
+arcsecond setup --lan-host 192.168.1.42
+arcsecond restart
 ```
-HOSTED_FRONTEND_HOST=192.168.1.42:5555
-```
+
+This writes `HOSTED_FRONTEND_HOST=192.168.1.42:5555` into `.env` (the port defaults to 5555). `arcsecond start` prints
+that address from then on, next to the local one.
 
 Browsing already works after step 2. This step is about the links Arcsecond *writes* — invitations and password-reset
 emails. The server has no way of knowing which address people reach it at, so left unset, every one of those links

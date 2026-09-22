@@ -104,28 +104,16 @@ by the server, which has no way of knowing which address people reach it at, so 
 to be told. Left unset, every one of those links says `localhost`, and lands whoever
 clicks it on their own computer.
 
-1. Open the `.env` file sitting next to your `docker-compose.yml`, in a text editor.
-2. Add this line at the end, with your own address:
-
-   ```
-   HOSTED_FRONTEND_HOST=192.168.1.42:5555
-   ```
-
-3. Save the file.
-4. In the Arcsecond folder, apply it:
-
-   ```bash
-   docker compose up -d
-   ```
-
-::: tip
-If the change does not seem to take effect, force the containers that read the file to
-be recreated:
+In the Arcsecond folder (or from anywhere, once `arcsecond setup` has run there), with your own address:
 
 ```bash
-docker compose up -d --force-recreate backend worker beat
+arcsecond setup --lan-host 192.168.1.42
+arcsecond restart
 ```
-:::
+
+The first line writes `HOSTED_FRONTEND_HOST=192.168.1.42:5555` into `.env` — the port defaults to 5555, name it
+(`--lan-host 192.168.1.42:5556`) if you changed it. The second recreates the containers, which is what makes them read
+the new value: a container keeps the environment it was created with, so a plain stop and start would not do.
 
 ::: info
 Adding a member does not require email at all: in the invitations panel, the
@@ -161,8 +149,8 @@ Typing an IP address is unpleasant to share. Two options:
 - **A DNS entry on your router.** Many routers let you map a name to a fixed address.
   This works for every device on the network with nothing to install.
 
-Either way, add the same name to the `.env` file at step 5 (for example
-`HOSTED_FRONTEND_HOST=arcsecond.local:5555`) so that the links in emails use it too.
+Either way, declare the same name at step 5 (`arcsecond setup --lan-host arcsecond.local`, then
+`arcsecond restart`) so that the links in emails use it too.
 
 ## Using the CLI or the API from another computer
 
@@ -170,27 +158,24 @@ The web interface only needs port `5555`. The [command-line interface](/cli/) an
 script talking to the API directly use port `8800` instead, which is **not** open by
 default on the network.
 
-If you need that, repeat step 4 for port `8800`, then give the CLI a name for your
-installation. In `~/.config/arcsecond/config.ini` (see
-[Install & Login](/cli/install)), add:
-
-```ini
-[local]
-api_server = http://192.168.1.42:8800
-```
-
-and pass that name to every command:
+If you need that, repeat step 4 for port `8800`, then, on the other computer, register your installation under a
+name and point the CLI at it:
 
 ```bash
-arcsecond login --api local --username <you> --type access --key <access-key>
+arcsecond api add local http://192.168.1.42:8800
+arcsecond api use local
+arcsecond login --username <you> --type access --key <access-key>
 ```
+
+Every command from then on talks to your installation, until `arcsecond api use cloud` points it back. See
+[Install & Login](/cli/install).
 
 Leave the port closed if nobody needs it — the web interface does not.
 
 The database and Redis publish no port at all, not even on the machine itself (since CLI 3.20.0; earlier templates
 bound them to `localhost`). They are reachable from the other containers only. Anything that needs the database, such
-as [backups](/local/backups) or [rotating its password](/local/rotate-postgres-password), goes through `docker exec`
-and needs no open port.
+as [backups](/local/backups) or [rotating its password](/local/rotate-postgres-password), is done by the `arcsecond`
+tool through the container, and needs no open port.
 
 ## If Arcsecond.local runs on macOS or Linux
 
@@ -209,8 +194,7 @@ Your installation predates the change that serves the API from the same address 
 web interface. Update it, and try again:
 
 ```bash
-docker compose pull
-docker compose up -d
+arcsecond update
 ```
 
 **It works from the observatory machine but nowhere else.** Check that you are using the

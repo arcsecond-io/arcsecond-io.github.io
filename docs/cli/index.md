@@ -27,16 +27,19 @@ The `arcsecond` command is how you install, operate and maintain a self-hosted
 install. The core flow is documented in the
 [Arcsecond.local](/local/) section:
 
-- [Installation](/local/installation) — `arcsecond setup`, then `docker compose up -d`.
-- [Updates](/local/updates) — keep your install current.
+- [Installation](/local/installation) — `arcsecond setup`, then `arcsecond start`.
+- [Updates](/local/updates) — `arcsecond update` moves to the latest release.
+- Day to day: `arcsecond status`, `arcsecond logs`, `arcsecond stop`, `arcsecond restart` — every command and its
+  options is in the [command reference](/cli/commands/), generated from the tool itself.
 - [Live-Image Proxy](/local/webcam) — stream USB webcams, all-sky cameras and network cameras into Arcsecond.local.
 - [Backups](/local/backups) — list, inspect, and restore the Postgres dumps.
 - [Rotate Postgres Password](/local/rotate-postgres-password) — rotate the database password on an existing install.
 
 ## Connecting to a server
 
-Whether you point it at the cloud or at your own install, the CLI uses the same
-commands and credentials:
+The CLI talks to one server at a time — the cloud by default, or your own install
+once you point it there with `arcsecond api use local` — and the same commands
+work against either:
 
 - [Install & Login](./install) — install the package and authenticate.
 - [Installing on Windows](./install-windows) — Windows-specific setup and `PATH` troubleshooting.

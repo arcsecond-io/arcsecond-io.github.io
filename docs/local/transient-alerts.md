@@ -1,13 +1,12 @@
 # Receiving transient alerts (NASA GCN)
 
-*Arcsecond.local only. Suggested location: `docs.arcsecond.io/local/transient-alerts` — the CLI, the `.env` comment and the alerts container's log line all point at this URL.*
-
 Your installation can listen to NASA's [General Coordinates Network](https://gcn.nasa.gov) (GCN), the stream over which space observatories announce transient events — gamma-ray bursts from Swift and SVOM, X-ray transients from Einstein Probe. Alerts arrive as database rows within seconds of the satellite's downlink and feed the Target-of-Opportunity features as they land in upcoming releases.
 
 The service is optional. If you skipped it during `arcsecond setup`, re-run:
 
 ```bash
 arcsecond setup --with-alerts
+arcsecond start
 ```
 
 ## Network prerequisites
@@ -29,23 +28,23 @@ GCN identifies each consumer individually — there are no shared Arcsecond cred
 
 ## Configure
 
-Open the `.env` file beside your `docker-compose.yml` and paste the two values:
+Open the `.env` file in your Arcsecond folder and paste the two values:
 
 ```
 GCN_CONSUMER_CLIENT_ID=your-client-id
 GCN_CONSUMER_CLIENT_SECRET=your-client-secret
 ```
 
-Then start (or restart) just the alerts service:
+Then recreate just the alerts service, so it reads them:
 
 ```bash
-docker compose up -d alerts
+arcsecond restart alerts
 ```
 
 ## Verify
 
 ```bash
-docker logs -f arcsecond-alerts
+arcsecond logs alerts -f
 ```
 
 Within about a minute you should see:
@@ -55,30 +54,25 @@ GCN consumer started (group.id=io.arcsecond.local.…, 32 topics).
 GCN connection established (heartbeat received).
 ```
 
-The heartbeat line repeats at most once per hour — that is the liveness signal. Real alerts are rare; a quiet log between heartbeats is normal and correct.
+The heartbeat line repeats at most once per hour — that is the liveness signal. Real alerts are rare; a quiet log between heartbeats is normal and correct. Ctrl-C leaves the log; the service keeps running.
 
 ## Troubleshooting
 
 | Symptom | Meaning and next action |
 | --- | --- |
-| `docker logs arcsecond-alerts` says *no such container* | The service is not in your `docker-compose.yml`. Run `arcsecond setup --with-alerts`. If you have customized your compose file, the packaged version lands in `docker-compose.latest.yml` — merge the `# >>> arcsecond:alerts` block from there by hand. |
-| Log says `GCN credentials not configured — transient alerts disabled` | The two `.env` keys are empty. Follow *Configure* above and restart: `docker compose up -d alerts`. |
-| Repeated authentication/SASL errors in the log | GCN rejected your credentials. Re-create them at <https://gcn.nasa.gov/quickstart> (check the scope is `gcn.nasa.gov/kafka-public-consumer`), update `.env`, restart the service. |
+| `arcsecond status` does not list `alerts` | The service is not in your `docker-compose.yml`. Run `arcsecond setup --with-alerts`, then `arcsecond start`. If you have customized your compose file, the packaged version lands in `docker-compose.latest.yml` — merge the `# >>> arcsecond:alerts` block from there by hand. |
+| Log says `GCN credentials not configured — transient alerts disabled` | The two `.env` keys are empty. Follow *Configure* above, then `arcsecond restart alerts`. |
+| Repeated authentication/SASL errors in the log | GCN rejected your credentials. Re-create them at <https://gcn.nasa.gov/quickstart> (check the scope is `gcn.nasa.gov/kafka-public-consumer`), update `.env`, then `arcsecond restart alerts`. |
 | Connected, but no heartbeat line | Outbound 443 to the two hosts above is likely blocked. Test from the host: `curl -sI https://auth.gcn.nasa.gov`. |
-| Log says `Installation not initialized` | The backend has not completed its first boot yet. Start the full stack (`docker compose up -d`), let the `backend` container become healthy, then run `docker compose restart alerts`. |
+| Log says `Installation not initialized` | The backend has not completed its first boot yet. Run `arcsecond start`, which waits for the backend to be ready, then `arcsecond restart alerts`. |
 
 ## Turning it off
 
-Stop it temporarily:
-
-```bash
-docker compose stop alerts
-```
-
-Or remove it from your compose file entirely:
+Remove the service from your installation; the next start takes its container down:
 
 ```bash
 arcsecond setup --without-alerts
+arcsecond start
 ```
 
-Your GCN credentials stay in `.env` either way; delete the two lines (and revoke the credential on gcn.nasa.gov) if you want them gone for good.
+Your GCN credentials stay in `.env`; delete the two lines (and revoke the credential on gcn.nasa.gov) if you want them gone for good. `arcsecond setup --with-alerts` brings the service back at any time.

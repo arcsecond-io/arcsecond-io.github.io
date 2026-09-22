@@ -23,6 +23,7 @@ A quick guide to getting up and running:
 
 1. [Installation](installation.md): simple steps to install and run Arcsecond.local.
 2. [Updates](updates.md): keep your installation up to date.
+   Coming from a tool older than 4.0? See [Upgrading to 4.0](upgrading-to-4.md).
 3. **Configuration**: set up member accounts, observing sites and data storage
    for your observatory's needs.
 4. **First Observations**: run your nights with the

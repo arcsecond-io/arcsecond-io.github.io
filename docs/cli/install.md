@@ -34,10 +34,31 @@ arcsecond <command> --help
 The Arcsecond CLI works like a tool such as `git`: `arcsecond` is the main entry
 point, followed by a command. Many commands directly map to Arcsecond resources.
 
+## Which server
+
+The CLI points at one API server at a time, and every command talks to that
+one. By default it is the cloud, `api.arcsecond.io`. To work against your own
+Arcsecond.local instead:
+
+```bash
+arcsecond api use local
+```
+
+`arcsecond setup` registers `local` for you (`http://localhost:8800`); from
+another computer, register the machine's address first —
+`arcsecond api add local http://192.168.1.42:8800` — see
+[Access from Other Computers](/local/lan-access). `arcsecond api` lists the
+servers, the current one marked with `*`, and `arcsecond api use cloud` points
+back. Credentials are kept per server, so log in once on each.
+
+For a script or a scheduled job, `ARCSECOND_API=local` in the environment selects
+a server for that process alone, without moving the pointer.
+
 ## Authentication
 
-To use the CLI, you need an Arcsecond account. In your settings page on
-[arcsecond.io](https://www.arcsecond.io) you will find two kinds of credentials:
+To use the CLI, you need an account on the server the CLI points at. In your
+settings page — on [arcsecond.io](https://www.arcsecond.io), or on your own
+Arcsecond.local — you will find two kinds of credentials:
 
 - an Access Key for broad access to your resources
 - an Upload Key for upload-only workflows

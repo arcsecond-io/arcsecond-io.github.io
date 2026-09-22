@@ -46,6 +46,7 @@ export default {
             { text: 'Introduction', link: '/local/index.md' },
             { text: 'Installation', link: '/local/installation.md' },
             { text: 'Updates', link: '/local/updates.md' },
+            { text: 'Upgrading to 4.0', link: '/local/upgrading-to-4.md' },
             { text: 'Troubleshooting', link: '/local/troubleshooting.md' },
             { text: 'Pricing', link: '/local/pricing.md' },
           ]

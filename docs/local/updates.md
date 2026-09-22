@@ -5,26 +5,37 @@ As of now, the installation of Arcsecond.local requires an individual authentica
 Arcsecond. In the future, the process will be streamlined and easier.
 :::
 
-Note that your existing installation can still be running, there is no need to stop it before updating. As usual, these
-are commands to be executed in the Arcsecond folder (where the file `docker-compose.yml` file resides).
+Your installation can keep running while it updates: there is no need to stop it first. Two commands, from any folder
+once `arcsecond setup` has run on this machine:
 
-- Update the Arcsecond CLI: `pip3 install --upgrade arcsecond`
-- Let it bring `docker-compose.yml` up to date: `arcsecond setup`
-- Update your Docker images with the latest ones: `docker compose pull`
-- Update your containers (it works for both a running or stopped installation): `docker compose up -d`
+```bash
+pip3 install --upgrade arcsecond
+arcsecond update
+```
 
-Note that it may take some time (1 min or so) for the containers to be recreated. Simply be patient. This is due to
-the various timeout/starting time settings.
+The first updates the `arcsecond` tool itself. The second updates the installation: it brings `docker-compose.yml` up to
+date (see below), downloads the latest images, recreates the containers whose image changed, waits for the backend to
+be ready again, and prints the address. Expect a minute or two while the containers come back; the tool waits for you.
 
-## Why run `arcsecond setup` again
+`arcsecond status` says whether an installation is current: it compares the version of your `docker-compose.yml` with
+the one the installed tool carries, and tells you to run `arcsecond update` when they differ.
 
-The `docker-compose.yml` file is not part of the Docker images: it is written by the CLI, and evolves with it. Running
-`arcsecond setup` after updating the CLI rewrites the file in place when it has not been edited by hand. If it has, the
-file is left alone and the packaged version is written beside it as `docker-compose.latest.yml`, for you to compare and
-merge. Your `.env` file only gains keys it lacks, and your data is never touched.
+## Why the compose file is refreshed
+
+The `docker-compose.yml` file is not part of the Docker images: it is written by the `arcsecond` tool, and evolves with
+it — which is why the tool is updated first. `arcsecond update` rewrites the file in place when it has not been edited
+by hand. If it has, the file is left alone and the packaged version is written beside it as
+`docker-compose.latest.yml`, for you to compare and merge. Your `.env` file only gains keys it lacks, and your data is
+never touched.
 
 The latest change of this kind: since CLI 3.20.0 (template version 6.4), the database and Redis containers no longer
 publish a port on the machine, not even on `localhost`. They are reachable from the other containers only, which is all
 Arcsecond ever needed, and an installation can now start next to a PostgreSQL already running on the machine. An
-installation that fails with *ports are not available* on `docker compose up -d` is one that has not had this update;
-see [Troubleshooting](/local/troubleshooting).
+installation that fails with *ports are not available* on `arcsecond start` is one that has not had this update; see
+[Troubleshooting](/local/troubleshooting).
+
+## Coming from a tool older than 4.0
+
+Version 4.0 of the tool changed how an installation is operated — `arcsecond start` and friends replace the `docker
+compose` commands these pages used to ask for. The installation itself needs no change. See
+[Upgrading to 4.0](/local/upgrading-to-4).

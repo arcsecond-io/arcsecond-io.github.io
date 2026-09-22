@@ -428,7 +428,7 @@ The typical workflow is:
 
 1. Register your cameras: `arcsecond webcam add ...`, `arcsecond allsky add ...`
 2. Start the proxy on the host: `arcsecond proxy start`
-3. Start Arcsecond.local: `docker compose up -d`
+3. Start Arcsecond.local: `arcsecond start`
 
 Cameras added later, with the proxy already running, appear without either the
 proxy or Arcsecond.local being restarted.
@@ -458,15 +458,14 @@ variable is not set, the backend falls back to
 
 ::: warning Changing this needs the container recreated
 A container keeps the environment it was created with, so editing `.env` alone
-changes nothing for a backend that is already running, and `docker compose
-restart` reuses that same environment. Recreate it instead:
+changes nothing for a backend that is already running, and a plain stop and start
+reuses that same environment. Recreate it instead:
 
 ```bash
-docker compose up -d --force-recreate backend
+arcsecond restart backend
 ```
 
-If the value has not changed, there is nothing to do. `docker exec arcsecond-api
-printenv LIVE_IMAGE_PROXY_URL` says what the running container actually has.
+If the value has not changed, there is nothing to do.
 :::
 
 The previous variable name `WEBCAM_PROXY_URL` is still accepted as a

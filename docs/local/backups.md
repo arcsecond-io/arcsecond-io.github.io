@@ -91,7 +91,7 @@ arcsecond backups restore backup-20260515-021100.sql.gz   # by filename
 4. Stop `arcsecond-api`, `arcsecond-worker`, `arcsecond-beat`,
    `arcsecond-web` (the DB container stays up so the dump can be piped in).
 5. Drop and recreate the `arcsecond_docker` database.
-6. `gunzip -c <backup> | docker exec -i arcsecond-db psql …`
+6. Pipe the decompressed dump into the database container.
 7. Restart the stopped services.
 
 Use `--dry-run` to print every command without touching anything — useful for
