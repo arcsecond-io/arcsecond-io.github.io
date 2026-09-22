@@ -16,8 +16,8 @@ arcsecond api [OPTIONS] [COMMAND] [ARGS]...
 The API server the CLI talks to.
 
 Every command uses one server: the "cloud" (api.arcsecond.io) by
-default, or any server registered here — typically your own
-Arcsecond.local. Point the CLI at one and it stays pointed there:
+    default, or any server registered here — typically your own
+    Arcsecond.local. Point the CLI at one and it stays pointed there:
 
 ```
 arcsecond api                          list the servers, * marks the current one
@@ -27,10 +27,10 @@ arcsecond api remove local
 ```
 
 Credentials are kept per server, so `arcsecond login` after `api use`
-logs you in on that server only.
+    logs you in on that server only.
 
 For a script or a cron job, set ARCSECOND_API=&lt;name&gt; instead: it applies to
-that process alone and leaves the pointer untouched.
+    that process alone and leaves the pointer untouched.
 
 **Subcommands**
 

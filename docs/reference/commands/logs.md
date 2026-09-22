@@ -14,7 +14,7 @@ arcsecond logs [OPTIONS] [SERVICE]
 ```
 
 Show recent logs. Services are named as in `arcsecond status`:
-backend, worker, beat, web, db, broker, platesolver, alerts.
+    backend, worker, beat, web, db, broker, platesolver, alerts.
 
 **Arguments**
 

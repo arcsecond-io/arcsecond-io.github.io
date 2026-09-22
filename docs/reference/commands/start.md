@@ -16,8 +16,8 @@ arcsecond start [OPTIONS]
 Start Arcsecond.local, or bring a running one in line with its files.
 
 Safe to run again at any time: containers already running and up to date
-are left alone. The first start downloads the Docker images, which takes
-a while.
+    are left alone. The first start downloads the Docker images, which takes
+    a while.
 
 **Options**
 

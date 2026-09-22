@@ -14,9 +14,9 @@ arcsecond check [OPTIONS]
 ```
 
 Run every check an installation can run on itself: Docker, the
-configuration files, the containers, the ports and what they are bound
-to, the address other computers use, and on Windows the network profile
-and the firewall rule. Each problem comes with its remedy.
+    configuration files, the containers, the ports and what they are bound
+    to, the address other computers use, and on Windows the network profile
+    and the firewall rule. Each problem comes with its remedy.
 
 Exit code 1 when something fails, 0 otherwise — so it can gate a script.
 

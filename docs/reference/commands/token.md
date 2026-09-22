@@ -16,7 +16,7 @@ arcsecond token [OPTIONS] [COMMAND] [ARGS]...
 The access token Arcsecond gave your observatory.
 
 It lets this machine download Arcsecond.local. `arcsecond setup` asks for
-it; these commands are for entering it again, or removing it.
+    it; these commands are for entering it again, or removing it.
 
 ```
 arcsecond token          does this machine have one?
@@ -50,8 +50,8 @@ arcsecond token set [OPTIONS]
 Enter the access token Arcsecond gave your observatory, once per machine.
 
 Nothing is shown while you type or paste it. Docker keeps it, so
-`arcsecond start` and `arcsecond update` can download the images from
-then on.
+    `arcsecond start` and `arcsecond update` can download the images from
+    then on.
 
 **Options**
 

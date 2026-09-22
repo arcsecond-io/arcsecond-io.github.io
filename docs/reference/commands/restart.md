@@ -14,10 +14,10 @@ arcsecond restart [OPTIONS] [SERVICES]...
 ```
 
 Recreate the given services — or all of them — from their current
-configuration.
+    configuration.
 
 This is what to run after editing .env: a plain stop/start would keep the
-old values. Naming services limits it: `arcsecond restart backend worker`.
+    old values. Naming services limits it: `arcsecond restart backend worker`.
 
 **Arguments**
 

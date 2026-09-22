@@ -16,7 +16,7 @@ arcsecond stop [OPTIONS]
 Stop the containers. `arcsecond start` brings them back.
 
 A stopped installation stays stopped across a reboot; one that was running
-comes back on its own when Docker does.
+    comes back on its own when Docker does.
 
 **Options**
 
