@@ -4,7 +4,7 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.2.1"
+cli: "4.3.0"
 ---
 
 # `arcsecond check`

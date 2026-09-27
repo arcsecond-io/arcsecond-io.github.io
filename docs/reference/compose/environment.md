@@ -4,8 +4,8 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.2.1"
-template: "6.4"
+cli: "4.3.0"
+template: "7.3"
 ---
 
 
@@ -36,6 +36,13 @@ A `$` in a value is interpolated by compose. Quotes, backslashes and `#` break t
 | `HOSTED_EXTRA_TRUSTED_ORIGINS` | read by the backend | Comma-separated origins, scheme included, to trust besides private-network addresses — a public domain, a Tailscale name. Not needed for a LAN address. |
 | `LIVE_IMAGE_PROXY_URL` | read by the backend | Where the backend reaches the live-image proxy for cameras. Default http://host.docker.internal:8765; change it only for a proxy on another machine, then `arcsecond restart backend`. |
 | `LOCAL_EMAIL_VERIFICATION_GRACE_HOURS` | read by the backend | How long a new member may use the installation before verifying their email, on an installation with no mail server. |
+| `ARCSECOND_DOWNLOADS_PER_CLIENT` | set by the operator | How many downloads one computer may have open at once; past it, the next one is refused with a 429 until one finishes. Default 6. Then `arcsecond restart web`. |
+| `ARCSECOND_DOWNLOADS_TOTAL` | set by the operator | How many downloads the installation serves at once, all computers together. Default 24. |
+| `ARCSECOND_DOWNLOAD_RATE` | set by the operator | The speed of each download, in bytes per second, `k` and `m` allowed; `0` for no limit. Default `20m`. Lower it when the observers work remotely over a link the downloads would otherwise fill. |
+| `ARCSECOND_BACKEND_MEMORY` | set by the operator | The most memory the backend container may use, e.g. `6g` (the default). Past it, Docker restarts the busiest of its processes rather than letting the machine take memory from the database. |
+| `ARCSECOND_WORKER_MEMORY` | set by the operator | The same ceiling for the worker, which runs the exposures and procedures. Default `6g`. |
+| `ARCSECOND_DATA_WORKER_MEMORY` | set by the operator | The same ceiling for the data worker: zip archives, previews, storage pushes, backups. Default `3g`. |
+| `ARCSECOND_DATA_WORKER_CONCURRENCY` | set by the operator | How many jobs the data worker runs at once. Default 2; each can hold a few hundred MB. |
 
 ## `SECRET_KEY` {#secret_key}
 
@@ -100,3 +107,31 @@ A `$` in a value is interpolated by compose. Quotes, backslashes and `#` break t
 ## `LOCAL_EMAIL_VERIFICATION_GRACE_HOURS` {#local_email_verification_grace_hours}
 
 *Read by the backend.* How long a new member may use the installation before verifying their email, on an installation with no mail server.
+
+## `ARCSECOND_DOWNLOADS_PER_CLIENT` {#arcsecond_downloads_per_client}
+
+*Set by the operator.* How many downloads one computer may have open at once; past it, the next one is refused with a 429 until one finishes. Default 6. Then `arcsecond restart web`.
+
+## `ARCSECOND_DOWNLOADS_TOTAL` {#arcsecond_downloads_total}
+
+*Set by the operator.* How many downloads the installation serves at once, all computers together. Default 24.
+
+## `ARCSECOND_DOWNLOAD_RATE` {#arcsecond_download_rate}
+
+*Set by the operator.* The speed of each download, in bytes per second, `k` and `m` allowed; `0` for no limit. Default `20m`. Lower it when the observers work remotely over a link the downloads would otherwise fill.
+
+## `ARCSECOND_BACKEND_MEMORY` {#arcsecond_backend_memory}
+
+*Set by the operator.* The most memory the backend container may use, e.g. `6g` (the default). Past it, Docker restarts the busiest of its processes rather than letting the machine take memory from the database.
+
+## `ARCSECOND_WORKER_MEMORY` {#arcsecond_worker_memory}
+
+*Set by the operator.* The same ceiling for the worker, which runs the exposures and procedures. Default `6g`.
+
+## `ARCSECOND_DATA_WORKER_MEMORY` {#arcsecond_data_worker_memory}
+
+*Set by the operator.* The same ceiling for the data worker: zip archives, previews, storage pushes, backups. Default `3g`.
+
+## `ARCSECOND_DATA_WORKER_CONCURRENCY` {#arcsecond_data_worker_concurrency}
+
+*Set by the operator.* How many jobs the data worker runs at once. Default 2; each can hold a few hundred MB.
