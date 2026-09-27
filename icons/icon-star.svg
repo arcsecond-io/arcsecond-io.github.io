@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Étoile" data-name="Étoile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff3c9;
+        isolation: isolate;
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="-405.58" cy="-2266.91" fx="-405.58" fy="-2266.91" r="1.01" gradientTransform="translate(450069.04 80686.43) rotate(90) scale(198.45 -198.45)" gradientUnits="userSpaceOnUse">
+      <stop offset=".27" stop-color="#ffe792"/>
+      <stop offset=".47" stop-color="#fcd36f"/>
+      <stop offset=".69" stop-color="#fac14e"/>
+      <stop offset=".88" stop-color="#f9b63a"/>
+      <stop offset="1" stop-color="#f9b233"/>
+    </radialGradient>
+  </defs>
+  <ellipse class="cls-2" cx="200" cy="200.01" rx="161.25" ry="161.24"/>
+  <path class="cls-1" d="M359.23,181.38l36.17,12.22c6.13,2.08,6.13,10.75,0,12.83l-36.17,12.22c-66.22,22.36-118.2,74.37-140.59,140.58l-12.22,36.17c-2.08,6.13-10.75,6.13-12.83,0l-12.22-36.17c-22.36-66.22-74.37-118.19-140.59-140.58l-36.17-12.22c-6.13-2.08-6.13-10.75,0-12.83l36.17-12.22c66.22-22.36,118.2-74.37,140.59-140.58l12.22-36.17c2.08-6.16,10.75-6.16,12.83-.03l12.22,36.17c22.36,66.22,74.37,118.19,140.59,140.58v.03Z"/>
+</svg>
