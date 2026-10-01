@@ -34,8 +34,12 @@ Below is the table of permissions associated with each role.
 | Read the organisation's information                         |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Delete datasets or data files                              |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
 | Invite new members & visitors                              |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
-| Change members' access levels                              |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
+| Create an account with a password (self-hosted)            |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
+| Change the access levels of visitors, members and admins   |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
 | Create/associate Observing Sites                           |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
 | Create/associate Telescopes                                |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
 | Update the organisation's information                       |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
-| Close the organisation                                     |                    |                    |                    |                    | :heavy_check_mark: |
+| Make someone an owner, or demote or remove an owner        |                    |                    |                    |                    | :heavy_check_mark: |
+| Manage billing and the payer (cloud portals only)          |                    |                    |                    |                    | :heavy_check_mark: |
+| Activate the licence (self-hosted)                         |                    |                    |                    |                    | :heavy_check_mark: |
+| Close the organisation (cloud portals only)                |                    |                    |                    |                    | :heavy_check_mark: |
