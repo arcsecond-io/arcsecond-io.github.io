@@ -45,5 +45,5 @@ organisation-wide layer on top of them.
 ## Members and roles
 
 Membership and access are governed by five purely-hierarchical roles, from
-`Anonymous` up to `Superadmin`. The full capability matrix is on the
+`Anonymous` up to `Owner`. The full capability matrix is on the
 [Permissions & Roles](./permissions) page.

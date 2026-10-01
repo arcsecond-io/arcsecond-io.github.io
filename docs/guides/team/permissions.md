@@ -14,7 +14,7 @@ understandable and avoid the complexity traps that some other software falls
 into, every Arcsecond.local install uses a list of only 5 purely-hierarchical
 roles:
 
-* `Superadmin`
+* `Owner`
 * `Admin`
 * `Member`
 * `Observer` (Visitor)
@@ -22,7 +22,7 @@ roles:
 
 Below is the table of permissions associated with each role.
 
-| -                                                          | Anonymous          | Visitor            | Member             | Admin              | Superadmin         |
+| -                                                          | Anonymous          | Visitor            | Member             | Admin              | Owner              |
 |------------------------------------------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
 | Download public data packages and datasets                 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Log into the organisation                                  |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
