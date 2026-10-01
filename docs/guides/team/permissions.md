@@ -41,5 +41,5 @@ Below is the table of permissions associated with each role.
 | Update the organisation's information                       |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
 | Make someone an owner, or demote or remove an owner        |                    |                    |                    |                    | :heavy_check_mark: |
 | Manage billing and the payer (cloud portals only)          |                    |                    |                    |                    | :heavy_check_mark: |
-| Activate the licence (self-hosted)                         |                    |                    |                    |                    | :heavy_check_mark: |
+| Activate the license (self-hosted)                         |                    |                    |                    |                    | :heavy_check_mark: |
 | Close the organisation (cloud portals only)                |                    |                    |                    |                    | :heavy_check_mark: |
