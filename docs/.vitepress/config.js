@@ -21,8 +21,13 @@ const base = process.env.DOCS_BASE || '/'
 // every page above it. A page is therefore public only in writing, and a page
 // without frontmatter is embedded, not public.
 //
-// TODO(visibility): the REST reference, once generated, needs the list of the
-// apps whose endpoints stay embedded-only. Name them here when that lands.
+// Generated pages that describe the server's interface leave out the apps
+// that drive or identify a rig. That list lives in the backend, in
+// settings/apps.py (`public_docs=False`), and every generator reads it there;
+// none keeps a copy. reference/permissions.md is committed in its public
+// flavour: before `npm run docs:build:embedded`, regenerate it from
+// arcsecond-back with
+// `python3 -m settings.capabilities markdown --flavour embedded --out <path>`.
 // ---------------------------------------------------------------------------
 const RANK = { public: 0, embedded: 1, internal: 2 }
 const flavour = process.env.DOCS_VISIBILITY || 'public'
@@ -226,6 +231,13 @@ export default {
           items: [
             { text: 'Services (docker-compose.yml)', link: '/reference/compose/services.md' },
             { text: 'Environment (.env)', link: '/reference/compose/environment.md' },
+          ]
+        },
+        {
+          text: 'Portals',
+          collapsible: true,
+          items: [
+            { text: 'Roles and permissions', link: '/reference/permissions.md' },
           ]
         },
         {

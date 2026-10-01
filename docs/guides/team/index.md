@@ -33,9 +33,9 @@ organisation-wide layer on top of them.
   observations, observers, targets and observing nights, and a modern data
   archive built on the same APIs that power the rest of the platform, even for
   data located elsewhere (see [External Storages](/guides/data/external-storages)).
-- **An unlimited number of members**, with a clear, easy-to-manage
-  [5-level permission scheme](./permissions) to control who can do what and who
-  can access what.
+- **An unlimited number of members**, with four clear roles
+  ([Permissions & Roles](./permissions)) to control who can do what and who can
+  access what.
 - **Sharing**, from a private dataset between two members up to a customizable
   public page exposing selected data to the world.
 - **An Observatory Schedule** to manage what happens across your telescopes and
@@ -44,6 +44,8 @@ organisation-wide layer on top of them.
 
 ## Members and roles
 
-Membership and access are governed by five purely-hierarchical roles, from
-`Anonymous` up to `Owner`. The full capability matrix is on the
-[Permissions & Roles](./permissions) page.
+Membership and access are governed by four roles, `Visitor`, `Member`, `Admin`
+and `Owner`, on top of what anyone may see in public. What each role is for is
+on the [Permissions & Roles](./permissions) page, and the complete list of
+rights, generated from the server, on the
+[Roles and permissions](/reference/permissions) page.

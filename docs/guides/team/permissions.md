@@ -8,38 +8,31 @@ source: handwritten
 
 # Permissions & Roles
 
-Since day one, Arcsecond has been built with the experience of real astronomical
-observatories and the various roles inside them. To keep things easily
-understandable and avoid the complexity traps that some other software falls
-into, every Arcsecond.local install uses a list of only 5 purely-hierarchical
-roles:
+Every member of an Arcsecond portal holds one of four roles: `Visitor`,
+`Member`, `Admin` or `Owner`. Each role holds everything the role before it
+holds. Anyone else, signed in or not, sees only what the portal makes public.
 
-* `Owner`
-* `Admin`
-* `Member`
-* `Observer` (Visitor)
-* `Anonymous`
+**Members** run the observatory from day to day. They see the whole portal and
+work with all of it: the observing setups and their equipment, the targets,
+the night plans and night logs, the data. They define setups and equipment,
+and they take control of a setup to observe with it. **Visitors** follow the
+portal's work: they read most of what members see, run their own observing
+sequences and receive the data packages shared with them, but they do not take
+control of a setup.
 
-Below is the table of permissions associated with each role.
+**Admins** make the critical changes: the observing sites and telescopes, the
+portal's settings, the safety conditions and procedures, the transient-alert
+policies, and the members and their roles. Engineers are usually admins. An
+admin never changes or removes an owner, and never grants a role above their
+own. **Owners** are the portal's accountable accounts. On top of everything an
+admin does, exactly three things are theirs alone: closing the organisation on
+the cloud, choosing the account that pays (an owner or an admin), and
+activating the license of a self-hosted installation. A portal always keeps at
+least one owner. An owner's role is administrative, not operational: at the
+telescope, an owner counts as an admin.
 
-| -                                                          | Anonymous          | Visitor            | Member             | Admin              | Owner              |
-|------------------------------------------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
-| Download public data packages and datasets                 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Log into the organisation                                  |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Download their own private datasets                        |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Download the organisation's private data packages and datasets |                |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Create datasets and upload data files                      |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Create and delete data packages                            |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Share data packages with visitors                          |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Read the organisation's information                         |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Delete datasets or data files                              |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
-| Invite new members & visitors                              |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
-| Create an account with a password (self-hosted)            |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
-| Change the access levels of visitors, members and admins   |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
-| Create/associate Observing Sites                           |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
-| Create/associate Telescopes                                |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
-| Update the organisation's information                       |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |
-| Make someone an owner, or demote or remove an owner        |                    |                    |                    |                    | :heavy_check_mark: |
-| Manage billing and the payer (cloud portals only)          |                    |                    |                    |                    | :heavy_check_mark: |
-| Activate the license (self-hosted)                         |                    |                    |                    |                    | :heavy_check_mark: |
-| Close the organisation (cloud portals only)                |                    |                    |                    |                    | :heavy_check_mark: |
+The complete list of what each role may do is generated from the server
+itself, so that it never drifts from what the server does:
+[Roles and permissions](/reference/permissions). The copy of this documentation
+that ships inside a self-hosted installation also lists the rights of the
+Control Room, of safety and of the installation.
