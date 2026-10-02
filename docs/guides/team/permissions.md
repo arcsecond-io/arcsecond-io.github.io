@@ -15,10 +15,14 @@ holds. Anyone else, signed in or not, sees only what the portal makes public.
 **Members** run the observatory from day to day. They see the whole portal and
 work with all of it: the observing setups and their equipment, the targets,
 the night plans and night logs, the data. They define setups and equipment,
-and they take control of a setup to observe with it. **Visitors** follow the
-portal's work: they read most of what members see, run their own observing
-sequences and receive the data packages shared with them, but they do not take
-control of a setup.
+and they take control of a setup to observe with it, and they assign setups to
+visitors. **Visitors** observe on the setups assigned to them: a member hands
+a visitor a setup for a range of observing nights, and during those nights the
+visitor takes control of it, drives its equipment and runs their own observing
+sequences on it. At any time they read those setups, their telescopes and
+their equipment, and they always see the site itself: its weather, its safety
+status, its all-sky cameras. They also receive the data packages shared with
+them.
 
 **Admins** make the critical changes: the observing sites and telescopes, the
 portal's settings, the safety conditions and procedures, the transient-alert

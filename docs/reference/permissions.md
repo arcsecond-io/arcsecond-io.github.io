@@ -47,28 +47,32 @@ What each role may do in a portal. A role holds everything the roles to its left
 | --- | :---: | :---: | :---: | :---: | :---: |
 | See the observing sites |  | ✓ | ✓ | ✓ | ✓ |
 | Create and edit observing sites |  |  |  | ✓ | ✓ |
-| See the telescopes |  | ✓ | ✓ | ✓ | ✓ |
+| See the telescopes |  | Assigned setups | ✓ | ✓ | ✓ |
 | Create, edit and delete telescopes |  |  |  | ✓ | ✓ |
 | Add images to observing sites and telescopes |  |  | ✓ | ✓ | ✓ |
-| See the instruments |  | ✓ | ✓ | ✓ | ✓ |
+| See the instruments |  | Assigned setups | ✓ | ✓ | ✓ |
 | Edit instruments |  |  | ✓ | ✓ | ✓ |
-| See the horizon masks |  | ✓ | ✓ | ✓ | ✓ |
+| See the horizon masks |  | Assigned setups | ✓ | ✓ | ✓ |
 | Upload horizon masks |  |  | ✓ | ✓ | ✓ |
 | See the observatory map and its inventory |  |  | ✓ | ✓ | ✓ |
 | Edit the observatory map and its inventory |  |  |  | ✓ | ✓ |
-| See the observing setups |  | ✓ | ✓ | ✓ | ✓ |
+| See the observing setups |  | Assigned setups | ✓ | ✓ | ✓ |
 | Create, edit and delete observing setups |  |  | ✓ | ✓ | ✓ |
-| See the equipment, its Alpaca servers and devices |  | ✓ | ✓ | ✓ | ✓ |
+| Assign setups to visitors for a range of observing nights |  |  | ✓ | ✓ | ✓ |
+| See the equipment, its Alpaca servers and devices |  | Assigned setups, and the site context | ✓ | ✓ | ✓ |
 | Create, edit and delete equipment, Alpaca servers and devices |  |  | ✓ | ✓ | ✓ |
 | See the all-sky cameras' frames and night products |  | ✓ | ✓ | ✓ | ✓ |
 | Upload all-sky camera frames |  |  | ✓ | ✓ | ✓ |
+
+- **Assign setups to visitors for a range of observing nights.** A visitor operates an assigned setup during the nights of the assignment, and reads it, its telescope and its equipment at any time.
+- **See the equipment, its Alpaca servers and devices.** The site context is the weather station, the safety monitors, the all-sky cameras and the webcams: every visitor sees them.
 
 ## Sequences and scheduling
 
 | | Anonymous | Visitor | Member | Admin | Owner |
 | --- | :---: | :---: | :---: | :---: | :---: |
-| See observing sequences and their triggers |  | Their own | ✓ | ✓ | ✓ |
-| Create, edit, run and delete observing sequences and their triggers |  | Their own | ✓ | ✓ | ✓ |
+| See observing sequences and their triggers |  | Their own, on assigned setups | ✓ | ✓ | ✓ |
+| Create, edit, run and delete observing sequences and their triggers |  | Their own, on assigned setups, during the assignment | ✓ | ✓ | ✓ |
 | See sequence step and task templates |  | ✓ | ✓ | ✓ | ✓ |
 | Create, edit and delete sequence step and task templates |  | ✓ | ✓ | ✓ | ✓ |
 | See the night plans |  |  | ✓ | ✓ | ✓ |
