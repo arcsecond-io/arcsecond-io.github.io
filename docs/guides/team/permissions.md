@@ -22,8 +22,12 @@ visitor takes control of it, drives its equipment and runs their own observing
 sequences on it. They prepare those sequences whenever they like, and may
 pause or stop them at any time. At any time they read those setups, their
 telescopes and their equipment, and they always see the site itself: its
-weather, its safety status, its all-sky cameras. They also receive the data
-packages shared with them.
+weather, its safety status, its all-sky cameras. They keep their own target
+lists, and add targets to the portal: a target the observatory already has is
+found, never copied, so the portal keeps one list of targets whoever added
+them. They see the targets of their lists and those they observed, their own
+night logs and observations, and the calibrations of their setups' nights.
+They also receive the data packages shared with them.
 
 **Admins** make the critical changes: the observing sites and telescopes, the
 portal's settings, the safety conditions and procedures, the transient-alert

@@ -96,20 +96,22 @@ What each role may do in a portal. A role holds everything the roles to its left
 
 | | Anonymous | Visitor | Member | Admin | Owner |
 | --- | :---: | :---: | :---: | :---: | :---: |
-| See the targets |  | ✓ | ✓ | ✓ | ✓ |
-| Create, edit and delete targets |  |  | ✓ | ✓ | ✓ |
+| See the targets |  | Those in their lists or observed by them | ✓ | ✓ | ✓ |
+| Add targets |  | ✓ | ✓ | ✓ | ✓ |
+| Edit and delete targets |  |  | ✓ | ✓ | ✓ |
 | Compute the current positions of targets |  |  | ✓ | ✓ | ✓ |
-| See the target lists |  | ✓ | ✓ | ✓ | ✓ |
-| Create, edit and delete target lists |  |  | ✓ | ✓ | ✓ |
+| See the target lists |  | Their own | ✓ | ✓ | ✓ |
+| Create, edit and delete target lists |  | Their own | ✓ | ✓ | ✓ |
 | Send a target list to a Virtual Observatory tool |  |  | ✓ | ✓ | ✓ |
-| See the night logs |  |  | ✓ | ✓ | ✓ |
+| See the night logs |  | Their own | ✓ | ✓ | ✓ |
 | Create, edit and delete night logs |  |  | ✓ | ✓ | ✓ |
-| See observations and calibrations |  | ✓ | ✓ | ✓ | ✓ |
+| See observations and calibrations |  | Their own; calibrations of assigned setup-nights | ✓ | ✓ | ✓ |
 | Create and edit observations and calibrations |  | ✓ | ✓ | ✓ | ✓ |
 | See how many observations and calibrations each night holds |  |  | ✓ | ✓ | ✓ |
 | Use satellite tracks and small-body ephemerides |  |  | ✓ | ✓ | ✓ |
 | Keep a personal Night Explorer tree |  |  | ✓ | ✓ | ✓ |
 
+- **Add targets.** Adds the observatory's existing target when the object is already known; never a copy.
 - **Keep a personal Night Explorer tree.** Each tree is its owner's alone.
 
 ## Data
