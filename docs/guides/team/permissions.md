@@ -19,10 +19,11 @@ and they take control of a setup to observe with it, and they assign setups to
 visitors. **Visitors** observe on the setups assigned to them: a member hands
 a visitor a setup for a range of observing nights, and during those nights the
 visitor takes control of it, drives its equipment and runs their own observing
-sequences on it. At any time they read those setups, their telescopes and
-their equipment, and they always see the site itself: its weather, its safety
-status, its all-sky cameras. They also receive the data packages shared with
-them.
+sequences on it. They prepare those sequences whenever they like, and may
+pause or stop them at any time. At any time they read those setups, their
+telescopes and their equipment, and they always see the site itself: its
+weather, its safety status, its all-sky cameras. They also receive the data
+packages shared with them.
 
 **Admins** make the critical changes: the observing sites and telescopes, the
 portal's settings, the safety conditions and procedures, the transient-alert

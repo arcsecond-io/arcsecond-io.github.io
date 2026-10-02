@@ -72,13 +72,15 @@ What each role may do in a portal. A role holds everything the roles to its left
 | | Anonymous | Visitor | Member | Admin | Owner |
 | --- | :---: | :---: | :---: | :---: | :---: |
 | See observing sequences and their triggers |  | Their own, on assigned setups | ✓ | ✓ | ✓ |
-| Create, edit, run and delete observing sequences and their triggers |  | Their own, on assigned setups, during the assignment | ✓ | ✓ | ✓ |
+| Create, edit, run and delete observing sequences and their triggers |  | Their own, on assigned setups | ✓ | ✓ | ✓ |
 | See sequence step and task templates |  | ✓ | ✓ | ✓ | ✓ |
 | Create, edit and delete sequence step and task templates |  | ✓ | ✓ | ✓ | ✓ |
 | See the night plans |  |  | ✓ | ✓ | ✓ |
 | Create, edit and delete night plans |  |  | ✓ | ✓ | ✓ |
 | See the observatory schedule |  | ✓ | ✓ | ✓ | ✓ |
 | Create, edit and delete observatory schedule events |  |  |  | ✓ | ✓ |
+
+- **Create, edit, run and delete observing sequences and their triggers.** A visitor prepares their sequences at any time, starts them only during the nights of the assignment, and may pause or stop them at any time.
 
 ## Safety and transient alerts
 
