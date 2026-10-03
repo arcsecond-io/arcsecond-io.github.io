@@ -109,10 +109,10 @@ What each role may do in a portal. A role holds everything the roles to its left
 | Create and edit observations and calibrations |  | Their own | ✓ | ✓ | ✓ |
 | See how many observations and calibrations each night holds |  |  | ✓ | ✓ | ✓ |
 | Use satellite tracks and small-body ephemerides |  |  | ✓ | ✓ | ✓ |
-| Keep a personal Night Explorer tree |  |  | ✓ | ✓ | ✓ |
+| Keep a personal Night Explorer tree |  | Their own, of the targets they reach | ✓ | ✓ | ✓ |
 
 - **Add targets.** Adds the observatory's existing target when the object is already known; never a copy.
-- **Keep a personal Night Explorer tree.** Each tree is its owner's alone.
+- **Keep a personal Night Explorer tree.** Each tree is its owner's alone. A tree changes a target's colour and notes only for those who may edit targets.
 
 ## Data
 
