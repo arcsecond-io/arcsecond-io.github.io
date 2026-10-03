@@ -19,14 +19,19 @@ and they take control of a setup to observe with it, and they assign setups to
 visitors. **Visitors** observe on the setups assigned to them: a member hands
 a visitor a setup for a range of observing nights, and during those nights the
 visitor takes control of it, drives its equipment and runs their own observing
-sequences on it. They prepare those sequences whenever they like, and may
-pause or stop them at any time. At any time they read those setups, their
+sequences on it. They must hold the setup's control to send it commands or to
+start a sequence on it, so only one visitor drives a setup at a time. They
+prepare their sequences whenever they like, and may pause or stop them at any
+time. At any time they read those setups, their
 telescopes and their equipment, and they always see the site itself: its
 weather, its safety status, its all-sky cameras. They keep their own target
 lists, and add targets to the portal: a target the observatory already has is
 found, never copied, so the portal keeps one list of targets whoever added
-them. They see the targets of their lists and those they observed, their own
-night logs and observations, and the calibrations of their setups' nights.
+them. They see the targets of their lists and those they observed. The
+portal keeps one night log per night and telescope, whoever observed, and each
+observation in it names its observer: a visitor sees the night logs of their
+setups' nights without the journal, which stays the members', their own
+observations in them, and the calibrations of those nights.
 In Data Grand Central, the portal files the frames a visitor takes under
 their name, in a folder of their own for each setup and night; they see and
 download those, the calibrations of their setups' nights, and the portal's

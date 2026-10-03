@@ -103,10 +103,10 @@ What each role may do in a portal. A role holds everything the roles to its left
 | See the target lists |  | Their own | ✓ | ✓ | ✓ |
 | Create, edit and delete target lists |  | Their own | ✓ | ✓ | ✓ |
 | Send a target list to a Virtual Observatory tool |  |  | ✓ | ✓ | ✓ |
-| See the night logs |  | Their own | ✓ | ✓ | ✓ |
+| See the night logs |  | Those of their assigned setup-nights, without the journal | ✓ | ✓ | ✓ |
 | Create, edit and delete night logs |  |  | ✓ | ✓ | ✓ |
 | See observations and calibrations |  | Their own; calibrations of assigned setup-nights | ✓ | ✓ | ✓ |
-| Create and edit observations and calibrations |  | ✓ | ✓ | ✓ | ✓ |
+| Create and edit observations and calibrations |  | Their own | ✓ | ✓ | ✓ |
 | See how many observations and calibrations each night holds |  |  | ✓ | ✓ | ✓ |
 | Use satellite tracks and small-body ephemerides |  |  | ✓ | ✓ | ✓ |
 | Keep a personal Night Explorer tree |  |  | ✓ | ✓ | ✓ |
