@@ -118,17 +118,17 @@ What each role may do in a portal. A role holds everything the roles to its left
 
 | | Anonymous | Visitor | Member | Admin | Owner |
 | --- | :---: | :---: | :---: | :---: | :---: |
-| See the public datasets and their data files | ✓ | ✓ | ✓ | ✓ | ✓ |
+| See the public datasets and their data files | ✓ | Public ones, their own, and the calibrations of their assigned setup-nights | ✓ | ✓ | ✓ |
 | See every dataset and data file of the portal |  |  | ✓ | ✓ | ✓ |
 | Create datasets, upload data files and edit them |  |  | ✓ | ✓ | ✓ |
 | Delete datasets and data files |  |  | ✓ | ✓ | ✓ |
-| Download a dataset as a zip file |  |  | ✓ | ✓ | ✓ |
-| See the zip files prepared for datasets and data packages |  | ✓ | ✓ | ✓ | ✓ |
+| Download a dataset as a zip file |  | Those they can see | ✓ | ✓ | ✓ |
+| See the zip files prepared for datasets and data packages |  | Those of the datasets they see and of the packages shared with them | ✓ | ✓ | ✓ |
 | Browse the data packages | ✓ | Those shared with them | ✓ | ✓ | ✓ |
 | See a data package |  | Those shared with them | ✓ | ✓ | ✓ |
 | See every data package and the datasets it holds |  |  | ✓ | ✓ | ✓ |
 | Create, edit and delete data packages |  |  | ✓ | ✓ | ✓ |
-| Download a data package as a zip file |  | ✓ | ✓ | ✓ | ✓ |
+| Download a data package as a zip file |  | Those shared with them | ✓ | ✓ | ✓ |
 | Share data packages with people outside the portal |  |  | ✓ | ✓ | ✓ |
 | See the portal's data storages |  | ✓ | ✓ | ✓ | ✓ |
 | Create, edit and delete data storages, and read their connection details |  |  |  | ✓ | ✓ |
@@ -137,6 +137,7 @@ What each role may do in a portal. A role holds everything the roles to its left
 | Push the pending files to a data storage now |  |  |  | ✓ | ✓ |
 | See one's own upload keys |  |  | ✓ | ✓ | ✓ |
 
+- **See the public datasets and their data files.** A portal's frames are filed per observer since the release after 7.2.22: a visitor's own are those they took; older portal datasets record no observer and stay members'.
 - **Browse the data packages.** Anyone sees the public packages; a member sees every package.
 - **See one's own upload keys.** Everyone sees their own keys only.
 

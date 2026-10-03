@@ -27,7 +27,12 @@ lists, and add targets to the portal: a target the observatory already has is
 found, never copied, so the portal keeps one list of targets whoever added
 them. They see the targets of their lists and those they observed, their own
 night logs and observations, and the calibrations of their setups' nights.
-They also receive the data packages shared with them.
+In Data Grand Central, the portal files the frames a visitor takes under
+their name, in a folder of their own for each setup and night; they see and
+download those, the calibrations of their setups' nights, and the portal's
+public datasets, but edit or delete none of them, since the frames are the
+observatory's archive. They also receive the data packages shared with them,
+and download those too.
 
 **Admins** make the critical changes: the observing sites and telescopes, the
 portal's settings, the safety conditions and procedures, the transient-alert
