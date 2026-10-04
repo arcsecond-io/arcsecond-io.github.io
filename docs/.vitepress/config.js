@@ -24,14 +24,28 @@ const base = process.env.DOCS_BASE || '/'
 // Generated pages that describe the server's interface leave out the apps
 // that drive or identify a rig. That list lives in the backend, in
 // settings/apps.py (`public_docs=False`), and every generator reads it there;
-// none keeps a copy. reference/permissions.md is committed in its public
-// flavour: before `npm run docs:build:embedded`, regenerate it from
-// arcsecond-back with
-// `python3 -m settings.capabilities markdown --flavour embedded --out <path>`.
+// none keeps a copy.
+//
+// Such a page is committed in both flavours: the public one at its own path,
+// the installation's beside it as <name>.embedded.md (visibility: embedded).
+// An embedded build serves the latter at the former's address, so the copy
+// built into the Arcsecond.local web image (arcsecond-front's Dockerfile,
+// which has no backend to generate it from) carries the installation's rows.
+// After a change to the backend's registry, regenerate both from
+// arcsecond-back:
+//   python3 -m settings.capabilities markdown --flavour public --out <docs>/reference/permissions.md
+//   python3 -m settings.capabilities markdown --flavour embedded --out <docs>/reference/permissions.embedded.md
 // ---------------------------------------------------------------------------
 const RANK = { public: 0, embedded: 1, internal: 2 }
 const flavour = process.env.DOCS_VISIBILITY || 'public'
 if (!(flavour in RANK)) throw new Error(`DOCS_VISIBILITY must be one of ${Object.keys(RANK)}, got ${flavour}`)
+
+// page -> its embedded flavour, both relative to docs/.
+const FLAVOURED_PAGES = { 'reference/permissions.md': 'reference/permissions.embedded.md' }
+const replacedPages = flavour === 'embedded' ? Object.keys(FLAVOURED_PAGES) : []
+const rewrites = flavour === 'embedded'
+  ? Object.fromEntries(Object.entries(FLAVOURED_PAGES).map(([page, embedded]) => [embedded, page]))
+  : {}
 
 function* markdownFiles (dir) {
   for (const name of readdirSync(dir)) {
@@ -56,9 +70,13 @@ const excluded = []
 for (const file of markdownFiles(docsDir)) {
   const rel = relative(docsDir, file)
   if (rel === 'index.md') continue
-  if (RANK[visibilityOf(file)] > RANK[flavour]) excluded.push(rel)
+  if (RANK[visibilityOf(file)] > RANK[flavour] || replacedPages.includes(rel)) excluded.push(rel)
 }
-const excludedUrls = excluded.map(rel => '/' + rel.replace(/\.md$/, '').replace(/\/index$/, '/'))
+// A replaced page's address still answers, with its embedded flavour: links
+// to it are not dead.
+const excludedUrls = excluded
+  .filter(rel => !replacedPages.includes(rel))
+  .map(rel => '/' + rel.replace(/\.md$/, '').replace(/\/index$/, '/'))
 
 // A sidebar entry for a page this flavour excludes would be a dead link, which
 // buildEnd refuses: a group of such pages is left out of the sidebar whole.
@@ -102,6 +120,7 @@ export default {
   siteTitle: false,
   cleanUrls: 'with-subfolders',
   srcExclude: excluded,
+  rewrites,
   ignoreDeadLinks: [
     /^https?:\/\/localhost/,
   ],
