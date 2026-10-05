@@ -17,3 +17,6 @@ node_modules
 docs/.vitepress/dist/
 docs/.vitepress/cache/
 docs/.vitepress/dist-embedded/
+
+# Printed at deploy time from network-sheet.html (npm run sheet:pdf).
+docs/public/network/*.pdf

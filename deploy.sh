@@ -3,6 +3,10 @@
 # abort on errors
 set -e
 
+# The network sheet as a PDF, printed from the page the command-line tool
+# generated (docs/public/network/network-sheet.html). Fails on more than one page.
+npm run sheet:pdf
+
 # build
 npm run docs:build
 

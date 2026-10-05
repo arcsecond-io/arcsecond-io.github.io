@@ -95,5 +95,6 @@ An activated installation keeps operating with no outside connection at all: ins
 
 ## To print, and to paste
 
-- [The same sheet on one printable page](/network/network-sheet.html) (print it, or save it as a PDF, from your browser).
+- [The same sheet as a one-page PDF](/network/arcsecond-local-network-sheet.pdf).
+- [The same sheet on one printable page](/network/network-sheet.html), to print from your browser.
 - [The request to send to whoever runs your firewall](/network/firewall-request.txt), as plain text.
