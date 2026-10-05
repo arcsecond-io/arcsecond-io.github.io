@@ -4,25 +4,25 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.3.0"
-template: "7.3"
+cli: "4.3.3"
+template: "7.4"
 ---
 
 
 
 # Services
 
-What `docker-compose.yml` version 7.3 starts, generated from the file itself — the comments below are the file's own. `arcsecond status` lists the same services with their state; `arcsecond logs <service>` shows one's log.
+What `docker-compose.yml` version 7.4 starts, generated from the file itself — the comments below are the file's own. `arcsecond status` lists the same services with their state; `arcsecond logs <service>` shows one's log.
 
 | Service | Container | Image | Ports on the machine | Depends on | Optional |
 | --- | --- | --- | --- | --- | --- |
 | `db` | `arcsecond-db` | `postgres:16` | none | — | no |
 | `broker` | `arcsecond-broker` | `redis:7.4` | none | — | no |
-| `backend` | `arcsecond-api` | `ghcr.io/arcsecond-io/arcsecond-api:latest` | `8800:8800` | `db`, `broker` | no |
+| `backend` | `arcsecond-api` | `ghcr.io/arcsecond-io/arcsecond-api:latest` | `127.0.0.1:8800:8800` | `db`, `broker` | no |
 | `worker` | `arcsecond-worker` | `ghcr.io/arcsecond-io/arcsecond-api:latest` | none | `backend` | no |
 | `dataworker` | `arcsecond-dataworker` | `ghcr.io/arcsecond-io/arcsecond-api:latest` | none | `backend` | no |
 | `beat` | `arcsecond-beat` | `ghcr.io/arcsecond-io/arcsecond-api:latest` | none | `backend` | no |
-| `platesolver` | `arcsecond-platesolver` | `ghcr.io/arcsecond-io/arcsecond-service-platesolver-astrometry:latest` | `8900:8900` | — | no |
+| `platesolver` | `arcsecond-platesolver` | `ghcr.io/arcsecond-io/arcsecond-service-platesolver-astrometry:latest` | none | — | no |
 | `web` | `arcsecond-web` | `ghcr.io/arcsecond-io/arcsecond-web:latest` | `5555:5555` | `backend` | no |
 | `alerts` | `arcsecond-alerts` | `ghcr.io/arcsecond-io/arcsecond-api:latest` | none | `backend` | yes (`alerts`) |
 
@@ -65,7 +65,7 @@ Arcsecond backend (REST APIs). Can be used for API calls and external pipelines,
 
 - **Container**: `arcsecond-api`
 - **Image**: `ghcr.io/arcsecond-io/arcsecond-api:latest`
-- **Ports published on the machine**: `8800:8800`
+- **Ports published on the machine**: `127.0.0.1:8800:8800`
 - **Starts after**: `db`, `broker`
 - **Restart policy**: `unless-stopped` — comes back with Docker after a reboot unless stopped on purpose
 - **Healthcheck**: yes — `arcsecond start` waits for it
@@ -75,6 +75,10 @@ Arcsecond backend (REST APIs). Can be used for API calls and external pipelines,
 
 From the file:
 
+> This machine only. Browsers and other computers go through the webapp's
+> port, which serves the very same API under /api/; 8800 is for the
+> `arcsecond` command and scripts run on this computer. Published on every
+> interface, it was a second, unneeded door onto the network.
 > Allows the backend to reach the host machine via host.docker.internal.
 > Required on Linux; Docker Desktop on Windows/macOS adds this automatically.
 > You must have a .env file with secret keys beside this yml file.
@@ -139,8 +143,13 @@ Arcsecond plate solver service, for solving coordinates from raw images.
 
 - **Container**: `arcsecond-platesolver`
 - **Image**: `ghcr.io/arcsecond-io/arcsecond-service-platesolver-astrometry:latest`
-- **Ports published on the machine**: `8900:8900`
+- **Ports published on the machine**: none — reachable from the other containers only
 - **Restart policy**: `unless-stopped` — comes back with Docker after a reboot unless stopped on purpose
+
+From the file:
+
+> No host port. Only the backend calls the solver, over the internal Docker
+> network; it has no authentication and nothing outside the stack needs it.
 
 ## `web`
 
@@ -165,7 +174,7 @@ From the file:
 
 ## `alerts`
 
-Arcsecond transient-alerts consumer (optional). Long-lived Kafka client for NASA GCN. Outbound TLS to kafka.gcn.nasa.gov and auth.gcn.nasa.gov only — nothing listens. Requires GCN_CONSUMER_CLIENT_ID / GCN_CONSUMER_CLIENT_SECRET in .env; idles harmlessly when they are absent. Single instance only — do not scale it.
+Arcsecond transient-alerts consumer (optional). Long-lived Kafka client for NASA GCN. Outbound TLS only — nothing listens: auth.gcn.nasa.gov on 443, then kafka, kafka1, kafka2 and kafka3.gcn.nasa.gov on 9092. Requires GCN_CONSUMER_CLIENT_ID / GCN_CONSUMER_CLIENT_SECRET in .env; idles harmlessly when they are absent. Single instance only — do not scale it.
 
 - **Container**: `arcsecond-alerts`
 - **Image**: `ghcr.io/arcsecond-io/arcsecond-api:latest`

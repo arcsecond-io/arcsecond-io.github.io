@@ -11,8 +11,9 @@ source: handwritten
 When you attach an [external storage](./external-storages), Arcsecond.local needs
 its credentials to read from it. Here is how those credentials are kept safe:
 
-- Credentials leave the browser already encrypted, and reach the Arcsecond.local
-  backend over HTTPS.
+- Credentials leave the browser already encrypted. That matters: Arcsecond.local is
+  served over plain HTTP on your local network, unless you put it behind your own
+  HTTPS reverse proxy.
 - They are stored in an **encrypted field** in the database. The field
   encryption key (`FIELD_ENCRYPTION_KEY`) lives in your install's `.env` file,
   outside the database itself — so a database dump alone never exposes them.

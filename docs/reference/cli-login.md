@@ -54,7 +54,7 @@ arcsecond api use local
 
 `arcsecond setup` registers `local` for you (`http://localhost:8800`); from
 another computer, register the machine's address first —
-`arcsecond api add local http://192.168.1.42:8800` — see
+`arcsecond api add local http://192.168.1.42:5555/api` — see
 [Access from Other Computers](/start/network). `arcsecond api` lists the
 servers, the current one marked with `*`, and `arcsecond api use cloud` points
 back. Credentials are kept per server, so log in once on each.

@@ -11,8 +11,8 @@ source: handwritten
 **Arcsecond.local is the full Arcsecond platform, self-hosted on your own
 infrastructure.** It is the off-the-shelf, multi-user and multi-telescope,
 industry-grade platform dedicated to astronomical observatories — the whole
-system, running on your machines, under your control, with your data never
-leaving them.
+system, running on your machines, under your control. Your images and files
+stay on them.
 
 Everything lives in [four apps](/concepts/apps):
 

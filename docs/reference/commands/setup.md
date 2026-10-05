@@ -4,7 +4,7 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.3.0"
+cli: "4.3.3"
 ---
 
 # `arcsecond setup`
@@ -27,4 +27,5 @@ date; nothing of yours is overwritten.
 | --- | --- |
 | `--with-alerts / --without-alerts` | Include (or remove) the optional transient-alerts (ToO) service in docker-compose.yml without prompting. |
 | `--lan-host HOST[:PORT]` | The address other computers reach this machine at (e.g. 192.168.1.42 or arcsecond.local). Needed for invitation and password-reset links to work from other computers. Port defaults to 5555. |
+| `--with-sky-map / --without-sky-map` | Keep (or not) a copy of the sky-brightness map on this machine, without prompting. With a copy, no outside lookup is made for it. |
 | `-v, --verbose` | Increases verbosity. |

@@ -38,8 +38,9 @@ computer, `localhost` means *that* computer, so the page never loads. This is th
 most common cause of "it works on the observatory PC but nowhere else".
 :::
 
-Only that one port has to be reachable. The API is served from the very same address,
-under `/api/`, so there is no second port to open for the web interface.
+That one port is the only one other computers have to reach. The API is served from the very
+same address, under `/api/`, so there is no second port to open, for the web interface or for
+anything else.
 
 ## 1. Note the IP address of the machine
 
@@ -162,23 +163,22 @@ Either way, declare the same name at step 5 (`arcsecond setup --lan-host arcseco
 
 ## Using the CLI or the API from another computer
 
-The web interface only needs port `5555`. The [command-line interface](/reference/cli) and any
-script talking to the API directly use port `8800` instead, which is **not** open by
-default on the network.
-
-If you need that, repeat step 4 for port `8800`, then, on the other computer, register your installation under a
-name and point the CLI at it:
+They go through the same port `5555`, under `/api/`. There is nothing more to open. On the other
+computer, register your installation under a name and point the [command-line interface](/reference/cli) at it:
 
 ```bash
-arcsecond api add local http://192.168.1.42:8800
+arcsecond api add local http://192.168.1.42:5555/api
 arcsecond api use local
 arcsecond login --username <you> --type access --key <access-key>
 ```
 
 Every command from then on talks to your installation, until `arcsecond api use cloud` points it back. See
-[Install & Login](/reference/cli-login).
+[Install & Login](/reference/cli-login). A script does the same: its base address is `http://192.168.1.42:5555/api/`.
 
-Leave the port closed if nobody needs it — the web interface does not.
+Port `8800` is the API as the machine running Arcsecond.local sees it, and it answers on that machine only
+(`localhost:8800`). An installation set up before the 7.4 configuration published it on the network as well;
+`arcsecond update` closes it, and [`arcsecond check`](/reference/commands/check) tells you which state you are in.
+The plate solver publishes no port at all since the same version.
 
 The database and Redis publish no port at all, not even on the machine itself (since CLI 3.20.0; earlier templates
 bound them to `localhost`). They are reachable from the other containers only. Anything that needs the database, such

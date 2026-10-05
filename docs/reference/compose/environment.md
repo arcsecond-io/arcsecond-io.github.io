@@ -4,8 +4,8 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.3.0"
-template: "7.3"
+cli: "4.3.3"
+template: "7.4"
 ---
 
 
@@ -34,6 +34,7 @@ A `$` in a value is interpolated by compose. Quotes, backslashes and `#` break t
 | `ARCSECOND_OPTIONAL_SERVICES` | written by `arcsecond setup` | The operator's yes/no answers about optional services (e.g. `alerts:yes`), so setup does not ask again. |
 | `HOSTED_FRONTEND_SCHEME` | read by the backend | `http` (default) or `https`, when a TLS-terminating reverse proxy of your own sits in front of the installation. |
 | `HOSTED_EXTRA_TRUSTED_ORIGINS` | read by the backend | Comma-separated origins, scheme included, to trust besides private-network addresses — a public domain, a Tailscale name. Not needed for a LAN address. |
+| `SKY_BRIGHTNESS_GEOTIFF_PATH` | written by `arcsecond setup` | Where the backend finds the sky-brightness map kept on this machine (a path under `/data`). Empty: the map is looked up on statics.arcsecond.io instead. Change the answer with `arcsecond setup --with-sky-map` or `--without-sky-map`. |
 | `LIVE_IMAGE_PROXY_URL` | read by the backend | Where the backend reaches the live-image proxy for cameras. Default http://host.docker.internal:8765; change it only for a proxy on another machine, then `arcsecond restart backend`. |
 | `LOCAL_EMAIL_VERIFICATION_GRACE_HOURS` | read by the backend | How long a new member may use the installation before verifying their email, on an installation with no mail server. |
 | `ARCSECOND_DOWNLOADS_PER_CLIENT` | set by the operator | How many downloads one computer may have open at once; past it, the next one is refused with a 429 until one finishes. Default 6. Then `arcsecond restart web`. |
@@ -99,6 +100,10 @@ A `$` in a value is interpolated by compose. Quotes, backslashes and `#` break t
 ## `HOSTED_EXTRA_TRUSTED_ORIGINS` {#hosted_extra_trusted_origins}
 
 *Read by the backend.* Comma-separated origins, scheme included, to trust besides private-network addresses — a public domain, a Tailscale name. Not needed for a LAN address.
+
+## `SKY_BRIGHTNESS_GEOTIFF_PATH` {#sky_brightness_geotiff_path}
+
+*Written by `arcsecond setup`.* Where the backend finds the sky-brightness map kept on this machine (a path under `/data`). Empty: the map is looked up on statics.arcsecond.io instead. Change the answer with `arcsecond setup --with-sky-map` or `--without-sky-map`.
 
 ## `LIVE_IMAGE_PROXY_URL` {#live_image_proxy_url}
 
