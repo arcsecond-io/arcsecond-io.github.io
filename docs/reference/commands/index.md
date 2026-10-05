@@ -18,9 +18,9 @@ Every command of the `arcsecond` tool, version 4.3.3, generated from the tool it
 | [`arcsecond alpaca`](./alpaca.md) | operator | Diagnostics for local ASCOM Alpaca devices. |
 | [`arcsecond api`](./api.md) | operator | The API server the CLI talks to. |
 | [`arcsecond backups`](./backups.md) | operator | Browse and restore Arcsecond.local DB backups. |
-| [`arcsecond check`](./check.md) | operator | Check that the installation works, and is reachable from other computers. |
 | [`arcsecond datasets`](./datasets.md) | astronomer | Display the list of (portal) datasets. |
 | [`arcsecond db`](./db.md) | operator | Manage the Arcsecond.local database. |
+| [`arcsecond doctor`](./doctor.md) | operator | Check that the installation works, is reachable, and can reach what it needs. |
 | [`arcsecond login`](./login.md) | operator | Login to your Arcsecond account. |
 | [`arcsecond logs`](./logs.md) | operator | Show the logs of Arcsecond.local, or of one service. |
 | [`arcsecond proxy`](./proxy.md) | operator | Start and inspect the proxy that serves your cameras. |

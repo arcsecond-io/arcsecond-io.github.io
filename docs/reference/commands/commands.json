@@ -31,13 +31,6 @@
       "group": true
     },
     {
-      "name": "check",
-      "page": "check.md",
-      "audience": "operator",
-      "summary": "Check that the installation works, and is reachable from other computers.",
-      "group": false
-    },
-    {
       "name": "datasets",
       "page": "datasets.md",
       "audience": "astronomer",
@@ -50,6 +43,13 @@
       "audience": "operator",
       "summary": "Manage the Arcsecond.local database.",
       "group": true
+    },
+    {
+      "name": "doctor",
+      "page": "doctor.md",
+      "audience": "operator",
+      "summary": "Check that the installation works, is reachable, and can reach what it needs.",
+      "group": false
     },
     {
       "name": "login",

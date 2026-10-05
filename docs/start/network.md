@@ -177,7 +177,7 @@ Every command from then on talks to your installation, until `arcsecond api use 
 
 Port `8800` is the API as the machine running Arcsecond.local sees it, and it answers on that machine only
 (`localhost:8800`). An installation set up before the 7.4 configuration published it on the network as well;
-`arcsecond update` closes it, and [`arcsecond check`](/reference/commands/check) tells you which state you are in.
+`arcsecond update` closes it, and [`arcsecond doctor`](/reference/commands/doctor) tells you which state you are in.
 The plate solver publishes no port at all since the same version.
 
 The database and Redis publish no port at all, not even on the machine itself (since CLI 3.20.0; earlier templates

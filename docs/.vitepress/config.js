@@ -266,6 +266,7 @@ export default {
           items: [
             { text: 'Services (docker-compose.yml)', link: '/reference/compose/services.md' },
             { text: 'Environment (.env)', link: '/reference/compose/environment.md' },
+            { text: 'On your network', link: '/reference/network/index.md' },
           ]
         },
         {

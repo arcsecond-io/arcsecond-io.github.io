@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Arcsecond.local on your network</title>
+<style>
+@page { size: A4; margin: 11mm 12mm; }
+* { box-sizing: border-box; }
+body { font: 8.5pt/1.25 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: #111; margin: 0; }
+h1 { font-size: 15pt; margin: 0 0 2mm; }
+h2 { font-size: 9pt; text-transform: uppercase; letter-spacing: .04em; margin: 2.2mm 0 .6mm; color: #333; }
+p { margin: 0 0 1mm; }
+.lead { font-size: 9.5pt; }
+table { width: 100%; border-collapse: collapse; }
+td { padding: 0 2mm 0 0; vertical-align: top; }
+td.name { width: 52%; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 7.6pt; }
+td.port { width: 14%; }
+tr.group td { padding-top: 1.4mm; font-weight: 600; }
+tr.group span { font-weight: 400; color: #444; }
+ul { margin: 0; padding-left: 4mm; }
+ul.two { columns: 2; }
+footer { margin-top: 2mm; color: #444; }
+code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 7.8pt; }
+</style></head>
+<body>
+<h1>Arcsecond.local on your network</h1>
+<p class="lead">Arcsecond.local listens on one port of your local network (5555) and on nothing from the Internet side. Everything else is outbound. One destination is required: licensing.arcsecond.io on port 443. A default installation also looks up 10 public astronomy services, all on port 443, and runs without them. The rest exists only when you turn a feature on.</p>
+<h2>What listens</h2>
+<ul><li>Port 5555, every interface: The application itself.</li><li>Port 8800, this machine only: The programming interface, for the arcsecond command and scripts run on the machine itself.</li><li>Port 8765, every interface: Relays webcam and all-sky camera images to the installation. Runs only when cameras are registered. Optional.</li></ul>
+<h2>What it contacts</h2>
+<table><tr class="group"><td colspan="3">Required. <span>Outbound, encrypted.</span></td></tr><tr><td class="name">licensing.arcsecond.io</td><td class="port">443</td><td>Licence activation and daily check</td></tr><tr class="group"><td colspan="3">Public catalogues and lookups. <span>Outbound, encrypted. The installation runs without them, with less to show.</span></td></tr><tr><td class="name">exoplanetarchive.ipac.caltech.edu</td><td class="port">443</td><td>Exoplanets and transits (NASA archive)</td></tr><tr><td class="name">ogle.astrouw.edu.pl</td><td class="port">443</td><td>Microlensing candidates (OGLE)</td></tr><tr><td class="name">minorplanetcenter.net, cgi.minorplanetcenter.net</td><td class="port">443</td><td>Near-Earth object candidates</td></tr><tr><td class="name">celestrak.org</td><td class="port">443</td><td>Satellite orbits</td></tr><tr><td class="name">simbad.cds.unistra.fr</td><td class="port">443</td><td>Object names and coordinates (SIMBAD)</td></tr><tr><td class="name">timezonedb.com</td><td class="port">443</td><td>Time-zone table refresh</td></tr><tr><td class="name">statics.arcsecond.io</td><td class="port">443</td><td>Sky darkness of a site</td></tr><tr><td class="name">ssd.jpl.nasa.gov, ssd-api.jpl.nasa.gov</td><td class="port">443</td><td>Comet and asteroid positions</td></tr><tr><td class="name">skyview.gsfc.nasa.gov</td><td class="port">443</td><td>Finding charts (NASA SkyView)</td></tr><tr><td class="name">datacenter.iers.org, maia.usno.navy.mil, hpiers.obspm.fr, data.iana.org</td><td class="port">443</td><td>Earth rotation tables</td></tr><tr class="group"><td colspan="3">Only when you turn the feature on. <span>Outbound. Nothing here is contacted by a default installation.</span></td></tr><tr><td class="name">scixplorer.org</td><td class="port">443</td><td>Papers about a target</td></tr><tr><td class="name">auth.gcn.nasa.gov</td><td class="port">443</td><td>Transient alerts: sign-in</td></tr><tr><td class="name">kafka, kafka1, kafka2, kafka3 .gcn.nasa.gov</td><td class="port">9092</td><td>Transient alerts: the feed</td></tr><tr><td class="name">api.tomorrow.io</td><td class="port">443</td><td>Weather forecast</td></tr><tr><td class="name">www.wis-tns.org</td><td class="port">443</td><td>Transient Name Server lookups</td></tr><tr><td class="name">a server you choose</td><td class="port">445, 22, 21 or 443</td><td>Copies to a storage you attach</td></tr><tr><td class="name">a server you choose</td><td class="port">587, 465 or 25</td><td>Email through your mail server</td></tr><tr class="group"><td colspan="3">To install and to update. <span>Outbound, encrypted. Not needed while running.</span></td></tr><tr><td class="name">ghcr.io, pkg-containers.githubusercontent.com</td><td class="port">443</td><td>Arcsecond.local itself</td></tr><tr><td class="name">registry-1.docker.io, auth.docker.io, production.cloudflare.docker.com</td><td class="port">443</td><td>Database and message broker</td></tr><tr><td class="name">pypi.org, files.pythonhosted.org</td><td class="port">443</td><td>The arcsecond command</td></tr><tr class="group"><td colspan="3">From your users&#x27; browsers. <span>Outbound, encrypted, from their workstations, not from the installation.</span></td></tr><tr><td class="name">server.arcgisonline.com, tile.openstreetmap.org, global.ssl.fastly.net, api.maptiler.com</td><td class="port">443</td><td>Map backgrounds</td></tr><tr><td class="name">alasky.cds.unistra.fr, alaskybis.cds.unistra.fr, alasky.unistra.fr, skyview.gsfc.nasa.gov</td><td class="port">443</td><td>Sky survey pictures</td></tr><tr><td class="name">statics.arcsecond.io</td><td class="port">443</td><td>Light-pollution layer, illustrations</td></tr><tr class="group"><td colspan="3">On your local network only. <span>Never leaves the site.</span></td></tr><tr><td class="name">addresses you enter</td><td class="port">set per device</td><td>Telescopes, domes, cameras, weather</td></tr><tr><td class="name">a broadcast on your network</td><td class="port">32227 (datagram)</td><td>Finding instruments on the network</td></tr><tr><td class="name">addresses you enter</td><td class="port">554, 80 or 443</td><td>Webcams and all-sky cameras</td></tr></table>
+<h2>What never leaves the site</h2>
+<ul class="two"><li>Images and data files</li><li>Night logs, sessions and observing conditions</li><li>Equipment configuration and instrument state</li><li>Accounts, passwords and access keys of the installation&#x27;s users</li><li>Usage statistics, error reports or any other telemetry</li></ul>
+<h2>If the connection is cut</h2>
+<p>An activated installation keeps operating with no outside connection at all: instrument control and data recording are local. It only does without the lookups listed above.</p>
+<h2>Check it yourself</h2>
+<ul><li>Run <code>arcsecond doctor</code> on the machine: it tests every destination above and sends nothing about your observatory. <code>arcsecond doctor --report</code> writes the result to a file for your records.</li><li>This sheet is generated from the software&#x27;s own network manifest (audited 2026-10-05); the current version is at docs.arcsecond.io/reference/network.</li><li>Security questions: team@arcsecond.io</li></ul>
+</body></html>
