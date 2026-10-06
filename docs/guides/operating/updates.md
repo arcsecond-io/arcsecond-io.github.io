@@ -31,10 +31,13 @@ the one the installed tool carries, and tells you to run `arcsecond update` when
 ## Why the compose file is refreshed
 
 The `docker-compose.yml` file is not part of the Docker images: it is written by the `arcsecond` tool, and evolves with
-it — which is why the tool is updated first. `arcsecond update` rewrites the file in place when it has not been edited
-by hand. If it has, the file is left alone and the packaged version is written beside it as
-`docker-compose.latest.yml`, for you to compare and merge. Your `.env` file only gains keys it lacks, and your data is
-never touched.
+it — which is why the tool is updated first. The file belongs to the tool: `arcsecond update` always leaves it exactly
+as the installed tool writes it. When the file differed — an older template, or an edit by hand — the previous one is
+kept beside it as `docker-compose.backup-<date>-<time>.yml`, so nothing is lost. Your `.env` file only gains keys it
+lacks, and your data is never touched.
+
+Changes of your own that must survive updates go in a `docker-compose.override.yml` beside it: compose applies that file
+on top of `docker-compose.yml`, every `arcsecond` command passes it along, and the tool never touches it.
 
 The latest change of this kind: since CLI 3.20.0 (template version 6.4), the database and Redis containers no longer
 publish a port on the machine, not even on `localhost`. They are reachable from the other containers only, which is all

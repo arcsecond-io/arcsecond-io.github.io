@@ -72,7 +72,7 @@ The heartbeat line repeats at most once per hour — that is the liveness signal
 
 | Symptom | Meaning and next action |
 | --- | --- |
-| `arcsecond status` does not list `alerts` | The service is not in your `docker-compose.yml`. Run `arcsecond setup --with-alerts`, then `arcsecond start`. If you have customized your compose file, the packaged version lands in `docker-compose.latest.yml` — merge the `# >>> arcsecond:alerts` block from there by hand. |
+| `arcsecond status` does not list `alerts` | The service is not in your `docker-compose.yml`. Run `arcsecond setup --with-alerts`, then `arcsecond start`. |
 | Log says `GCN credentials not configured — transient alerts disabled` | The two `.env` keys are empty. Follow *Configure* above, then `arcsecond restart alerts`. |
 | Repeated authentication/SASL errors in the log | GCN rejected your credentials. Re-create them at <https://gcn.nasa.gov/quickstart> (check the scope is `gcn.nasa.gov/kafka-public-consumer`), update `.env`, then `arcsecond restart alerts`. |
 | Connected, but no heartbeat line | An outbound connection to the names above is likely blocked, most often port 9092. Test from the host: `curl -sI https://auth.gcn.nasa.gov`, then `curl -v telnet://kafka.gcn.nasa.gov:9092` (it must say *Connected*). |

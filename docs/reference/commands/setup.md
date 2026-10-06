@@ -18,8 +18,8 @@ current folder: .env, with this installation's secrets, and
 docker-compose.yml — and ask for the access token Arcsecond gave your
 observatory, if this machine has none yet. Then:  arcsecond start
 
-Run it again after upgrading the CLI to bring docker-compose.yml up to
-date; nothing of yours is overwritten.
+Run again, it keeps .env and its secrets, and brings docker-compose.yml
+up to date; a file that differed is kept aside as a backup.
 
 **Options**
 

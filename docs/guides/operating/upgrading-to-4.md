@@ -9,7 +9,8 @@ source: handwritten
 # Upgrading to CLI 4.0
 
 Version 4.0 of the `arcsecond` tool changes how an installation is *operated*. The installation itself — your folder,
-`.env`, `docker-compose.yml`, the database, the data — needs no change and is not touched by the upgrade.
+`.env`, the database, the data — needs no preparation. `arcsecond update` replaces `docker-compose.yml` with the current
+template and keeps the previous one beside it as a backup; see [Updates](/guides/operating/updates).
 
 ```bash
 pip3 install --upgrade arcsecond

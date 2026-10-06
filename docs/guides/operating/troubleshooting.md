@@ -44,9 +44,9 @@ pip3 install --upgrade arcsecond
 arcsecond update
 ```
 
-`arcsecond update` rewrites `docker-compose.yml` in place when it has not been edited by hand. If it has, the file is
-left alone and the packaged version lands beside it as `docker-compose.latest.yml`: remove the `ports:` block of the
-`db` and `broker` services from your file (or merge the two files by hand), then run `arcsecond start`.
+`arcsecond update` replaces `docker-compose.yml` with the current template, keeping the previous file beside it as
+`docker-compose.backup-<date>-<time>.yml`. If you had edited the old file by hand, carry those changes over into a
+`docker-compose.override.yml` (see [Updates](/guides/operating/updates)).
 
 There is no need to stop or remove the other PostgreSQL. If you would rather know what holds the port anyway:
 `netstat -ano | findstr :5432` in PowerShell prints the process id in the last column, and `tasklist /FI "PID eq <pid>"`
