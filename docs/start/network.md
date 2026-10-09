@@ -113,7 +113,14 @@ by the server, which has no way of knowing which address people reach it at, so 
 to be told. Left unset, every one of those links says `localhost`, and lands whoever
 clicks it on their own computer.
 
-In the Arcsecond folder (or from anywhere, once `arcsecond setup` has run there), with your own address:
+`arcsecond setup` tells it for you: when no address is declared yet, it declares this
+machine's network address (it prints it, e.g. `http://192.168.1.42:5555`). If that is how
+people reach it, there is nothing to do here. `arcsecond doctor` warns if the machine's
+address changes later, e.g. after a reboot on a network that hands out addresses
+dynamically. Pin the address on the router to avoid that.
+
+To declare another address (a name such as `arcsecond.local`, another port), in the
+Arcsecond folder (or from anywhere, once `arcsecond setup` has run there):
 
 ```bash
 arcsecond setup --lan-host 192.168.1.42
