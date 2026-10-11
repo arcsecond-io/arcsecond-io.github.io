@@ -1,0 +1,79 @@
+Request: outbound access for Arcsecond.local
+
+We run Arcsecond.local, observatory software, on one machine of our network.
+It accepts no connection from the Internet and needs no port forwarded.
+It opens outbound connections only, encrypted, to the destinations below.
+Please allow them from that machine.
+
+Required:
+  licensing.arcsecond.io                   tcp 443    Licence activation and daily check
+
+To install and to update the software:
+  ghcr.io                                  tcp 443    Arcsecond.local itself
+  pkg-containers.githubusercontent.com     tcp 443    Arcsecond.local itself
+  registry-1.docker.io                     tcp 443    Database and message broker
+  auth.docker.io                           tcp 443    Database and message broker
+  production.cloudflare.docker.com         tcp 443    Database and message broker
+  pypi.org                                 tcp 443    The arcsecond command
+  files.pythonhosted.org                   tcp 443    The arcsecond command
+
+Recommended (public astronomy catalogues; the software runs without them):
+  exoplanetarchive.ipac.caltech.edu        tcp 443    Exoplanets and transits (NASA archive)
+  ogle.astrouw.edu.pl                      tcp 443    Microlensing candidates (OGLE)
+  minorplanetcenter.net                    tcp 443    Near-Earth object candidates
+  cgi.minorplanetcenter.net                tcp 443    Near-Earth object candidates
+  celestrak.org                            tcp 443    Satellite orbits
+  simbad.cds.unistra.fr                    tcp 443    Object names and coordinates (SIMBAD)
+  timezonedb.com                           tcp 443    Time-zone table refresh
+  statics.arcsecond.io                     tcp 443    Sky darkness of a site
+  ssd.jpl.nasa.gov                         tcp 443    Comet and asteroid positions
+  ssd-api.jpl.nasa.gov                     tcp 443    Comet and asteroid positions
+  skyview.gsfc.nasa.gov                    tcp 443    Finding charts (NASA SkyView)
+  datacenter.iers.org                      tcp 443    Earth rotation tables
+  maia.usno.navy.mil                       tcp 443    Earth rotation tables
+  hpiers.obspm.fr                          tcp 443    Earth rotation tables
+  data.iana.org                            tcp 443    Earth rotation tables
+
+Only for features we may turn on:
+  scixplorer.org                           tcp 443    Papers about a target
+  auth.gcn.nasa.gov                        tcp 443    Transient alerts: sign-in
+  kafka.gcn.nasa.gov                       tcp 9092   Transient alerts: the feed
+  kafka1.gcn.nasa.gov                      tcp 9092   Transient alerts: the feed
+  kafka2.gcn.nasa.gov                      tcp 9092   Transient alerts: the feed
+  kafka3.gcn.nasa.gov                      tcp 9092   Transient alerts: the feed
+  api.tomorrow.io                          tcp 443    Weather forecast
+  www.wis-tns.org                          tcp 443    Transient Name Server lookups
+
+Note: port 9092 carries NASA's alert feed. It is not web traffic and cannot go through a web proxy.
+
+--- as a web proxy allow list (names reached on port 443) ---
+api.tomorrow.io
+auth.docker.io
+auth.gcn.nasa.gov
+celestrak.org
+cgi.minorplanetcenter.net
+data.iana.org
+datacenter.iers.org
+exoplanetarchive.ipac.caltech.edu
+files.pythonhosted.org
+ghcr.io
+hpiers.obspm.fr
+licensing.arcsecond.io
+maia.usno.navy.mil
+minorplanetcenter.net
+ogle.astrouw.edu.pl
+pkg-containers.githubusercontent.com
+production.cloudflare.docker.com
+pypi.org
+registry-1.docker.io
+scixplorer.org
+simbad.cds.unistra.fr
+skyview.gsfc.nasa.gov
+ssd-api.jpl.nasa.gov
+ssd.jpl.nasa.gov
+statics.arcsecond.io
+timezonedb.com
+www.wis-tns.org
+
+The software's own check, `arcsecond doctor`, tests each of these and sends nothing about the observatory.
+Source: the network manifest shipped with the software, audited 2026-10-05.
