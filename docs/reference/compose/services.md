@@ -4,15 +4,15 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.3.3"
-template: "7.4"
+cli: "4.4.4"
+template: "7.7"
 ---
 
 
 
 # Services
 
-What `docker-compose.yml` version 7.4 starts, generated from the file itself — the comments below are the file's own. `arcsecond status` lists the same services with their state; `arcsecond logs <service>` shows one's log.
+What `docker-compose.yml` version 7.7 starts, generated from the file itself — the comments below are the file's own. `arcsecond status` lists the same services with their state; `arcsecond logs <service>` shows one's log.
 
 | Service | Container | Image | Ports on the machine | Depends on | Optional |
 | --- | --- | --- | --- | --- | --- |
@@ -71,10 +71,14 @@ Arcsecond backend (REST APIs). Can be used for API calls and external pipelines,
 - **Healthcheck**: yes — `arcsecond start` waits for it
 - **Time allowed to stop cleanly**: `60s`
 - **Storage**: `${SHARED_DATA_PATH} → /data`
-- **Reads from .env**: [`SHARED_DATA_PATH`](./environment#shared_data_path), [`ARCSECOND_BACKEND_MEMORY`](./environment#arcsecond_backend_memory)
+- **Reads from .env**: [`ARCSECOND_API_IMAGE`](./environment#arcsecond_api_image), [`ARCSECOND_API_PULL_POLICY`](./environment#arcsecond_api_pull_policy), [`SHARED_DATA_PATH`](./environment#shared_data_path), [`ARCSECOND_BACKEND_MEMORY`](./environment#arcsecond_backend_memory)
 
 From the file:
 
+> ARCSECOND_API_IMAGE swaps the published image for one built from the
+> backend's sources, here and on every service below that runs it.
+> ARCSECOND_API_PULL_POLICY=never goes with it: such an image exists on
+> this machine only, and `arcsecond update` must not try to download it.
 > This machine only. Browsers and other computers go through the webapp's
 > port, which serves the very same API under /api/; 8800 is for the
 > `arcsecond` command and scripts run on this computer. Published on every
@@ -99,7 +103,7 @@ Arcsecond worker, for offloading background work: the Control Room's exposures a
 - **Restart policy**: `unless-stopped` — comes back with Docker after a reboot unless stopped on purpose
 - **Time allowed to stop cleanly**: `120s`
 - **Storage**: `${SHARED_DATA_PATH} → /data`
-- **Reads from .env**: [`SHARED_DATA_PATH`](./environment#shared_data_path), [`ARCSECOND_WORKER_MEMORY`](./environment#arcsecond_worker_memory)
+- **Reads from .env**: [`ARCSECOND_API_IMAGE`](./environment#arcsecond_api_image), [`ARCSECOND_API_PULL_POLICY`](./environment#arcsecond_api_pull_policy), [`SHARED_DATA_PATH`](./environment#shared_data_path), [`ARCSECOND_WORKER_MEMORY`](./environment#arcsecond_worker_memory)
 
 From the file:
 
@@ -118,7 +122,7 @@ Arcsecond data worker, for the background work nobody at the telescope is waitin
 - **Restart policy**: `unless-stopped` — comes back with Docker after a reboot unless stopped on purpose
 - **Time allowed to stop cleanly**: `120s`
 - **Storage**: `${SHARED_DATA_PATH} → /data`
-- **Reads from .env**: [`ARCSECOND_DATA_WORKER_CONCURRENCY`](./environment#arcsecond_data_worker_concurrency), [`SHARED_DATA_PATH`](./environment#shared_data_path), [`ARCSECOND_DATA_WORKER_MEMORY`](./environment#arcsecond_data_worker_memory)
+- **Reads from .env**: [`ARCSECOND_API_IMAGE`](./environment#arcsecond_api_image), [`ARCSECOND_API_PULL_POLICY`](./environment#arcsecond_api_pull_policy), [`ARCSECOND_DATA_WORKER_CONCURRENCY`](./environment#arcsecond_data_worker_concurrency), [`SHARED_DATA_PATH`](./environment#shared_data_path), [`ARCSECOND_DATA_WORKER_MEMORY`](./environment#arcsecond_data_worker_memory)
 
 From the file:
 
@@ -136,6 +140,7 @@ Arcsecond beat, to launch specific background tasks at specific times.
 - **Starts after**: `backend`
 - **Restart policy**: `unless-stopped` — comes back with Docker after a reboot unless stopped on purpose
 - **Time allowed to stop cleanly**: `30s`
+- **Reads from .env**: [`ARCSECOND_API_IMAGE`](./environment#arcsecond_api_image), [`ARCSECOND_API_PULL_POLICY`](./environment#arcsecond_api_pull_policy)
 
 ## `platesolver`
 
@@ -161,10 +166,12 @@ Arcsecond webapp. Served on 5555 only: a self-hosted install is organisation-bas
 - **Starts after**: `backend`
 - **Restart policy**: `unless-stopped` — comes back with Docker after a reboot unless stopped on purpose
 - **Storage**: `${SHARED_DATA_PATH} → /data`
-- **Reads from .env**: [`ARCSECOND_DOWNLOADS_PER_CLIENT`](./environment#arcsecond_downloads_per_client), [`ARCSECOND_DOWNLOADS_TOTAL`](./environment#arcsecond_downloads_total), [`ARCSECOND_DOWNLOAD_RATE`](./environment#arcsecond_download_rate), [`SHARED_DATA_PATH`](./environment#shared_data_path)
+- **Reads from .env**: [`ARCSECOND_WEB_IMAGE`](./environment#arcsecond_web_image), [`ARCSECOND_WEB_PULL_POLICY`](./environment#arcsecond_web_pull_policy), [`ARCSECOND_DOWNLOADS_PER_CLIENT`](./environment#arcsecond_downloads_per_client), [`ARCSECOND_DOWNLOADS_TOTAL`](./environment#arcsecond_downloads_total), [`ARCSECOND_DOWNLOAD_RATE`](./environment#arcsecond_download_rate), [`SHARED_DATA_PATH`](./environment#shared_data_path)
 
 From the file:
 
+> ARCSECOND_WEB_IMAGE and ARCSECOND_WEB_PULL_POLICY: the same as the
+> backend's pair above, for an image built from the webapp's sources.
 > Download limits: how many downloads one computer may have open at
 > once, how many in total, and the speed of each (bytes per second,
 > k and m allowed, 0 for none). They keep downloads from filling the
@@ -174,7 +181,7 @@ From the file:
 
 ## `alerts`
 
-Arcsecond transient-alerts consumer (optional). Long-lived Kafka client for NASA GCN. Outbound TLS only — nothing listens: auth.gcn.nasa.gov on 443, then kafka, kafka1, kafka2 and kafka3.gcn.nasa.gov on 9092. Requires GCN_CONSUMER_CLIENT_ID / GCN_CONSUMER_CLIENT_SECRET in .env; idles harmlessly when they are absent. Single instance only — do not scale it.
+Arcsecond transient-alerts consumer (optional). Long-lived Kafka clients, outbound only — nothing listens. NASA GCN, over TLS: auth.gcn.nasa.gov on 443, then kafka, kafka1, kafka2 and kafka3.gcn.nasa.gov on 9092. Requires GCN_CONSUMER_CLIENT_ID / GCN_CONSUMER_CLIENT_SECRET in .env; idles harmlessly without them. Fink survey alerts, unencrypted (public data): kafka-ztf.fink-broker.org and the brokers it hands out, all on 24499. Needs nothing in .env; FINK_ENABLED=false turns it off. Single instance only — do not scale it.
 
 - **Container**: `arcsecond-alerts`
 - **Image**: `ghcr.io/arcsecond-io/arcsecond-api:latest`
@@ -182,4 +189,5 @@ Arcsecond transient-alerts consumer (optional). Long-lived Kafka client for NASA
 - **Starts after**: `backend`
 - **Restart policy**: `unless-stopped` — comes back with Docker after a reboot unless stopped on purpose
 - **Time allowed to stop cleanly**: `30s`
+- **Reads from .env**: [`ARCSECOND_API_IMAGE`](./environment#arcsecond_api_image), [`ARCSECOND_API_PULL_POLICY`](./environment#arcsecond_api_pull_policy)
 - **Optional**: added with `arcsecond setup --with-alerts`, removed with `--without-alerts`

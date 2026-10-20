@@ -4,8 +4,8 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.3.3"
-template: "7.4"
+cli: "4.4.4"
+template: "7.7"
 ---
 
 
@@ -30,7 +30,10 @@ A `$` in a value is interpolated by compose. Quotes, backslashes and `#` break t
 | `POSTGRES_DB` | written by `arcsecond setup` | The database name. |
 | `GCN_CONSUMER_CLIENT_ID` | set by the operator | NASA GCN client credentials for the optional transient-alerts service. Empty until you paste yours. |
 | `GCN_CONSUMER_CLIENT_SECRET` | set by the operator | See GCN_CONSUMER_CLIENT_ID. |
-| `HOSTED_FRONTEND_HOST` | set by the operator | The address other computers reach the installation at, port included (e.g. 192.168.1.42:5555). The backend builds invitation and password-reset links from it. Empty means localhost:5555. Set with `arcsecond setup --lan-host`. |
+| `FINK_ENABLED` | read by the backend | `false` turns off the survey alerts from Fink in the optional transient-alerts service; GCN keeps running. Fink needs no credentials, so it is on wherever the service runs. |
+| `FINK_KAFKA_GROUP_ID` | read by the backend | The installation's consumer group at Fink. Empty: `arcsecond-local-` and this machine's fingerprint, which no other installation shares. Two installations sharing a group split the alerts between them. |
+| `FINK_TOPICS` | read by the backend | Comma-separated Fink topics, each ending in its survey (`_ztf`). Empty: the topics Arcsecond chose. |
+| `HOSTED_FRONTEND_HOST` | set by the operator | The address other computers reach the installation at, port included (e.g. 192.168.1.42:5555). The backend builds invitation and password-reset links from it. Empty means localhost:5555. `arcsecond setup` fills it in with this machine's network address when it is empty; set it with `arcsecond setup --lan-host`. |
 | `ARCSECOND_OPTIONAL_SERVICES` | written by `arcsecond setup` | The operator's yes/no answers about optional services (e.g. `alerts:yes`), so setup does not ask again. |
 | `HOSTED_FRONTEND_SCHEME` | read by the backend | `http` (default) or `https`, when a TLS-terminating reverse proxy of your own sits in front of the installation. |
 | `HOSTED_EXTRA_TRUSTED_ORIGINS` | read by the backend | Comma-separated origins, scheme included, to trust besides private-network addresses — a public domain, a Tailscale name. Not needed for a LAN address. |
@@ -44,6 +47,10 @@ A `$` in a value is interpolated by compose. Quotes, backslashes and `#` break t
 | `ARCSECOND_WORKER_MEMORY` | set by the operator | The same ceiling for the worker, which runs the exposures and procedures. Default `6g`. |
 | `ARCSECOND_DATA_WORKER_MEMORY` | set by the operator | The same ceiling for the data worker: zip archives, previews, storage pushes, backups. Default `3g`. |
 | `ARCSECOND_DATA_WORKER_CONCURRENCY` | set by the operator | How many jobs the data worker runs at once. Default 2; each can hold a few hundred MB. |
+| `ARCSECOND_API_IMAGE` | set by the operator | The image the backend, both workers, beat and the alerts consumer run instead of the published one: one built from the backend's sources, e.g. `arcsecond-api:latest`. Empty: the published image. Set ARCSECOND_API_PULL_POLICY to `never` with it, then `arcsecond restart`. |
+| `ARCSECOND_API_PULL_POLICY` | set by the operator | `never` when ARCSECOND_API_IMAGE names an image that exists on this machine only, so `arcsecond update` and `arcsecond start --pull` leave it alone rather than fail to download it. Default `missing`. |
+| `ARCSECOND_WEB_IMAGE` | set by the operator | The image the web interface runs instead of the published one: one built from the webapp's sources, e.g. `arcsecond-web:latest`. Empty: the published image. Set ARCSECOND_WEB_PULL_POLICY to `never` with it, then `arcsecond restart web`. |
+| `ARCSECOND_WEB_PULL_POLICY` | set by the operator | `never` when ARCSECOND_WEB_IMAGE names an image that exists on this machine only, as ARCSECOND_API_PULL_POLICY does for the backend's. Default `missing`. |
 
 ## `SECRET_KEY` {#secret_key}
 
@@ -85,9 +92,21 @@ A `$` in a value is interpolated by compose. Quotes, backslashes and `#` break t
 
 *Set by the operator.* See GCN_CONSUMER_CLIENT_ID.
 
+## `FINK_ENABLED` {#fink_enabled}
+
+*Read by the backend.* `false` turns off the survey alerts from Fink in the optional transient-alerts service; GCN keeps running. Fink needs no credentials, so it is on wherever the service runs.
+
+## `FINK_KAFKA_GROUP_ID` {#fink_kafka_group_id}
+
+*Read by the backend.* The installation's consumer group at Fink. Empty: `arcsecond-local-` and this machine's fingerprint, which no other installation shares. Two installations sharing a group split the alerts between them.
+
+## `FINK_TOPICS` {#fink_topics}
+
+*Read by the backend.* Comma-separated Fink topics, each ending in its survey (`_ztf`). Empty: the topics Arcsecond chose.
+
 ## `HOSTED_FRONTEND_HOST` {#hosted_frontend_host}
 
-*Set by the operator.* The address other computers reach the installation at, port included (e.g. 192.168.1.42:5555). The backend builds invitation and password-reset links from it. Empty means localhost:5555. Set with `arcsecond setup --lan-host`.
+*Set by the operator.* The address other computers reach the installation at, port included (e.g. 192.168.1.42:5555). The backend builds invitation and password-reset links from it. Empty means localhost:5555. `arcsecond setup` fills it in with this machine's network address when it is empty; set it with `arcsecond setup --lan-host`.
 
 ## `ARCSECOND_OPTIONAL_SERVICES` {#arcsecond_optional_services}
 
@@ -140,3 +159,19 @@ A `$` in a value is interpolated by compose. Quotes, backslashes and `#` break t
 ## `ARCSECOND_DATA_WORKER_CONCURRENCY` {#arcsecond_data_worker_concurrency}
 
 *Set by the operator.* How many jobs the data worker runs at once. Default 2; each can hold a few hundred MB.
+
+## `ARCSECOND_API_IMAGE` {#arcsecond_api_image}
+
+*Set by the operator.* The image the backend, both workers, beat and the alerts consumer run instead of the published one: one built from the backend's sources, e.g. `arcsecond-api:latest`. Empty: the published image. Set ARCSECOND_API_PULL_POLICY to `never` with it, then `arcsecond restart`.
+
+## `ARCSECOND_API_PULL_POLICY` {#arcsecond_api_pull_policy}
+
+*Set by the operator.* `never` when ARCSECOND_API_IMAGE names an image that exists on this machine only, so `arcsecond update` and `arcsecond start --pull` leave it alone rather than fail to download it. Default `missing`.
+
+## `ARCSECOND_WEB_IMAGE` {#arcsecond_web_image}
+
+*Set by the operator.* The image the web interface runs instead of the published one: one built from the webapp's sources, e.g. `arcsecond-web:latest`. Empty: the published image. Set ARCSECOND_WEB_PULL_POLICY to `never` with it, then `arcsecond restart web`.
+
+## `ARCSECOND_WEB_PULL_POLICY` {#arcsecond_web_pull_policy}
+
+*Set by the operator.* `never` when ARCSECOND_WEB_IMAGE names an image that exists on this machine only, as ARCSECOND_API_PULL_POLICY does for the backend's. Default `missing`.

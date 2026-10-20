@@ -4,7 +4,7 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.3.3"
+cli: "4.4.4"
 ---
 
 # `arcsecond logs`
@@ -15,6 +15,9 @@ arcsecond logs [OPTIONS] [SERVICE]
 
 Show recent logs. Services are named as in `arcsecond status`:
 backend, worker, dataworker, beat, web, db, broker, platesolver, alerts.
+
+Each service keeps the last 100 MB of its log, so a busy one cannot fill
+the disk; older lines are dropped.
 
 **Arguments**
 
