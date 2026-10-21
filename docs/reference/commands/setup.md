@@ -4,7 +4,7 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.4.4"
+cli: "4.5.0"
 ---
 
 # `arcsecond setup`
@@ -28,4 +28,5 @@ up to date; a file that differed is kept aside as a backup.
 | `--with-alerts / --without-alerts` | Include (or remove) the optional transient-alerts (ToO) service in docker-compose.yml without prompting. |
 | `--lan-host HOST[:PORT]` | The address other computers reach this machine at (e.g. 192.168.1.42 or arcsecond.local). Needed for invitation and password-reset links to work from other computers. Port defaults to 5555. Without it, setup declares this machine's network address when none is declared yet; an empty value keeps the links on this machine. |
 | `--with-sky-map / --without-sky-map` | Keep (or not) a copy of the sky-brightness map on this machine, without prompting. With a copy, no outside lookup is made for it. |
+| `--tomorrow-io-key KEY` | Your own Tomorrow.io API key, for the weather forecast, without prompting (a free key is enough). An empty value removes it. |
 | `-v, --verbose` | Increases verbosity. |

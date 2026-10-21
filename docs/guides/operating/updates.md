@@ -45,6 +45,23 @@ Arcsecond ever needed, and an installation can now start next to a PostgreSQL al
 installation that fails with *ports are not available* on `arcsecond start` is one that has not had this update; see
 [Troubleshooting](/guides/operating/troubleshooting).
 
+## Coming from a tool older than 4.5
+
+Since version 4.5 of the tool, the weather forecast uses **your own Tomorrow.io API key**. Arcsecond's own key was
+never shipped with Arcsecond.local, so an installation without a key has had no forecast. `arcsecond update` adds an
+empty `TOMORROW_IO_API_KEY` line to `.env` but does not ask for the key. Get a free key from
+[tomorrow.io](https://www.tomorrow.io/weather-api/), then:
+
+```bash
+arcsecond setup --tomorrow-io-key <your key>
+arcsecond restart
+```
+
+`arcsecond doctor` says whether a key is set. See [Environment](/reference/compose/environment#tomorrow_io_api_key).
+The key works with the images you already have. Until `arcsecond update` brings a backend image newer than 4.5, the
+installation asks Tomorrow.io every five minutes per site instead of hourly, and a free key then covers a single
+observing site.
+
 ## Coming from a tool older than 4.0
 
 Version 4.0 of the tool changed how an installation is operated — `arcsecond start` and friends replace the `docker

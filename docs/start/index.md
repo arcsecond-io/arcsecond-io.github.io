@@ -94,6 +94,11 @@ in PowerShell: WSL has no direct access to the host's USB devices. See the
 - `arcsecond setup` also asks for the **access token Arcsecond gave your observatory**, once per machine — it is
   what lets the machine download Arcsecond.local. Nothing is shown while you type or paste it. Left empty, enter it
   later with `arcsecond token set`; `arcsecond token` says whether the machine has one.
+- It then asks for **your own Tomorrow.io API key**, which the weather forecast comes from. A free key from
+  [tomorrow.io](https://www.tomorrow.io/weather-api/) is enough: the installation asks once an hour per observing
+  site. Arcsecond's own key is not shipped with Arcsecond.local. Left empty, the installation runs without a forecast,
+  and any safety condition only a forecast could feed (cloud cover, humidity where no station of yours measures them)
+  is shown as unavailable. Add it later with `arcsecond setup --tomorrow-io-key <your key>`, then `arcsecond restart`.
 - Start Arcsecond.local: `arcsecond start`. **The first time, it downloads all the required images, which takes a
   while.** It then waits for the backend to be ready and prints the address to open.
 

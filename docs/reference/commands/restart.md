@@ -4,7 +4,7 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.4.4"
+cli: "4.5.0"
 ---
 
 # `arcsecond restart`

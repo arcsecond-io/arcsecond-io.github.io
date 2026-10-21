@@ -4,7 +4,7 @@ visibility: public
 audience: operator
 tier: reference
 source: generated
-cli: "4.4.4"
+cli: "4.5.0"
 template: "7.7"
 ---
 
@@ -30,6 +30,7 @@ A `$` in a value is interpolated by compose. Quotes, backslashes and `#` break t
 | `POSTGRES_DB` | written by `arcsecond setup` | The database name. |
 | `GCN_CONSUMER_CLIENT_ID` | set by the operator | NASA GCN client credentials for the optional transient-alerts service. Empty until you paste yours. |
 | `GCN_CONSUMER_CLIENT_SECRET` | set by the operator | See GCN_CONSUMER_CLIENT_ID. |
+| `TOMORROW_IO_API_KEY` | set by the operator | Your own Tomorrow.io API key: the weather forecast, and the safety conditions only a forecast can feed (cloud cover, humidity) where no station of yours measures them. A free key from https://www.tomorrow.io/weather-api/ is enough; the backend asks once an hour per observing site. Arcsecond's key is not shipped. Empty: no forecast, and the Safety strip says so. Asked at setup, or `arcsecond setup --tomorrow-io-key KEY`. |
 | `FINK_ENABLED` | read by the backend | `false` turns off the survey alerts from Fink in the optional transient-alerts service; GCN keeps running. Fink needs no credentials, so it is on wherever the service runs. |
 | `FINK_KAFKA_GROUP_ID` | read by the backend | The installation's consumer group at Fink. Empty: `arcsecond-local-` and this machine's fingerprint, which no other installation shares. Two installations sharing a group split the alerts between them. |
 | `FINK_TOPICS` | read by the backend | Comma-separated Fink topics, each ending in its survey (`_ztf`). Empty: the topics Arcsecond chose. |
@@ -91,6 +92,10 @@ A `$` in a value is interpolated by compose. Quotes, backslashes and `#` break t
 ## `GCN_CONSUMER_CLIENT_SECRET` {#gcn_consumer_client_secret}
 
 *Set by the operator.* See GCN_CONSUMER_CLIENT_ID.
+
+## `TOMORROW_IO_API_KEY` {#tomorrow_io_api_key}
+
+*Set by the operator.* Your own Tomorrow.io API key: the weather forecast, and the safety conditions only a forecast can feed (cloud cover, humidity) where no station of yours measures them. A free key from https://www.tomorrow.io/weather-api/ is enough; the backend asks once an hour per observing site. Arcsecond's key is not shipped. Empty: no forecast, and the Safety strip says so. Asked at setup, or `arcsecond setup --tomorrow-io-key KEY`.
 
 ## `FINK_ENABLED` {#fink_enabled}
 
