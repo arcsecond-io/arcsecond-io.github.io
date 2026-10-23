@@ -46,6 +46,7 @@ Arcsecond.local listens on one port of your local network (5555) and on nothing 
 | scixplorer.org | 443 | Papers about a target |
 | auth.gcn.nasa.gov | 443 | Transient alerts: sign-in |
 | kafka, kafka1, kafka2, kafka3 .gcn.nasa.gov | 9092 | Transient alerts: the feed |
+| kafka-ztf.fink-broker.org | 24499, not encrypted | Survey alerts (Fink) |
 | api.tomorrow.io | 443 | Weather forecast |
 | www.wis-tns.org | 443 | Transient Name Server lookups |
 | a server you choose | 445, 22, 21 or 443 | Copies to a storage you attach |

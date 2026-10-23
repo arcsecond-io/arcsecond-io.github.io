@@ -2,7 +2,7 @@ Request: outbound access for Arcsecond.local
 
 We run Arcsecond.local, observatory software, on one machine of our network.
 It accepts no connection from the Internet and needs no port forwarded.
-It opens outbound connections only, encrypted, to the destinations below.
+It opens outbound connections only, encrypted except Fink's public survey alerts, to the destinations below.
 Please allow them from that machine.
 
 Required:
@@ -41,10 +41,17 @@ Only for features we may turn on:
   kafka1.gcn.nasa.gov                      tcp 9092   Transient alerts: the feed
   kafka2.gcn.nasa.gov                      tcp 9092   Transient alerts: the feed
   kafka3.gcn.nasa.gov                      tcp 9092   Transient alerts: the feed
+  kafka-ztf.fink-broker.org                tcp 24499  Survey alerts (Fink)
+  157.136.249.242                          tcp 24499  Survey alerts (Fink)
+  157.136.252.46                           tcp 24499  Survey alerts (Fink)
+  157.136.252.125                          tcp 24499  Survey alerts (Fink)
+  157.136.252.183                          tcp 24499  Survey alerts (Fink)
+  157.136.253.223                          tcp 24499  Survey alerts (Fink)
   api.tomorrow.io                          tcp 443    Weather forecast
   www.wis-tns.org                          tcp 443    Transient Name Server lookups
 
-Note: port 9092 carries NASA's alert feed. It is not web traffic and cannot go through a web proxy.
+Note: port 9092 carries NASA's alert feed, and port 24499 Fink's survey alerts.
+They are not web traffic and cannot go through a web proxy.
 
 --- as a web proxy allow list (names reached on port 443) ---
 api.tomorrow.io
