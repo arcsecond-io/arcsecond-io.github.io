@@ -4,7 +4,7 @@ visibility: embedded
 audience: admin
 tier: reference
 source: generated
-backend: "7.3.3"
+backend: "7.3.8"
 ---
 
 # Roles and permissions
@@ -60,7 +60,6 @@ What each role may do on Arcsecond.local. A role holds everything the roles to i
 | See the equipment, its Alpaca servers and devices | Assigned setups, and the site context | ✓ | ✓ |
 | Create, edit and delete equipment, Alpaca servers and devices |  | ✓ | ✓ |
 | See the all-sky cameras' frames and night products | ✓ | ✓ | ✓ |
-| Upload all-sky camera frames |  | ✓ | ✓ |
 
 - **Assign setups to visitors for a range of observing nights.** A visitor operates an assigned setup during the nights of the assignment, and reads it, its telescope and its equipment at any time.
 - **See the equipment, its Alpaca servers and devices.** The site context is the weather station, the safety monitors, the all-sky cameras and the webcams: every visitor sees them.
