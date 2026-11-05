@@ -78,12 +78,6 @@ What each role may do on Arcsecond.local. A role holds everything the roles to i
 | Dismiss, observe or stop a transient alert, and answer an interruption |  | ✓ | ✓ |
 | Allow or refuse transient-alert interruptions on a setup |  | ✓ | ✓ |
 | Manage custom transient-alert sources and their secrets |  |  | ✓ |
-| See the saved transient filters | ✓ | ✓ | ✓ |
-| Create, edit and delete saved transient filters |  | ✓ | ✓ |
-| See the alerts on saved transient filters and their sends | ✓ | ✓ | ✓ |
-| Create, edit and delete alerts on saved transient filters |  | ✓ | ✓ |
-
-- **See the alerts on saved transient filters and their sends.** Visitors see a webhook's host, not its URL.
 
 ## Targets and night logs
 
