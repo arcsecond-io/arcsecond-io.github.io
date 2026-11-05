@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Night_Plans-mini" data-name="Night Plans-mini" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: .5px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #063;
+        stroke: #1d1d1b;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        isolation: isolate;
+      }
+
+      .cls-1, .cls-2, .cls-6 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: .25px;
+      }
+
+      .cls-3 {
+        opacity: .9;
+      }
+
+      .cls-3, .cls-4, .cls-7 {
+        fill: #1d1d1b;
+      }
+
+      .cls-3, .cls-4, .cls-7, .cls-8 {
+        stroke-width: 0px;
+      }
+
+      .cls-6 {
+        fill: #d0e9d5;
+        stroke: #063;
+        stroke-width: 3px;
+      }
+
+      .cls-8 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-6" x="10.25" y="4.48" width="381.21" height="384.53" rx="107.91" ry="107.91"/>
+  <path class="cls-4" d="M283.03,69.05H105.31c-5.87,0-10.63,4.63-10.63,10.34l.02,225.94,14.49,32.98V90.49c0-5.86,4.89-10.62,10.92-10.62h184.27l-21.35-10.81Z"/>
+  <rect class="cls-3" x="109.2" y="199.83" width="197.83" height="110.27"/>
+  <g class="cls-5">
+    <path class="cls-1" d="M289.72,342.6h11.82c3.03,0,5.48-2.39,5.48-5.33v-27.17h-17.3v32.5Z"/>
+    <path class="cls-1" d="M289.72,79.87v119.96h17.3v-115.5c0-2.46-2.05-4.46-4.59-4.46h-12.71Z"/>
+  </g>
+  <g>
+    <path class="cls-2" d="M119.94,79.87c-5.93,0-10.74,4.68-10.74,10.45v109.51h167.44v-119.96H119.94Z"/>
+    <path class="cls-2" d="M109.2,336.65c0,3.29,2.74,5.96,6.13,5.96h161.31v-32.5H109.2v26.54Z"/>
+  </g>
+  <g class="cls-5">
+    <rect class="cls-8" x="259.63" y="80.37" width="29.59" height="261.73"/>
+    <path class="cls-7" d="M288.72,80.87v260.73h-28.59V80.87h28.59M289.72,79.87h-30.59v262.73h30.59V79.87h0Z"/>
+  </g>
+  <rect class="cls-8" x="135.64" y="214.63" width="14.19" height="74.01"/>
+  <rect class="cls-8" x="154.57" y="254.97" width="33.67" height="33.67"/>
+  <rect class="cls-8" x="194.03" y="254.97" width="33.67" height="33.67"/>
+</svg>
