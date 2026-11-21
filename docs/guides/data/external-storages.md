@@ -29,7 +29,7 @@ The table is what the code supports today, not a roadmap.
 | **FTP** | yes | no | host, port, user, password, root folder |
 | **SFTP** | yes | yes | host, port, user, a password *or* a private key (with its passphrase), root folder |
 | **SMB / Windows share** | yes | yes | host, port, share name, domain, user, password, root folder |
-| Local disk (a folder on the machine) | not yet | — | — |
+| **Local disk** (self-hosted only) | yes | yes | the folder, on a disk made available with `arcsecond disks add` |
 
 ::: info What is not available
 Azure, Google Drive and observatory archives (ESO, CADC, HST…) were listed as choices in
@@ -73,8 +73,26 @@ root folder inside the share. An SMB storage can also hold the installation's ne
 
 ## Local disk
 
-A folder on the machine running Arcsecond.local is **not attachable yet**. Share the folder
-over SMB, or serve it over SFTP, and attach that instead.
+A folder on a disk of the machine running Arcsecond.local, with no network share in between:
+the fastest way to index terabytes already sitting on that machine. Arcsecond.local runs in
+containers, so the disk must first be made visible to them. The CLI does it:
+
+1. `arcsecond update` (and `arcsecond setup`) asks once whether there is a disk or folder of
+   this machine to make available. Or, at any time:
+
+   ```bash
+   arcsecond disks add /mnt/astro
+   ```
+
+   with the path of the disk or folder: `/Volumes/Astro` on macOS, `D:/astro` on Windows. Add as
+   many as you need; `arcsecond disks list` shows them and `arcsecond disks remove NAME` takes
+   one away. The CLI restarts what needs to be restarted.
+2. In **Attached Storages**, choose **Local Disk**, browse to the folder to attach, **Test**,
+   and attach it.
+
+Arcsecond.local reads nothing outside that folder: a path leading elsewhere, or a symbolic link
+pointing out of the mounted disks, is refused. As with SMB and SFTP, it only ever writes inside
+its own `Arcsecond/` directory, and only when the storage is attached writable.
 
 ## What happens once a storage is attached
 
