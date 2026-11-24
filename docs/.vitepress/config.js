@@ -190,7 +190,6 @@ export default {
           collapsible: true,
           items: [
             { text: 'Updates', link: '/guides/operating/updates.md' },
-            { text: 'Upgrading to CLI 4.0', link: '/guides/operating/upgrading-to-4.md' },
             { text: 'Troubleshooting', link: '/guides/operating/troubleshooting.md' },
             { text: 'Backups', link: '/guides/operating/backups.md' },
             { text: 'Rotate the database password', link: '/guides/operating/rotate-postgres-password.md' },

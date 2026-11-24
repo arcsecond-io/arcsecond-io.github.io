@@ -31,13 +31,13 @@ The full line, shown by `arcsecond start` after `docker compose up` failed, is `
 and Linux. The `arcsecond-db` container does not start, and neither does anything that depends on it.
 
 Another program on the machine already listens on port 5432 — usually a PostgreSQL server installed directly on the
-machine, sometimes a container from another project. The `docker-compose.yml` written by CLI versions up to 3.19 asked
-Docker to publish the database on that same port of the machine (and Redis on 6379), so the two could not coexist.
-Nothing in Arcsecond ever used that port: every container reaches the database over Docker's internal network, and every
+machine, sometimes a container from another project — and your `docker-compose.yml` is out of date: it asks Docker to publish
+the database on that same port, so the two cannot coexist. The current template publishes no port for the database
+nor for Redis, as nothing in Arcsecond needs one: every container reaches the database over Docker's internal network, and every
 CLI command that needs it ([backups](/guides/operating/backups), [password rotation](/guides/operating/rotate-postgres-password)) reaches it
 through the container.
 
-Since CLI 3.20.0, the template (version 6.4) publishes neither port. Update the CLI, then the installation:
+Update the CLI, then the installation:
 
 ```bash
 pip3 install --upgrade arcsecond
@@ -71,8 +71,8 @@ sudo usermod -aG docker $USER
 
 Repeated `WARN[0000] The "..." variable is not set` lines in the progress `arcsecond start` shows, with names that look like random
 fragments, come from a `$` inside one of the secret keys that `arcsecond setup` wrote to `.env`. Compose interpolates
-`$name` in that file, so the `$` and the characters after it are dropped. Versions of the CLI up to 3.17.1 could
-generate such keys; later versions do not.
+`$name` in that file, so the `$` and the characters after it are dropped. An up-to-date CLI
+does not generate such keys.
 
 The containers all see the same shortened value, so an installation that runs with these warnings is fine as it is.
 On a **brand new** installation that has not started yet, the cleaner move is to open `.env` and remove every `$` from

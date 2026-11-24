@@ -39,6 +39,7 @@
   "/local/transient-alerts": "/guides/operating/transient-alerts",
   "/local/troubleshooting": "/guides/operating/troubleshooting",
   "/local/updates": "/guides/operating/updates",
-  "/local/upgrading-to-4": "/guides/operating/upgrading-to-4",
+  "/local/upgrading-to-4": "/guides/operating/updates",
+  "/guides/operating/upgrading-to-4": "/guides/operating/updates",
   "/local/webcam": "/guides/operating/live-image-proxy"
 }

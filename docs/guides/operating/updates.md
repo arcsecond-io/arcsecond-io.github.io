@@ -39,12 +39,6 @@ lacks, and your data is never touched.
 Changes of your own that must survive updates go in a `docker-compose.override.yml` beside it: compose applies that file
 on top of `docker-compose.yml`, every `arcsecond` command passes it along, and the tool never touches it.
 
-The latest change of this kind: since CLI 3.20.0 (template version 6.4), the database and Redis containers no longer
-publish a port on the machine, not even on `localhost`. They are reachable from the other containers only, which is all
-Arcsecond ever needed, and an installation can now start next to a PostgreSQL already running on the machine. An
-installation that fails with *ports are not available* on `arcsecond start` is one that has not had this update; see
-[Troubleshooting](/guides/operating/troubleshooting).
-
 ## Coming from a tool older than 4.5
 
 Since version 4.5 of the tool, the weather forecast uses **your own Tomorrow.io API key**. Arcsecond's own key was
@@ -61,9 +55,3 @@ arcsecond restart
 The key works with the images you already have. Until `arcsecond update` brings a backend image newer than 4.5, the
 installation asks Tomorrow.io every five minutes per site instead of hourly, and a free key then covers a single
 observing site.
-
-## Coming from a tool older than 4.0
-
-Version 4.0 of the tool changed how an installation is operated — `arcsecond start` and friends replace the `docker
-compose` commands these pages used to ask for. The installation itself needs no change. See
-[Upgrading to 4.0](/guides/operating/upgrading-to-4).

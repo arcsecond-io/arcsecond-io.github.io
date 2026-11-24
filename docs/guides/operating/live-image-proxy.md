@@ -278,7 +278,7 @@ nothing about `.local` and answers with a failure:
 Cannot connect to host skykot.local:80 [DNS server returned general failure]
 ```
 
-The proxy handles this itself since 3.19.0: when your machine's resolver has
+The proxy handles this itself: when your machine's resolver has
 no answer for a `.local` name, it sends its own mDNS query, exactly as the
 browser you copied the address from does. Nothing to configure, and the name —
 not an address — is what stays registered, so the camera survives its next

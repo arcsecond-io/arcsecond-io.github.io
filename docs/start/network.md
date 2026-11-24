@@ -183,12 +183,11 @@ Every command from then on talks to your installation, until `arcsecond api use 
 [Install & Login](/reference/cli-login). A script does the same: its base address is `http://192.168.1.42:5555/api/`.
 
 Port `8800` is the API as the machine running Arcsecond.local sees it, and it answers on that machine only
-(`localhost:8800`). An installation set up before the 7.4 configuration published it on the network as well;
-`arcsecond update` closes it, and [`arcsecond doctor`](/reference/commands/doctor) tells you which state you are in.
-The plate solver publishes no port at all since the same version.
+(`localhost:8800`). [`arcsecond doctor`](/reference/commands/doctor) confirms it. The plate solver publishes no port
+at all.
 
-The database and Redis publish no port at all, not even on the machine itself (since CLI 3.20.0; earlier templates
-bound them to `localhost`). They are reachable from the other containers only. Anything that needs the database, such
+The database and Redis publish no port at all, not even on the machine itself. They are reachable
+from the other containers only. Anything that needs the database, such
 as [backups](/guides/operating/backups) or [rotating its password](/guides/operating/rotate-postgres-password), is done by the `arcsecond`
 tool through the container, and needs no open port.
 
@@ -205,8 +204,7 @@ The same five steps apply, with different tools:
 ## Troubleshooting
 
 **The page loads but stays blank, or the interface reports it cannot reach the server.**
-Your installation predates the change that serves the API from the same address as the
-web interface. Update it, and try again:
+Your installation is probably out of date. Update it, and try again:
 
 ```bash
 arcsecond update
