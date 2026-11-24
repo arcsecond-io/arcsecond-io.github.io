@@ -9,7 +9,7 @@ source: handwritten
 # Data Upload
 
 Arcsecond CLI makes it easy to upload dataset files to your account or to a
-shared organisation, on the cloud or on your own [Arcsecond.local](/concepts/arcsecond-local)
+shared organisation, on the cloud or on your own [Arcsecond.local](/guides/)
 install.
 
 All non-hidden files are uploaded. Choose folders carefully so you only send the

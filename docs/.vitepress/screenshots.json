@@ -1,0 +1,218 @@
+{
+  "observer-console": [
+    {
+      "name": "observer-console-0",
+      "source": "7.3.8",
+      "alt": "Observer Console during the night: Hα frames of the Helix Nebula reviewed in heat colours, with guiding running, the sky conditions and safety at GO.",
+      "caption": "One dense frame to observe by hand: target, telescope, camera, filters, rotator, focuser and dome, with guiding, sky conditions and safety alongside, and every frame reviewed as it lands."
+    },
+    {
+      "name": "observer-console-1",
+      "source": "7.3.8",
+      "alt": "Observer Console in Queue mode, preparing a 2×2 mosaic of the Helix Nebula with the rotator at 25°.",
+      "caption": "Queue exposures and build mosaics on the fly: Arcsecond lays out the tiles, the filters and the rotator angle, then runs them for you."
+    }
+  ],
+  "night-scheduler": [
+    {
+      "name": "night-scheduler-0",
+      "source": "7.3.8",
+      "alt": "Night Scheduler running tonight's sequence on NGC 253, with its airmass curve, the steps of the sequence, and a sidebar of targets of every kind.",
+      "caption": "Build a night as a sequence of steps, from opening the dome to closing it, press Run, and come back in the morning. Every step is recorded."
+    }
+  ],
+  "transient-alerts": [
+    {
+      "name": "transient-alerts-0",
+      "source": "7.4.0",
+      "alt": "ToO Policies verdicts listing alerts from Swift, SVOM, Fermi, Einstein Probe, IceCube, LVK and ZTF, beside the runs they triggered.",
+      "caption": "Listen to NASA's GCN and Fink's ZTF streams: every alert is scored against your policies, and the observable ones can interrupt the night to be observed at once."
+    },
+    {
+      "name": "transient-alerts-1",
+      "source": "7.4.0",
+      "alt": "ToO Policies: interruption policies, notifying or interrupting per mission, beside the observation series they run.",
+      "caption": "Decide which missions notify and which interrupt, within which limits of altitude, Sun, Moon and error box, and what the telescope observes when they do."
+    }
+  ],
+  "safety-configuration": [
+    {
+      "name": "safety-configuration-0",
+      "source": "7.3.8",
+      "alt": "Safety Configuration listing the safety procedures beside the default condition sets on weather, night bounds, mount limits and Sun avoidance.",
+      "caption": "Combine condition sets on weather, Sun, Moon and mount limits with your own procedures: close the dome, park the mount, cover the optics, cut the power."
+    },
+    {
+      "name": "safety-configuration-1",
+      "source": "7.3.8",
+      "alt": "Safety Configuration decisions log, listing a day of GO and NOGO changes with the conditions that triggered them and the procedures they ran.",
+      "caption": "Arcsecond evaluates your conditions continuously and keeps every GO/NOGO change, with what triggered it and what was done about it."
+    }
+  ],
+  "calibrations-manager": [
+    {
+      "name": "calibrations-manager-0",
+      "source": "7.3.8",
+      "alt": "Calibration Manager with bias templates, the plans combining biases and darks, and their daily and weekly schedules.",
+      "caption": "Describe your biases and darks once, combine them into plans and schedule them: Arcsecond takes the frames and files them in dedicated datasets."
+    },
+    {
+      "name": "calibrations-manager-1",
+      "source": "7.3.8",
+      "alt": "Calibration Manager browsing a past run of darks, with its frames and their previews.",
+      "caption": "Browse every calibration series ever taken, with its frames, previews, night and dataset, ready for your pipelines."
+    }
+  ],
+  "equipment-registry": [
+    {
+      "name": "equipment-registry-0",
+      "source": "7.3.8",
+      "alt": "Equipments Registry with all the Alpaca devices of the observatory connected and the T100 telescope selected, showing its pointing and state.",
+      "caption": "Register your ASCOM Alpaca devices once, then connect, monitor and drive each of them: telescope, camera, dome, filter wheel, focuser, rotator and more."
+    },
+    {
+      "name": "equipment-registry-1",
+      "source": "7.3.8",
+      "alt": "Equipments Registry with the science camera selected, showing its last exposure of 47 Tucanae, its statistics and the exposure controls.",
+      "caption": "Expose, cool and inspect right from the registry: each camera shows its last frame, its statistics and its settings."
+    },
+    {
+      "name": "equipment-registry-2",
+      "source": "7.3.8",
+      "alt": "Equipments Registry with the all-sky camera selected, showing its live fisheye image of the night sky.",
+      "caption": "USB, network and all-sky cameras join the registry through the Arcsecond CLI's live-image proxy: streamed live, and recorded all night long."
+    }
+  ],
+  "polar-alignment": [
+    {
+      "name": "polar-alignment-0",
+      "source": "7.3.8",
+      "alt": "Polar Alignment overview of the T100 mount: its last measurement with knob guidance and a pole plot, and the history of three measurements.",
+      "caption": "Measure how far your polar axis sits from the pole, with its uncertainty: Arcsecond tells you which knob to turn, by how much, and follows it over time."
+    }
+  ],
+  "night-explorer": [
+    {
+      "name": "night-explorer-0",
+      "source": "arcsecond-nightstudio-epxlorer-71-6panes",
+      "alt": "Night Explorer screenshot",
+      "caption": "Our flagship tool, the Night Explorer (a.k.a. iObserve), the best decision-making tool for planning and scheduling observations. Used by many astronomers worldwide."
+    }
+  ],
+  "fdc-editor": [
+    {
+      "name": "fdc-editor-0",
+      "source": "platform63-nightstudio-fdceditor",
+      "alt": "FOV Simulator & Finding Charts Editor screenshot",
+      "caption": "Our Finding Chart Editor is a powerful way to prepare detailed and highly customized finding charts, with custom overlays from large instruments or even your own."
+    }
+  ],
+  "transit-browser": [
+    {
+      "name": "transit-browser-0",
+      "source": "platform63-nightstudio-transitsbrowser",
+      "alt": "Transit Browser screenshot",
+      "caption": "Our Transit Browser has been extended! It allows to browse the currently accessible transits for exoplanets, at a given time and location, as well as non-regular transits and other transiting objects."
+    }
+  ],
+  "transient-sky": [
+    {
+      "name": "transient-sky-0",
+      "source": "7.4.0",
+      "alt": "Transient Sky: a sky map and a table of events from Swift, SVOM, Fermi, Einstein Probe, IceCube, LVK, TNS and ZTF, each judged observable or not from the telescope, one event selected.",
+      "caption": "Every transient of the last day on one sky map, from NASA's GCN, TNS and Fink's ZTF stream. Each is judged from your telescope against your ToO policies; select one to import it as a target."
+    }
+  ],
+  "target-lists": [
+    {
+      "name": "target-lists-0",
+      "source": "platform62-nightstudio-targetlists",
+      "alt": "Target Lists screenshot",
+      "caption": "The Target Lists are a simple way to organize and manage your observing targets. They can be used to plan observations, track progress, and share with colleagues."
+    }
+  ],
+  "data-browser": [
+    {
+      "name": "data-browser-0",
+      "source": "7.3.8",
+      "alt": "Data Browser listing the datasets on an observatory NAS, with the frames of NGC 5128 and their previews.",
+      "caption": "Browse every dataset, on Arcsecond Cloud or on your own storage (here an SMB NAS of the observatory), with headers and previews, organised night by night."
+    }
+  ],
+  "observations-browser": [
+    {
+      "name": "observations-browser-0",
+      "source": "7.3.8",
+      "alt": "Observations Browser in Per Night mode, listing six nights of observations with their targets, start times, durations and previews.",
+      "caption": "Every observation of every night, extracted from your data or recorded by the Control Room, grouped by night log."
+    },
+    {
+      "name": "observations-browser-1",
+      "source": "7.3.8",
+      "alt": "Observations Browser in Per Target mode, with NGC 253 selected and its observations over three nights.",
+      "caption": "Follow each target across the nights: how often, with which telescope, for how long. Arcsecond keeps the list up to date by itself."
+    }
+  ],
+  "data-viewer": [
+    {
+      "name": "data-viewer-0",
+      "source": "7.3.8",
+      "alt": "Data Viewer showing a FITS image of Centaurus A in heat colours, with its statistics, a close-up of a star and the FITS header.",
+      "caption": "Open any FITS or XISF frame right in the browser: scales, colour maps, statistics, a close-up under the cursor and the full header. Nothing to install."
+    }
+  ],
+  "virtual-filesystem": [
+    {
+      "name": "virtual-filesystem-0",
+      "source": "platform62-dgc-virtualfs",
+      "alt": "Virtual Filesystem screenshot",
+      "caption": "The Virtual Filesystem is a tool dedicated for people uploading their data to Arcsecond Cloud Storage using our Python CLI/Module. It reproduces the local filesystem structure, allowing to recover your familiar organisation in the cloud."
+    }
+  ],
+  "data-sharing": [
+    {
+      "name": "data-sharing-0",
+      "source": "platform62-dgc-datasharing",
+      "alt": "Data Distribution & Sharing screenshot",
+      "caption": "Data Distribution & Sharing is a dedicated tool to organise datasets into packages, and share them privately to people inside or outside Arcsecond."
+    }
+  ],
+  "observatory-schedule": [
+    {
+      "name": "observatory-schedule-0",
+      "source": "7.3.8",
+      "alt": "Observatory Schedule showing a month of nights, maintenance and meetings, with a night log selected and its observations and previews.",
+      "caption": "One calendar for the whole observatory: nights fill in by themselves from your data, beside maintenance, meetings and visitors, per telescope and per person."
+    }
+  ],
+  "observatory-map": [
+    {
+      "name": "observatory-map-0",
+      "source": "7.3.8",
+      "alt": "Observatory Map of Cerro Arcsecond: two domes with their telescopes and equipment, the control building with its servers and network, and the NAS.",
+      "caption": "Arcsecond draws your observatory from its registry: domes, telescopes, equipment, buildings, computers, software and storage, and how they are linked. Then make it yours."
+    }
+  ],
+  "data-storages": [
+    {
+      "name": "data-storages-0",
+      "source": "7.3.8",
+      "alt": "Data Storages with the observatory NAS attached over SMB as the default destination, and the log of its latest push.",
+      "caption": "Attach your own NAS, SMB share, S3 bucket or SFTP server: Arcsecond.local pushes every new file and database backup there, and logs every push."
+    }
+  ],
+  "observatory-settings": [
+    {
+      "name": "observatory-settings-0",
+      "source": "7.3.8",
+      "alt": "Observatory Settings composing the file names of new frames from telescope, target, filter, exposure and date blocks, with example names.",
+      "caption": "Compose the name of every frame your observatory takes from simple blocks: telescope, target, filter, exposure, date and more."
+    },
+    {
+      "name": "observatory-settings-1",
+      "source": "7.3.8",
+      "alt": "Observatory Settings with the observatory's SMTP server configured to send invitations, password resets and notifications.",
+      "caption": "Plug in your observatory's SMTP server: invitations, password resets and notifications leave from your own domain."
+    }
+  ]
+}

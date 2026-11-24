@@ -1,5 +1,5 @@
 {
-  "/apps/": "/concepts/apps",
+  "/apps/": "/guides/observing/",
   "/apps/control-room/": "/guides/observing/control-room",
   "/apps/data/": "/guides/data/",
   "/apps/data/credentials-security": "/guides/data/credentials-security",
@@ -15,7 +15,7 @@
   "/apps/data/external-storages": "/guides/data/external-storages",
   "/apps/data/filebrowser": "/guides/data/filebrowser",
   "/apps/data/storage": "/guides/data/storage",
-  "/apps/followup/": "/guides/observing/follow-up",
+  "/apps/followup/": "/guides/data/#observations-browser",
   "/apps/headquarters/": "/guides/team/",
   "/apps/headquarters/permissions": "/guides/team/permissions",
   "/apps/night-studio/": "/guides/observing/night-studio",
@@ -29,7 +29,7 @@
   "/developers/": "/reference/",
   "/developers/aa-js": "/reference/aa-js",
   "/developers/apis": "/reference/rest",
-  "/local/": "/concepts/arcsecond-local",
+  "/local/": "/guides/",
   "/local/alpaca-lan": "/guides/operating/alpaca-lan",
   "/local/backups": "/guides/operating/backups",
   "/local/installation": "/start/",
@@ -41,5 +41,9 @@
   "/local/updates": "/guides/operating/updates",
   "/local/upgrading-to-4": "/guides/operating/updates",
   "/guides/operating/upgrading-to-4": "/guides/operating/updates",
-  "/local/webcam": "/guides/operating/live-image-proxy"
+  "/local/webcam": "/guides/operating/live-image-proxy",
+  "/concepts/": "/guides/",
+  "/concepts/apps": "/guides/observing/",
+  "/concepts/arcsecond-local": "/guides/",
+  "/guides/observing/follow-up": "/guides/data/#observations-browser"
 }

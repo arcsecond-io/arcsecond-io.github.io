@@ -2,7 +2,7 @@ import DefaultTheme from 'vitepress/theme'
 import { nextTick, onMounted, watch } from 'vue'
 import { useRoute } from 'vitepress'
 import mediumZoom from 'medium-zoom'
-import ThemedImage from './ThemedImage.vue'
+import ToolShot from './ToolShot.vue'
 import './custom.css'
 
 export default {
@@ -10,7 +10,7 @@ export default {
 
   enhanceApp (ctx) {
     const { app } = ctx
-    app.component('ThemedImage', ThemedImage)
+    app.component('ToolShot', ToolShot)
     DefaultTheme.enhanceApp(ctx)
   },
 

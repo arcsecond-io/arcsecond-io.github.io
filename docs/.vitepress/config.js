@@ -94,7 +94,7 @@ const commandItems = commands.commands.map(c => ({ text: `arcsecond ${c.name}`, 
 
 // ---------------------------------------------------------------------------
 // Old addresses. The site was restructured in September 2026 (Start / Guides /
-// Reference / Concepts); every address it had before answers with a page that
+// Reference); every address it had before answers with a page that
 // sends the browser on. GitHub Pages cannot redirect, so these are files
 // written at the end of the build — see buildEnd. The Arcsecond.local .env
 // comments and the app's help links still name some of the old addresses.
@@ -162,7 +162,6 @@ export default {
       { text: 'Start', link: '/start/' },
       { text: 'Guides', link: '/guides/' },
       { text: 'Reference', link: '/reference/' },
-      { text: 'Concepts', link: '/concepts/' },
     ],
     footer: {
       message: 'MIT Licensed',
@@ -202,16 +201,62 @@ export default {
           text: 'Observing',
           collapsible: true,
           items: [
-            { text: 'Night Studio', link: '/guides/observing/night-studio.md' },
-            { text: 'Control Room', link: '/guides/observing/control-room.md' },
-            { text: 'Follow-up targets', link: '/guides/observing/follow-up.md' },
+            { text: 'The four apps', link: '/guides/observing/index.md' },
+            {
+              text: 'Night Studio',
+              link: '/guides/observing/night-studio.md',
+              collapsed: true,
+              items: [
+                { text: 'Night Explorer', link: '/guides/observing/night-studio.md#night-explorer' },
+                { text: 'Transit Browser', link: '/guides/observing/night-studio.md#transit-browser' },
+                { text: 'Target Lists', link: '/guides/observing/night-studio.md#target-lists' },
+                { text: 'Transient Sky', link: '/guides/observing/night-studio.md#transient-sky' },
+                { text: 'Finding Chart Editor', link: '/guides/observing/night-studio.md#finding-chart-editor' },
+              ]
+            },
+            {
+              text: 'Control Room',
+              link: '/guides/observing/control-room.md',
+              collapsed: false,
+              items: [
+                { text: 'Equipments Registry', link: '/guides/observing/equipment-registry.md' },
+                { text: 'Observer Console', link: '/guides/observing/observer-console.md' },
+                { text: 'Night Scheduler', link: '/guides/observing/night-scheduler.md' },
+                { text: 'ToO Policies', link: '/guides/observing/too-policies.md' },
+                { text: 'Calibration Manager', link: '/guides/observing/calibration-manager.md' },
+                { text: 'Safety Configuration', link: '/guides/observing/safety-configuration.md' },
+                { text: 'Polar Alignment', link: '/guides/observing/polar-alignment.md' },
+              ]
+            },
+            {
+              text: 'Data Grand Central',
+              link: '/guides/data/index.md',
+              collapsed: true,
+              items: [
+                { text: 'Data Browser', link: '/guides/data/#data-browser' },
+                { text: 'Observations Browser', link: '/guides/data/#observations-browser' },
+                { text: 'Data Viewer', link: '/guides/data/#data-viewer' },
+                { text: 'Virtual File System', link: '/guides/data/#virtual-file-system' },
+                { text: 'Data Distribution & Sharing', link: '/guides/data/#data-distribution-sharing' },
+              ]
+            },
+            {
+              text: 'Observatory Headquarters',
+              link: '/guides/team/index.md',
+              collapsed: true,
+              items: [
+                { text: 'Schedule', link: '/guides/team/#schedule' },
+                { text: 'Map', link: '/guides/team/#map' },
+                { text: 'Data Storages', link: '/guides/team/#data-storages' },
+                { text: 'Settings', link: '/guides/team/#settings' },
+              ]
+            },
           ]
         },
         {
           text: 'Data',
           collapsible: true,
           items: [
-            { text: 'Data Grand Central', link: '/guides/data/index.md' },
             { text: 'Storage', link: '/guides/data/storage.md' },
             { text: 'External storages', link: '/guides/data/external-storages.md' },
             { text: 'S3: a read-only IAM user', link: '/guides/data/external-storage-aws.md' },
@@ -225,7 +270,6 @@ export default {
           text: 'Team',
           collapsible: true,
           items: [
-            { text: 'Observatory Headquarters', link: '/guides/team/index.md' },
             { text: 'Permissions & roles', link: '/guides/team/permissions.md' },
           ]
         },
@@ -284,16 +328,6 @@ export default {
             { text: 'Python — basics', link: '/reference/python-basics.md' },
             { text: 'Python — resources', link: '/reference/python-resources.md' },
             { text: 'aa-js', link: '/reference/aa-js.md' },
-          ]
-        },
-      ],
-      '/concepts/': [
-        {
-          text: 'Concepts',
-          items: [
-            { text: 'Overview', link: '/concepts/index.md' },
-            { text: 'What Arcsecond.local is', link: '/concepts/arcsecond-local.md' },
-            { text: 'The four apps', link: '/concepts/apps.md' },
           ]
         },
       ],

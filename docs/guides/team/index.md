@@ -38,9 +38,8 @@ organisation-wide layer on top of them.
   access what.
 - **Sharing**, from a private dataset between two members up to a customizable
   public page exposing selected data to the world.
-- **An Observatory Schedule** to manage what happens across your telescopes and
-  observers over time — switchable between a calendar view, a telescopes
-  timeline or an observers timeline, including recurring events.
+- **An observatory schedule, a map, storages and settings** shared by everyone,
+  each with [its own tool](#the-tools).
 
 ## Members and roles
 
@@ -49,3 +48,34 @@ and `Owner`, on top of what anyone may see in public. What each role is for is
 on the [Permissions & Roles](./permissions) page, and the complete list of
 rights, generated from the server, on the
 [Roles and permissions](/reference/permissions) page.
+
+## The tools
+
+### Schedule
+
+One calendar for the whole observatory. Nights fill in by themselves from your data, beside the events you add:
+maintenance, meetings, visitors. Events can recur, and name telescopes, observers and night operators.
+
+<ToolShot tool="observatory-schedule" />
+
+### Map
+
+A drawing of the observatory and of how it is linked: sites, domes, buildings, rooms, telescopes, equipment, computers,
+software and network. It starts from your registry; admins arrange it. Members only.
+
+<ToolShot tool="observatory-map" />
+
+### Data Storages
+
+Where the data lives, and how it gets there. Admins attach storages (SMB, S3, SFTP...) to which new data files and
+database backups are pushed. See [External storages](/guides/data/external-storages).
+
+<ToolShot tool="data-storages" />
+
+### Settings
+
+Activation, email, file naming, appearance and preferences. Admins only.
+
+<ToolShot tool="observatory-settings" />
+
+<ToolShot tool="observatory-settings" :index="1" />

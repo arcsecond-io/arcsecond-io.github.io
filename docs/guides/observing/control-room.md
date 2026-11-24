@@ -10,58 +10,57 @@ source: handwritten
 
 > Automate your data acquisition, integrated with your data pipelines.
 
-The **Control Room** is the app where Arcsecond.local acquires new data and
-automates your observing nights. It sits between [Night Studio](/guides/observing/night-studio)
-— where you prepare what to observe — and [Data Grand Central](/guides/data/) —
-where the resulting data is stored and shared.
+The **Control Room** drives your equipment and takes your data. It runs on your own infrastructure, talks directly to
+the devices of your observatory, and files every frame in [Data Grand Central](/guides/data/).
 
-Because it runs on your own infrastructure, the Control Room talks directly to
-the equipment on (or reachable from) the host, including live cameras through
-the [Live-Image Proxy](/guides/operating/live-image-proxy).
+<ToolShot tool="observer-console" no-caption />
 
-:::info
-The Control Room is the most recent of the four apps and is under active
-development. Some of the tools below are already in use on real telescopes;
-others are still maturing. [Contact us](mailto:team@arcsecond.io) if you'd like
-to follow along or take part in early testing.
-:::
+## The seven tools
 
-## Equipment Registry
+| I want to… | Tool |
+| --- | --- |
+| Register, connect, check or move a device | [Equipments Registry](./equipment-registry) |
+| Observe by hand, now | [Observer Console](./observer-console) |
+| Automate a whole night | [Night Scheduler](./night-scheduler) |
+| React to gamma-ray bursts and other transients | [ToO Policies](./too-policies) |
+| Take biases, darks and dome flats | [Calibration Manager](./calibration-manager) |
+| Close the observatory when conditions turn bad | [Safety Configuration](./safety-configuration) |
+| Measure and correct a polar alignment | [Polar Alignment](./polar-alignment) |
 
-<ThemedImage prefix="platform62-controlroom-equipments" alt="Equipment Registry"/>
+## Before the first night
 
-Register all your equipment for precise setup and configuration. Freely combine
-any of them into custom setups.
+1. **Start an Alpaca server** on the machine your devices are plugged into. Arcsecond only needs its address. If it is
+   not the machine running Arcsecond.local, see [Alpaca server on another machine](/guides/operating/alpaca-lan).
+2. **Register the devices** in the [Equipments Registry](./equipment-registry).
+3. **Define an observing setup**: a telescope, and the equipment used with it.
+4. **Check the safety rules** in [Safety Configuration](./safety-configuration).
+5. **Observe** from the [Observer Console](./observer-console). Once that works, automate with the
+   [Night Scheduler](./night-scheduler).
 
-## Observer Console
+## Equipment, device, setup
 
-<ThemedImage prefix="platform63-controlroom-console" alt="Observer Console"/>
+| Word | Meaning |
+| --- | --- |
+| **Device** | What an Alpaca server exposes: the driver Arcsecond connects to. |
+| **Equipment** | The telescope, camera or dome itself, which observations and metadata are attached to. Its device can be replaced, and the equipment stays the same. |
+| **Observing setup** | A telescope and the equipment used with it. The Observer Console and the Night Scheduler work on one setup. |
 
-A packed and powerful frame dedicated to observing manually, with a 1-click
-switch between telescopes and custom setups. Currently tested in various
-locations.
+## The status bar
 
-## Night Scheduler
+The bar at the bottom stays there in every tool. It holds:
 
-<ThemedImage prefix="platform62-controlroom-scheduler" alt="Night Scheduler"/>
+- the **connection** to the server, and a check of all equipment at once;
+- the **observing setup** in use;
+- the **interrupts** switch, which allows [transient alerts](./too-policies) to take that setup;
+- the **observer** in control. One person controls a setup at a time: take control, request it, hand it over or
+  release it here;
+- the **night log** and the **dataset** of the night;
+- webcams, all-sky images and the live stream of operations.
 
-Our main automation tool, currently under active development. Simply define a
-sequence of targets, exposures, constraints, triggers and more, then press play!
-Come back in the morning to harvest the night — Arcsecond has recorded
-**everything**, every 5 seconds, for you to replay the night.
+## Where the data goes
 
-## Queue Mode
+Frames taken from the Observer Console and the Night Scheduler are saved in a dataset, and attached to the night log of
+the telescope, which records the activity of the night. Both are one click away in the status bar. Frames taken from the
+Equipments Registry are not filed: download them there.
 
-<ThemedImage prefix="platform62-controlroom-queuemode" alt="Queue Mode"/>
-
-Automate your automatic nights! Define observation programs and let Arcsecond
-optimise your observations depending on the live constraints on targets,
-weather, safety, and more.
-
-## Calibrations Manager
-
-<ThemedImage prefix="platform63-controlroom-calibmanager" alt="Calibrations Manager"/>
-
-Remove the hassle of calibrations with a dedicated manager. Define your needs
-and the best schedule, and Arcsecond takes care of the rest, making dedicated
-[datasets](/guides/data/datasets) for you.
+Who may do what is on the [Roles and permissions](/reference/permissions) page.

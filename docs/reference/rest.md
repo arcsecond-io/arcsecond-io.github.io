@@ -9,7 +9,7 @@ source: handwritten
 # REST APIs
 
 Every Arcsecond server — the cloud at `api.arcsecond.io` or your own
-[Arcsecond.local](/concepts/arcsecond-local) install — exposes the same **RESTful** API. The
+[Arcsecond.local](/guides/) install — exposes the same **RESTful** API. The
 easiest way to talk to it is the [CLI / Python module](/reference/python-basics), but the
 endpoints are plain HTTP and fully browseable.
 

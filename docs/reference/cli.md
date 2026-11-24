@@ -10,7 +10,7 @@ source: handwritten
 
 The Arcsecond CLI is the open-source companion that connects to and interacts
 with an Arcsecond API server — whether that is the cloud or your own
-[Arcsecond.local](/concepts/arcsecond-local) install. Its main purpose today is precisely this:
+[Arcsecond.local](/guides/) install. Its main purpose today is precisely this:
 **to set up and run Arcsecond.local**.
 
 It is a lightweight command-line tool *and* a Python module, giving you two
@@ -33,7 +33,7 @@ arcsecond --help
 
 The `arcsecond` command is how you install, operate and maintain a self-hosted
 install. The core flow is documented in the
-[Arcsecond.local](/concepts/arcsecond-local) section:
+[Arcsecond.local](/guides/) section:
 
 - [Installation](/start/) — `arcsecond setup`, then `arcsecond start`.
 - [Updates](/guides/operating/updates) — `arcsecond update` moves to the latest release.

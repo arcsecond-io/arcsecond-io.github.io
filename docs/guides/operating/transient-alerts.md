@@ -85,7 +85,7 @@ The heartbeat line repeats at most once per hour — that is the liveness signal
 
 Fink, run by the IJCLab in France, reads every alert of the Zwicky Transient Facility (ZTF) and publishes them by science case, one stream per selection. Your installation subscribes to the selections a small telescope can follow, a few hundred events a night: early type Ia supernova candidates, supernova candidates, fast risers, kilonova candidates, microlensing candidates, and ZTF objects already classified on the Transient Name Server.
 
-Each object becomes one event named by its ZTF id (`ZTF26abzidlp`), with one entry per detection, its latest magnitude, and Fink's classification scores. You can turn any of them into a target. Observing policies do not take survey events yet; when they do, a policy will have to name the survey explicitly, so an existing policy never starts receiving them on its own.
+Each object becomes one event named by its ZTF id (`ZTF26abzidlp`), with one entry per detection, its latest magnitude, and Fink's classification scores. You can turn any of them into a target. A [ToO policy](/guides/observing/too-policies) takes survey events only when it names the survey explicitly, so an existing policy never starts receiving them on its own.
 
 Survey events are kept for 30 days after their last detection, then removed, unless a target names them or an alert refers to them. GCN events are never removed.
 

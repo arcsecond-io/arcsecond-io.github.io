@@ -9,7 +9,7 @@ source: handwritten
 # Live-Image Proxy
 
 The Arcsecond CLI ships a native live-image proxy that lets
-[Arcsecond.local](/concepts/arcsecond-local) — the self-hosted version of
+[Arcsecond.local](/guides/) — the self-hosted version of
 Arcsecond — access **USB webcams**, **all-sky cameras** and **network
 cameras**.
 

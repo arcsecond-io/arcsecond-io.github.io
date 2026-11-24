@@ -36,44 +36,45 @@ cap — the limit is the disk you give the install.
 - **[Credentials & Security](./credentials-security)** — how the credentials of
   your attached storages are encrypted and protected.
 
-## A tour of the tools
+## The tools
 
 ### Data Browser
 
-<ThemedImage prefix="platform62-dgc-databrowser" alt="Data Browser"/>
+Browse every dataset and file, wherever it is stored: names, observers, telescopes, FITS and XISF headers, and
+previews. See [File browser](./filebrowser).
 
-The most straightforward way to [browse your data](./filebrowser): access
-FITS/XISF headers, 1D and 2D previews, and organise it all — whether it is
-stored on your install or reached through an
-[attached external storage](./external-storages).
-
-### Virtual Filesystem
-
-<ThemedImage prefix="platform62-dgc-virtualfs" alt="Virtual Filesystem"/>
-
-A tool for everyone uploading data with the [CLI / Python module](/reference/upload).
-It reproduces your local filesystem structure on the server, so you recover your
-familiar organisation inside Arcsecond.
-
-### Target Follow-up
-
-<ThemedImage prefix="platform62-dgc-targetfollowup" alt="Target Follow-up"/>
-
-An automatic way to keep track of all your observed targets. As soon as you
-upload or attach data, Arcsecond.local performs smart scans of the FITS/XISF
-headers, reconstructs your observing nights, and builds your
-[Follow-Up Targets](/guides/observing/follow-up) table.
-
-### Data Distribution & Sharing
-
-<ThemedImage prefix="platform62-dgc-datasharing" alt="Data Distribution & Sharing"/>
-
-Organise datasets into [data packages](./datapackages) and share them privately
-with people inside or outside your organisation.
+<ToolShot tool="data-browser" no-caption />
 
 ### Observations Browser
 
-<ThemedImage prefix="platform62-dgc-observationsbrowser" alt="Observations Browser"/>
+Search past observations, recorded by the Control Room or extracted from your data.
 
-Follow the addition of observations night by night, for each telescope and
-observing site.
+<ToolShot tool="observations-browser" />
+
+**Per Night** groups them by night log. **Per Target** follows every target you have observed: how often, with
+which telescope, and for how long. Arcsecond.local keeps that list up to date by itself, from the night logs of the
+[Control Room](/guides/observing/control-room) and from those it reconstructs out of the data you upload or
+[attach](./external-storages).
+
+<ToolShot tool="observations-browser" :index="1" />
+
+### Data Viewer
+
+Open a FITS or XISF file of a dataset, or one dropped from your computer, which is not stored until you decide. Adjust
+the scale and the colours, and read the statistics, the value profiles, a close-up under the cursor and the header.
+
+<ToolShot tool="data-viewer" />
+
+### Virtual File System
+
+Browse uploaded data as if it were on a disk. It shows again the folders you had on your computer when you uploaded
+with the [CLI / Python module](/reference/upload).
+
+<ToolShot tool="virtual-filesystem" no-caption />
+
+### Data Distribution & Sharing
+
+Group datasets into [data packages](./datapackages) and share them by email. A package is dynamic: receivers always
+download its latest content.
+
+<ToolShot tool="data-sharing" no-caption />

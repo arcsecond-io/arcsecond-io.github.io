@@ -5,10 +5,16 @@ platform — and its ecosystem.
 
 Structure under `docs/`:
 
-- `local/` — Arcsecond.local: what it is, installation, updates, and self-hosting ops.
-- `apps/` — the four apps (Night Studio, Control Room, Data Grand Central, Observatory Headquarters).
-- `cli/` — the `arcsecond` command-line tool and Python module.
-- `ecosystem/` — developer references (REST APIs, aa-js).
+- `start/` — installing Arcsecond.local.
+- `guides/` — operating it, observing with it (the four apps and their tools), data, team.
+- `reference/` — the `arcsecond` tool, the installation files, the interfaces. Mostly generated.
+
+The screenshots of the app pages come from the sibling repositories `arcsecond-homes` (which shots, which captions) and
+`arcsecond-screenshots` (the newest version of each, older images otherwise). Refresh them, then commit, with:
+
+```bash
+npm run screenshots
+```
 
 Based on [VitePress](https://vitepress.vuejs.org).
 

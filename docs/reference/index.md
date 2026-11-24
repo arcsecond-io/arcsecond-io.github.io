@@ -9,7 +9,7 @@ source: handwritten
 # Developers
 
 Arcsecond is a software *system*. Behind the interface you use every day — in
-the cloud or on your own [Arcsecond.local](/concepts/arcsecond-local) install — there are several
+the cloud or on your own [Arcsecond.local](/guides/) install — there are several
 open, associated services and projects you can build on.
 
 * [APIs](./rest) - the backend RESTful APIs every Arcsecond server exposes.

@@ -25,7 +25,7 @@ If you are targeting a specific organisation by its subdomain, pass it:
 api = ArcsecondAPI(config, subdomain="my-observatory")
 ```
 
-On a self-hosted [Arcsecond.local](/concepts/arcsecond-local) install, the subdomain is always
+On a self-hosted [Arcsecond.local](/guides/) install, the subdomain is always
 `"local"`:
 
 ```python
