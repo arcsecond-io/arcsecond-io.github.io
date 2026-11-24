@@ -10,8 +10,6 @@ Structure under `docs/`:
 - `cli/` — the `arcsecond` command-line tool and Python module.
 - `ecosystem/` — developer references (REST APIs, aa-js).
 
-The Oort Uploader still has its documentation integrated into its own repository.
-
 Based on [VitePress](https://vitepress.vuejs.org).
 
 ## Development
