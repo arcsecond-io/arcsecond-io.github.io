@@ -157,7 +157,8 @@ export default {
 
   themeConfig: {
     logo: '/logo.svg',
-    localSearch: true,
+    // Runs in the browser, on an index built with the pages: it works offline.
+    search: { provider: 'local' },
     nav: [
       { text: 'Start', link: '/start/' },
       { text: 'Guides', link: '/guides/' },
