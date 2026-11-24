@@ -159,10 +159,11 @@
 }
 
 /* ---- medium-zoom ---- */
+/* A zoomed image covers everything: VitePress's own layers (--vp-z-index-*)
+   go up to 60. */
 .medium-zoom-overlay {
-  z-index: 20;
+  z-index: 100;
 }
-
-.medium-zoom-image {
-  z-index: 21;
+.medium-zoom-image--opened {
+  z-index: 101;
 }
