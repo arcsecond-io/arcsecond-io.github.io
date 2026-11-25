@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .5;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #37007d;
+      }
+
+      .cls-1, .cls-5, .cls-4 {
+        fill-rule: evenodd;
+        isolation: isolate;
+      }
+
+      .cls-1, .cls-4, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-7 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-7, .cls-2, .cls-5, .cls-3, .cls-8 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-7, .cls-8 {
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        opacity: .7;
+      }
+
+      .cls-2, .cls-5, .cls-3 {
+        stroke: #fff;
+      }
+
+      .cls-5 {
+        fill: #00000c;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        opacity: .4;
+      }
+
+      .cls-8 {
+        fill: #e2d3e8;
+        stroke: #951b81;
+      }
+    </style>
+  </defs>
+  <g id="Dataset">
+    <rect class="cls-8" x="7.41" y="5.6" width="381.21" height="384.53" rx="107.91" ry="107.91"/>
+  </g>
+  <g id="Data_package-mini" data-name="Data package-mini">
+    <path class="cls-4" d="M126.25,178.98v-49.47l-64.07,26.55,64.07,22.92Z"/>
+    <path class="cls-1" d="M273.9,177.52l60-21.46-60-24.85v46.32ZM198.02,100.7l1.07-.49-1.07-.44v.93Z"/>
+    <path class="cls-5" d="M273.9,177.52l-40.5,14.49-35.38,12.65-72.73-24.42.16-97.1,148.45-47.85v142.23Z"/>
+    <path class="cls-6" d="M333.9,156.06l-135.88,48.6,50.99,66.69,134.24-53.37-49.35-61.92Z"/>
+    <polygon class="cls-2" points="249.01 271.35 198.02 204.66 198.02 361.99 338.47 308.72 336.31 236.64 249.01 271.35"/>
+    <polygon class="cls-3" points="147.08 271.35 59.77 236.64 57.62 308.72 198.02 361.99 198.02 204.66 147.08 271.35"/>
+    <path class="cls-7" d="M62.18,156.06l135.83,48.6-50.94,66.69L12.84,217.98l49.35-61.92Z"/>
+    <path class="cls-7" d="M333.9,156.06l-135.88,48.6,50.99,66.69,134.24-53.37-49.35-61.92Z"/>
+  </g>
+</svg>
