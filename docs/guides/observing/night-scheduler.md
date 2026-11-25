@@ -42,9 +42,9 @@ pointing. With several conditions, the loop goes on while all of them hold.
 
 ### Focus and dithering
 
-In the Configuration tab, set the autofocus and dither rules for the setup or for this sequence only. Autofocus runs
-when the temperature has drifted or enough time has passed; dithering, after a number of light frames. Each firing is
-recorded with its reason.
+Press **Configure...** in the header of the sequence, and set the autofocus and dither rules for the setup or for this
+sequence only. Autofocus runs when the temperature has drifted or enough time has passed; dithering, after a number of
+light frames. Each firing is recorded with its reason.
 
 ## Run it
 
@@ -62,7 +62,7 @@ The Activity tab follows the night: safety, meridian flips, and the autofocus an
 - **Conditions turn bad.** The sequence is interrupted and the safety procedure runs. The observatory stays closed until
   you reopen it: safety never reopens on its own. See [Safety Configuration](./safety-configuration).
 - **A transient takes the telescope.** The sequence stops for the observation series and resumes on its own afterwards.
-  If it cannot, the reason is shown. See [ToO Policies](./too-policies).
+  If it cannot, the reason is shown. See [Targets of Opportunity](./too-policies).
 
 ## Afterwards
 

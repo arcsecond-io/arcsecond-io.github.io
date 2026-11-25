@@ -1,14 +1,14 @@
 ---
-title: "ToO Policies"
+title: "Targets of Opportunity"
 visibility: public
 audience: astronomer
 tier: guide
 source: handwritten
 ---
 
-# ToO Policies
+# Targets of Opportunity
 
-**Decide in advance which transients are worth the telescope.** ToO (Target of Opportunity) policies judge each alert as
+**Decide in advance which transients are worth the telescope.** Target of Opportunity (ToO) policies judge each alert as
 it arrives, and tell you about it or observe it at once.
 
 <ToolShot tool="transient-alerts" />

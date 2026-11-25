@@ -25,13 +25,13 @@
     {
       "name": "transient-alerts-0",
       "source": "7.4.0",
-      "alt": "ToO Policies verdicts listing alerts from Swift, SVOM, Fermi, Einstein Probe, IceCube, LVK and ZTF, beside the runs they triggered.",
+      "alt": "Targets of Opportunity verdicts listing alerts from Swift, SVOM, Fermi, Einstein Probe, IceCube, LVK and ZTF, beside the runs they triggered.",
       "caption": "Listen to NASA's GCN and Fink's ZTF streams: every alert is scored against your policies, and the observable ones can interrupt the night to be observed at once."
     },
     {
       "name": "transient-alerts-1",
       "source": "7.4.0",
-      "alt": "ToO Policies: interruption policies, notifying or interrupting per mission, beside the observation series they run.",
+      "alt": "Targets of Opportunity: interruption policies, notifying or interrupting per mission, beside the observation series they run.",
       "caption": "Decide which missions notify and which interrupt, within which limits of altitude, Sun, Moon and error box, and what the telescope observes when they do."
     }
   ],

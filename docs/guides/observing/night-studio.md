@@ -65,7 +65,7 @@ See what is changing in the sky now, and whether you can observe it.
 - **Sort**: choose the time window, show or hide missions, and apply a saved filter.
 - **Act**: open an event for its details, import it as a target, or open its finding chart.
 
-Transient Sky is for browsing. What makes a telescope react by itself is in [ToO Policies](./too-policies).
+Transient Sky is for browsing. What makes a telescope react by itself is in [Targets of Opportunity](./too-policies).
 
 ## Finding Chart Editor
 

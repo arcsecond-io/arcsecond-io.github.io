@@ -14,7 +14,7 @@ grouped in four apps: the first three follow an observation, the fourth runs the
 | | App | Its tools |
 | --- | --- | --- |
 | Prepare | [Night Studio](./night-studio) | [Night Explorer](./night-studio#night-explorer), [Transit Browser](./night-studio#transit-browser), [Target Lists](./night-studio#target-lists), [Transient Sky](./night-studio#transient-sky), [Finding Chart Editor](./night-studio#finding-chart-editor) |
-| Observe | [Control Room](./control-room) | [Equipments Registry](./equipment-registry), [Observer Console](./observer-console), [Night Scheduler](./night-scheduler), [ToO Policies](./too-policies), [Calibration Manager](./calibration-manager), [Safety Configuration](./safety-configuration), [Polar Alignment](./polar-alignment) |
+| Observe | [Control Room](./control-room) | [Equipments Registry](./equipment-registry), [Observer Console](./observer-console), [Night Scheduler](./night-scheduler), [Targets of Opportunity](./too-policies), [Calibration Manager](./calibration-manager), [Safety Configuration](./safety-configuration), [Polar Alignment](./polar-alignment) |
 | Keep and share | [Data Grand Central](/guides/data/) | [Data Browser](/guides/data/#data-browser), [Observations Browser](/guides/data/#observations-browser), [Data Viewer](/guides/data/#data-viewer), [Virtual File System](/guides/data/#virtual-file-system), [Data Distribution & Sharing](/guides/data/#data-distribution-sharing) |
 | Run the observatory | [Observatory Headquarters](/guides/team/) | [Schedule](/guides/team/#schedule), [Map](/guides/team/#map), [Data Storages](/guides/team/#data-storages), [Settings](/guides/team/#settings) |
 

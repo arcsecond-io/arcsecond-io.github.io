@@ -22,7 +22,7 @@ the devices of your observatory, and files every frame in [Data Grand Central](/
 | Register, connect, check or move a device | [Equipments Registry](./equipment-registry) |
 | Observe by hand, now | [Observer Console](./observer-console) |
 | Automate a whole night | [Night Scheduler](./night-scheduler) |
-| React to gamma-ray bursts and other transients | [ToO Policies](./too-policies) |
+| React to gamma-ray bursts and other transients | [Targets of Opportunity](./too-policies) |
 | Take biases, darks and dome flats | [Calibration Manager](./calibration-manager) |
 | Close the observatory when conditions turn bad | [Safety Configuration](./safety-configuration) |
 | Measure and correct a polar alignment | [Polar Alignment](./polar-alignment) |

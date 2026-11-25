@@ -223,7 +223,7 @@ export default {
                 { text: 'Equipments Registry', link: '/guides/observing/equipment-registry.md' },
                 { text: 'Observer Console', link: '/guides/observing/observer-console.md' },
                 { text: 'Night Scheduler', link: '/guides/observing/night-scheduler.md' },
-                { text: 'ToO Policies', link: '/guides/observing/too-policies.md' },
+                { text: 'Targets of Opportunity', link: '/guides/observing/too-policies.md' },
                 { text: 'Calibration Manager', link: '/guides/observing/calibration-manager.md' },
                 { text: 'Safety Configuration', link: '/guides/observing/safety-configuration.md' },
                 { text: 'Polar Alignment', link: '/guides/observing/polar-alignment.md' },
